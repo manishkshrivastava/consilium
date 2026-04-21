@@ -1,0 +1,59 @@
+# === Secrets ===
+.env
+*.key
+*.pem
+credentials*
+
+# === Model weights & adapters (too large for GitHub) ===
+telco-7b-adapter-*/
+telco-7b-adapter*.zip
+*.gguf
+*.bin
+*.safetensors
+models/*.zip
+models/telco-slm-v1-mlx/adapter/
+models/telco-slm-v2-mlx/adapter/
+models/telco-slm-v2-mlx/fused/
+models/telco-slm-v2-mlx/quantized/
+models/telco-slm-v3-mlx/adapter/
+models/telco-7b-merged/
+models/telco-7b-merged-v1v2/
+
+# === RAG vector database (64 GB) ===
+rag/vector_db/
+rag/chroma*/
+
+# === Training data (large) ===
+data/
+kaggle-output-account3/
+
+# === Virtual environments ===
+.venv/
+eval-venv/
+venv/
+__pycache__/
+*.pyc
+
+# === Branded / internal docs ===
+INTERNAL_RND_DISCUSSION.md
+*.pptx
+*.pdf
+
+# === OS / IDE ===
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# === OneDrive artifacts ===
+~$*
+.~lock.*
+
+# === Claude Code config (personal) ===
+.claude/
+
+# === Old/legacy folders ===
+reco after llama v1/
+v3 suggestion Manish/
+KAIROS_*

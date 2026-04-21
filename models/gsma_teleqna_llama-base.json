@@ -1,0 +1,4538 @@
+{
+  "benchmark": "GSMA TeleQnA",
+  "benchmark_source": "huggingface.co/datasets/netop/TeleQnA",
+  "model": "Llama 3.1 8B Instruct (base, no fine-tuning)",
+  "total_questions": 500,
+  "overall_accuracy": 0.648,
+  "correct": 324,
+  "unparsed": 1,
+  "by_subject": {
+    "Research publications": {
+      "accuracy": 0.7022222222222222,
+      "correct": 158,
+      "total": 225
+    },
+    "Standards specifications": {
+      "accuracy": 0.53125,
+      "correct": 51,
+      "total": 96
+    },
+    "Research overview": {
+      "accuracy": 0.6228070175438597,
+      "correct": 71,
+      "total": 114
+    },
+    "Lexicon": {
+      "accuracy": 0.8421052631578947,
+      "correct": 16,
+      "total": 19
+    },
+    "Standards overview": {
+      "accuracy": 0.6086956521739131,
+      "correct": 28,
+      "total": 46
+    }
+  },
+  "results": [
+    {
+      "id": 0,
+      "subject": "Research publications",
+      "question": "What is the advantage of combining SDMA (Spatial Division Multiple Access) systems with TDD (Time Division Duplex)?",
+      "correct_answer": 4,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 7.831351041793823
+    },
+    {
+      "id": 1,
+      "subject": "Research publications",
+      "question": "What is the main limitation of inductive coupling WET (wireless energy transfer)?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.6821949481964111
+    },
+    {
+      "id": 2,
+      "subject": "Research publications",
+      "question": "What are the key requirements for IoT (Internet of Thing) networks?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.6855597496032715
+    },
+    {
+      "id": 3,
+      "subject": "Standards specifications",
+      "question": "What determines the NF instances (AMF and SMF) serving a specific UE? [3GPP Release 18]",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.7034449577331543
+    },
+    {
+      "id": 4,
+      "subject": "Standards specifications",
+      "question": "What does the UE generate as HARQ-ACK information when it correctly decodes a transport block? [3GPP Release 17]",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.6873319149017334
+    },
+    {
+      "id": 5,
+      "subject": "Standards specifications",
+      "question": "What is the relationship between macOffsetTimeSlot and OTD? [IEEE 802.15.4]",
+      "correct_answer": 2,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.7099268436431885
+    },
+    {
+      "id": 6,
+      "subject": "Research overview",
+      "question": "How can indoor localization benefit the health sector?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 1.074246883392334
+    },
+    {
+      "id": 7,
+      "subject": "Research overview",
+      "question": "In the context of on-demand data modeling, what does SOCAM show?",
+      "correct_answer": 2,
+      "predicted_answer": 4,
+      "is_correct": false,
+      "elapsed": 0.877755880355835
+    },
+    {
+      "id": 8,
+      "subject": "Lexicon",
+      "question": "What does the term 'Bandwidth' refer to in telecommunications?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.770035982131958
+    },
+    {
+      "id": 9,
+      "subject": "Standards specifications",
+      "question": "Which test system is impacted by off-focus antenna? [3GPP Release 18]",
+      "correct_answer": 2,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.9564919471740723
+    },
+    {
+      "id": 10,
+      "subject": "Standards specifications",
+      "question": "What are the possible classifications of OFDM symbols in a slot in a downlink frame? [3GPP Release 17]",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.7963597774505615
+    },
+    {
+      "id": 11,
+      "subject": "Research publications",
+      "question": "How many bits is the plaintext required to be in DES (Data Encryption Standard) encryption?",
+      "correct_answer": 3,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.8510990142822266
+    },
+    {
+      "id": 12,
+      "subject": "Research publications",
+      "question": "What is the purpose of using floating cars (FCs) in traffic sensing?",
+      "correct_answer": 1,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.7027487754821777
+    },
+    {
+      "id": 13,
+      "subject": "Research publications",
+      "question": "Which of the following is not a category of underwater environmental monitoring applications?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.775763988494873
+    },
+    {
+      "id": 14,
+      "subject": "Research overview",
+      "question": "Which wireless standard uses the privacy and key management (PKM) protocol for user authentication and secure transmissions?",
+      "correct_answer": 2,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.5831022262573242
+    },
+    {
+      "id": 15,
+      "subject": "Research overview",
+      "question": "What is the main advantage of RSMA (Rate-splitting multiple access) over conventional capacity-achieving schemes for the SISO (single-input single-output) BC (broadcast channel)?",
+      "correct_answer": 4,
+      "predicted_answer": 0,
+      "is_correct": false,
+      "elapsed": 0.6297626495361328
+    },
+    {
+      "id": 16,
+      "subject": "Research publications",
+      "question": "What type of modulation does DPSK (Differential Phase Shift Keying) use to carry the data?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.7370421886444092
+    },
+    {
+      "id": 17,
+      "subject": "Research publications",
+      "question": "Which smart antenna technology can be used to improve the energy efficiency of wireless power transfer?",
+      "correct_answer": 4,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.7877349853515625
+    },
+    {
+      "id": 18,
+      "subject": "Research publications",
+      "question": "What is the complementary error function?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.684751033782959
+    },
+    {
+      "id": 19,
+      "subject": "Research publications",
+      "question": "What are the main areas where M2M (Machine-to-Machine) communications are expected to be major technological drivers?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.8027420043945312
+    },
+    {
+      "id": 20,
+      "subject": "Research publications",
+      "question": "What is the main principle of Time Reversal (TR) for wireless communications?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.7817919254302979
+    },
+    {
+      "id": 21,
+      "subject": "Research overview",
+      "question": "Which defense scheme uses the mean value and variance of reports to find outliers?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.7793710231781006
+    },
+    {
+      "id": 22,
+      "subject": "Research publications",
+      "question": "What is the disadvantage of traditional aperture antennas such as reflectors and lenses?",
+      "correct_answer": 0,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.8868708610534668
+    },
+    {
+      "id": 23,
+      "subject": "Standards specifications",
+      "question": "According to IEEE Std 802.11-2020, when can an HT STA transmit a frame with LDPC coding? [IEEE 802.11]",
+      "correct_answer": 0,
+      "predicted_answer": 4,
+      "is_correct": false,
+      "elapsed": 1.0318818092346191
+    },
+    {
+      "id": 24,
+      "subject": "Research publications",
+      "question": "What is the utilization factor in the M/M/1 queueing model?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.7678883075714111
+    },
+    {
+      "id": 25,
+      "subject": "Research publications",
+      "question": "Which of the following is a potential commercial cloud platform for central cloud deployment?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.6091780662536621
+    },
+    {
+      "id": 26,
+      "subject": "Research publications",
+      "question": "What is the role of the graph Fourier transform?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.8710589408874512
+    },
+    {
+      "id": 27,
+      "subject": "Research overview",
+      "question": "What is the purpose of waveform multiplexing?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.6648390293121338
+    },
+    {
+      "id": 28,
+      "subject": "Research publications",
+      "question": "What is the definition of channel capacity?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.8864078521728516
+    },
+    {
+      "id": 29,
+      "subject": "Research overview",
+      "question": "What is the main limitation of natural materials for nonreciprocal systems at optical frequencies?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.7789032459259033
+    },
+    {
+      "id": 30,
+      "subject": "Research overview",
+      "question": "What is the main difference in throughput requirements between AANETs (Aircraft Ad-hoc Networks) and FANETs (Flying it ad hoc Networks)?",
+      "correct_answer": 0,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 1.0609612464904785
+    },
+    {
+      "id": 31,
+      "subject": "Research publications",
+      "question": "What is the objective function used by Barlow Twins?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.7612628936767578
+    },
+    {
+      "id": 32,
+      "subject": "Research overview",
+      "question": "What is the Quantum Volume benchmark designed by IBM?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.8106849193572998
+    },
+    {
+      "id": 33,
+      "subject": "Standards specifications",
+      "question": "What information triggers the activation or deactivation of access stratum time distribution for a UE? [3GPP Release 18]",
+      "correct_answer": 2,
+      "predicted_answer": 4,
+      "is_correct": false,
+      "elapsed": 0.7949528694152832
+    },
+    {
+      "id": 34,
+      "subject": "Lexicon",
+      "question": "What is the definition of ProSe Discovery?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.7644898891448975
+    },
+    {
+      "id": 35,
+      "subject": "Research publications",
+      "question": "What is the purpose of the test loss in machine learning?",
+      "correct_answer": 1,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.7871859073638916
+    },
+    {
+      "id": 36,
+      "subject": "Lexicon",
+      "question": "What is the definition of an IP-CAN bearer?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.8885929584503174
+    },
+    {
+      "id": 37,
+      "subject": "Research overview",
+      "question": "What is the involvement of the cellular network in Device-to-Device (D2D) communication?",
+      "correct_answer": 1,
+      "predicted_answer": 4,
+      "is_correct": false,
+      "elapsed": 0.8797008991241455
+    },
+    {
+      "id": 38,
+      "subject": "Research publications",
+      "question": "What is the superior spectral efficiency of NOMA?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.8100438117980957
+    },
+    {
+      "id": 39,
+      "subject": "Standards specifications",
+      "question": "What specific mechanism is used to obtain start and ending times for each available white space channel? [IEEE 802.11]",
+      "correct_answer": 1,
+      "predicted_answer": 0,
+      "is_correct": false,
+      "elapsed": 0.7144989967346191
+    },
+    {
+      "id": 40,
+      "subject": "Research overview",
+      "question": "What can compensate for the propagation loss in millimeter-wave communications?",
+      "correct_answer": 1,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.7180821895599365
+    },
+    {
+      "id": 41,
+      "subject": "Standards specifications",
+      "question": "How can the transformation from a LCS to a GCS be expressed? [3GPP Release 18]",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.6975600719451904
+    },
+    {
+      "id": 42,
+      "subject": "Standards specifications",
+      "question": "What does the NAS protocol on N1 comprise of? [3GPP Release 18]",
+      "correct_answer": 0,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.8155252933502197
+    },
+    {
+      "id": 43,
+      "subject": "Research overview",
+      "question": "What is the objective of soft decoding of a pixel patch in the soft decoding of JPEG encoded images?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.874610185623169
+    },
+    {
+      "id": 44,
+      "subject": "Research overview",
+      "question": "In the design of a nonreciprocal system with a double slab, what factor is essential for achieving nonreciprocity?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.8168959617614746
+    },
+    {
+      "id": 45,
+      "subject": "Research publications",
+      "question": "Which organization is responsible for the development of technical standards covering all fields of telecommunications?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.8162341117858887
+    },
+    {
+      "id": 46,
+      "subject": "Research publications",
+      "question": "What is the maximum number of eigenmodes that the MIMO channel can support? (nt is the number of transmit antennas, nr is the number of receive antennas)",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.7855386734008789
+    },
+    {
+      "id": 47,
+      "subject": "Standards overview",
+      "question": "When can AMF (Authentication Management Field) relocation take place?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 1.2110941410064697
+    },
+    {
+      "id": 48,
+      "subject": "Research publications",
+      "question": "What is the new class of 6G services that requires joint uplink-downlink designs and can potentially offer energy to small devices via wireless energy transfer?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.8209259510040283
+    },
+    {
+      "id": 49,
+      "subject": "Research publications",
+      "question": "What is the function of connection control in protocols?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.8053641319274902
+    },
+    {
+      "id": 50,
+      "subject": "Standards specifications",
+      "question": "What is included in the cancellation of a PUSCH transmission for a serving cell? [3GPP Release 17]",
+      "correct_answer": 0,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.8343498706817627
+    },
+    {
+      "id": 51,
+      "subject": "Research publications",
+      "question": "Research Papers",
+      "correct_answer": 0,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.6779341697692871
+    },
+    {
+      "id": 52,
+      "subject": "Standards specifications",
+      "question": "What is the meaning of LOS in the channel coefficient generation procedure? [3GPP Release 17]",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.794281005859375
+    },
+    {
+      "id": 53,
+      "subject": "Research publications",
+      "question": "What is the purpose of fronthauling in a 5G ultra dense cloud small cell network (UDCSNet)?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.7088241577148438
+    },
+    {
+      "id": 54,
+      "subject": "Research overview",
+      "question": "What are the two main design approaches for MC (molecular communications) transmitter (Tx) and receiver (Rx)?",
+      "correct_answer": 0,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.7877669334411621
+    },
+    {
+      "id": 55,
+      "subject": "Research publications",
+      "question": "What factors should be considered in the decision-making process for computation offloading?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.6289300918579102
+    },
+    {
+      "id": 56,
+      "subject": "Research publications",
+      "question": "What is the optimal strategy for achieving sum-capacity in the BC (broadcast channel) model?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.6949801445007324
+    },
+    {
+      "id": 57,
+      "subject": "Lexicon",
+      "question": "What is non-access stratum?",
+      "correct_answer": 3,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.6935529708862305
+    },
+    {
+      "id": 58,
+      "subject": "Research publications",
+      "question": "What does the state space of the M/E k/1 system represent?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.8309230804443359
+    },
+    {
+      "id": 59,
+      "subject": "Research publications",
+      "question": "What is the main purpose of using small cells?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.8505949974060059
+    },
+    {
+      "id": 60,
+      "subject": "Research overview",
+      "question": "Which schemes fall into the category of bi-orthogonal schemes?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.7922251224517822
+    },
+    {
+      "id": 61,
+      "subject": "Research publications",
+      "question": "What is the purpose of convex relaxations in discrete optimization problems?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.8094899654388428
+    },
+    {
+      "id": 62,
+      "subject": "Research publications",
+      "question": "What does the surface integral in Poynting's theorem represent?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.6903820037841797
+    },
+    {
+      "id": 63,
+      "subject": "Standards specifications",
+      "question": "What can a UE be provided for scrambling the CRC of multicast DCI formats for scheduling PDSCH receptions? [3GPP Release 17]",
+      "correct_answer": 0,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.7854578495025635
+    },
+    {
+      "id": 64,
+      "subject": "Research publications",
+      "question": "What do metasurfaces transform incident waves into?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.7046961784362793
+    },
+    {
+      "id": 65,
+      "subject": "Lexicon",
+      "question": "What is the purpose of paging in mobile networks?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.7985107898712158
+    },
+    {
+      "id": 66,
+      "subject": "Standards specifications",
+      "question": "Which state supports QoE measurement reporting in UMTS networks? [3GPP Release 14]",
+      "correct_answer": 1,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.714296817779541
+    },
+    {
+      "id": 67,
+      "subject": "Research publications",
+      "question": "What is the purpose of encapsulation in protocols?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.7940237522125244
+    },
+    {
+      "id": 68,
+      "subject": "Research publications",
+      "question": "What polarization property allows the sheet to act as a perfect absorber from one side and a twist polarizer in reflection from the other side?",
+      "correct_answer": 2,
+      "predicted_answer": 0,
+      "is_correct": false,
+      "elapsed": 0.7887749671936035
+    },
+    {
+      "id": 69,
+      "subject": "Research overview",
+      "question": "Which machine learning algorithm learns by interacting with its environment?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.6939139366149902
+    },
+    {
+      "id": 70,
+      "subject": "Research publications",
+      "question": "What is the effect of shadowing on the average correlation between the channels of UEs (User Equipments) in the same region?",
+      "correct_answer": 4,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.7232630252838135
+    },
+    {
+      "id": 71,
+      "subject": "Research publications",
+      "question": "What does SE stand for in the context of cellular networks?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.7648310661315918
+    },
+    {
+      "id": 72,
+      "subject": "Research publications",
+      "question": "What type of attack aims to break down the victim computer network or cyber systems and interrupt their services?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.6243829727172852
+    },
+    {
+      "id": 73,
+      "subject": "Research overview",
+      "question": "Which wireless charging standard supports bidirectional wireless charging between portable devices?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.6296298503875732
+    },
+    {
+      "id": 74,
+      "subject": "Research overview",
+      "question": "How is the fading coefficient commonly modeled?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.8661491870880127
+    },
+    {
+      "id": 75,
+      "subject": "Research publications",
+      "question": "What is the relationship between the electric and magnetic fields in the far field of a fixed antenna radiating into free space?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.8893828392028809
+    },
+    {
+      "id": 76,
+      "subject": "Research publications",
+      "question": "Why is solar power considered inappropriate for smaller UAVs (Unmanned aerial vehicles)?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.698483943939209
+    },
+    {
+      "id": 77,
+      "subject": "Standards specifications",
+      "question": "What information is provided by the SMF to the UPF during the N4 Session Establishment procedure? [3GPP Release 18]",
+      "correct_answer": 2,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.6903722286224365
+    },
+    {
+      "id": 78,
+      "subject": "Research overview",
+      "question": "Which use case category involves gathering a huge amount of data from users or sensors?",
+      "correct_answer": 1,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.6808671951293945
+    },
+    {
+      "id": 79,
+      "subject": "Research publications",
+      "question": "What are the two common adversarial techniques used to attack GPS (Global Positioning System) sensors?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 1.0659680366516113
+    },
+    {
+      "id": 80,
+      "subject": "Research overview",
+      "question": "In the D2D (device to device) channel topology, how does the user achieve accurate positioning?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.8366551399230957
+    },
+    {
+      "id": 81,
+      "subject": "Research publications",
+      "question": "Which technique utilizes multiple antennas to improve the stealthiness of wireless channels?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.701225996017456
+    },
+    {
+      "id": 82,
+      "subject": "Research publications",
+      "question": "What is the necessary condition for zero reflection?",
+      "correct_answer": 0,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.6983370780944824
+    },
+    {
+      "id": 83,
+      "subject": "Research overview",
+      "question": "What is one of the key advantages of the sub-THz band for 6G systems?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.7715258598327637
+    },
+    {
+      "id": 84,
+      "subject": "Research overview",
+      "question": "What are some applications of GANs?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.7970461845397949
+    },
+    {
+      "id": 85,
+      "subject": "Research overview",
+      "question": "What type of energy sources are considered attractive solutions for improving the energy efficiency in 5G networks?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.7887990474700928
+    },
+    {
+      "id": 86,
+      "subject": "Research publications",
+      "question": "What does TCP (Transmission Control Protocol) provide in terms of data transfer?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.6288189888000488
+    },
+    {
+      "id": 87,
+      "subject": "Standards specifications",
+      "question": "What is the purpose of a codeword in the context of Target UE privacy? [3GPP Release 17]",
+      "correct_answer": 3,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.879127025604248
+    },
+    {
+      "id": 88,
+      "subject": "Research publications",
+      "question": "What is one potential use case for 6G networks?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.7641041278839111
+    },
+    {
+      "id": 89,
+      "subject": "Standards specifications",
+      "question": "How is an active scan initiated? [IEEE 802.15.4]",
+      "correct_answer": 0,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.6941382884979248
+    },
+    {
+      "id": 90,
+      "subject": "Research publications",
+      "question": "How does NOMA (Non-orthogonal multiple access) differ from conventional OFDMA (orthogonal frequency division multiple access) technique?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.8004870414733887
+    },
+    {
+      "id": 91,
+      "subject": "Standards specifications",
+      "question": "Which interface is used to carry packet data transmission and mobility management between the SGSN and BSS? [3GPP Release 17]",
+      "correct_answer": 2,
+      "predicted_answer": 4,
+      "is_correct": false,
+      "elapsed": 0.6916060447692871
+    },
+    {
+      "id": 92,
+      "subject": "Standards specifications",
+      "question": "Which bearer option supports the SeNB being directly connected with the S-GW via S1-U? [3GPP Release 17]",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.7622110843658447
+    },
+    {
+      "id": 93,
+      "subject": "Research publications",
+      "question": "What is the main reason for offloading cellular traffic to WiFi and small cells?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.6988358497619629
+    },
+    {
+      "id": 94,
+      "subject": "Research publications",
+      "question": "What is the constraint on the total throughput in the uplink AWGN (additive white gaussian noise) channel?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.7899110317230225
+    },
+    {
+      "id": 95,
+      "subject": "Standards specifications",
+      "question": "What is the difference between reliability and communication service availability? [3GPP Release 19]",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 1.0709409713745117
+    },
+    {
+      "id": 96,
+      "subject": "Research publications",
+      "question": "What is the purpose of slicing for AI (artificial intelligence)?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.6850020885467529
+    },
+    {
+      "id": 97,
+      "subject": "Research publications",
+      "question": "What is the eigenvalue of the circulant matrix associated with the circular convolution operation?",
+      "correct_answer": 0,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.6791942119598389
+    },
+    {
+      "id": 98,
+      "subject": "Research overview",
+      "question": "Which of the following localization techniques is based on the difference in signal propagation times from different transmitters?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.7828779220581055
+    },
+    {
+      "id": 99,
+      "subject": "Research publications",
+      "question": "What motivates the need for exploring higher frequency bands beyond sub-6 GHz in 6G?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.8030598163604736
+    },
+    {
+      "id": 100,
+      "subject": "Standards overview",
+      "question": "Which sub-carrier spacing is supported by NR-V2X (Vehicle to everything) in SL (sidelink)?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.8722679615020752
+    },
+    {
+      "id": 101,
+      "subject": "Research publications",
+      "question": "What are the three basic multi-terminal system architectures?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.8081398010253906
+    },
+    {
+      "id": 102,
+      "subject": "Standards overview",
+      "question": "What protocol is used by SNMP messages? [TCP/IP]",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.7970850467681885
+    },
+    {
+      "id": 103,
+      "subject": "Research publications",
+      "question": "What is the purpose of power allocation in physical-layer security?",
+      "correct_answer": 0,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.8031806945800781
+    },
+    {
+      "id": 104,
+      "subject": "Research publications",
+      "question": "What is the focus of the High-Efficiency WLAN (HEW) Task Group?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.8235359191894531
+    },
+    {
+      "id": 105,
+      "subject": "Research publications",
+      "question": "What is Wi-Fi-based sensing?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.8017051219940186
+    },
+    {
+      "id": 106,
+      "subject": "Standards overview",
+      "question": "What does SBA stand for? [ETSI NFV Release 5]",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.6980850696563721
+    },
+    {
+      "id": 107,
+      "subject": "Research publications",
+      "question": "What are the R1 features in Wi-Fi 7?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.7065410614013672
+    },
+    {
+      "id": 108,
+      "subject": "Standards specifications",
+      "question": "In an S1G BSS, when is S1G_1M preamble transmission allowed as the response? [IEEE 802.11]",
+      "correct_answer": 3,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.8226330280303955
+    },
+    {
+      "id": 109,
+      "subject": "Research publications",
+      "question": "What is the benefit of using array gain in molecular MIMO systems?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.7848477363586426
+    },
+    {
+      "id": 110,
+      "subject": "Research overview",
+      "question": "What are some future requirements for 6G wireless networks? ",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.8675978183746338
+    },
+    {
+      "id": 111,
+      "subject": "Standards specifications",
+      "question": "What media capabilities are included in the IMS Multimedia Telephony service? [3GPP Release 17]",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.8011949062347412
+    },
+    {
+      "id": 112,
+      "subject": "Research overview",
+      "question": "What technique is used to improve the efficiency and robustness of training?",
+      "correct_answer": 1,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.638822078704834
+    },
+    {
+      "id": 113,
+      "subject": "Research overview",
+      "question": "What is the main motivation for choosing inband D2D (Device-to-Device) communication?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.8068130016326904
+    },
+    {
+      "id": 114,
+      "subject": "Research overview",
+      "question": "What is the advantage of having non-causal side information at the encoder in the wiretap channel model?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.8733580112457275
+    },
+    {
+      "id": 115,
+      "subject": "Research publications",
+      "question": "Where are the dApps executed in the O-RAN architecture?",
+      "correct_answer": 1,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.787337064743042
+    },
+    {
+      "id": 116,
+      "subject": "Research publications",
+      "question": "What is variable length scalar quantization?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.8817479610443115
+    },
+    {
+      "id": 117,
+      "subject": "Research publications",
+      "question": "What can be used to measure the similarity of states in MDP (Markov Decision Process) model compression?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.7018692493438721
+    },
+    {
+      "id": 118,
+      "subject": "Research publications",
+      "question": "What is the function of the remote radio heads (RRHs) in the C-RAN architecture?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.7805812358856201
+    },
+    {
+      "id": 119,
+      "subject": "Research overview",
+      "question": "What is transfer learning?",
+      "correct_answer": 4,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.7005569934844971
+    },
+    {
+      "id": 120,
+      "subject": "Research publications",
+      "question": "Why is learning the entire SCM (Structural Causal Model) difficult?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.6988248825073242
+    },
+    {
+      "id": 121,
+      "subject": "Research overview",
+      "question": "What are the key components of an MEC (Mobile Edge Computing) system?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.7992398738861084
+    },
+    {
+      "id": 122,
+      "subject": "Research publications",
+      "question": "What is the critical limitation of FDD (frequency-division duplex) operation for high mobility scenarios or higher frequencies?",
+      "correct_answer": 2,
+      "predicted_answer": 0,
+      "is_correct": false,
+      "elapsed": 0.7114269733428955
+    },
+    {
+      "id": 123,
+      "subject": "Research publications",
+      "question": "What is the major benefit of SVC when the channel is constant?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.7768368721008301
+    },
+    {
+      "id": 124,
+      "subject": "Research overview",
+      "question": "What are the on-device resource constraints considered in edge ML?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.6981201171875
+    },
+    {
+      "id": 125,
+      "subject": "Research publications",
+      "question": "What is the advantage of Semi-Persistent Scheduling for V2X (vehicle-to-everything)?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.8858380317687988
+    },
+    {
+      "id": 126,
+      "subject": "Research overview",
+      "question": "What is the main advantage of using a fixed code quantized consensus algorithm?",
+      "correct_answer": 2,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.8693172931671143
+    },
+    {
+      "id": 127,
+      "subject": "Standards specifications",
+      "question": "What determines the energy detection threshold in channel access procedures? [3GPP Release 17]",
+      "correct_answer": 3,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.7742998600006104
+    },
+    {
+      "id": 128,
+      "subject": "Standards overview",
+      "question": "Which organization developed the OSI model? [IEEE 802.3]",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.6137442588806152
+    },
+    {
+      "id": 129,
+      "subject": "Research publications",
+      "question": "What is the function of the pulse carver in an RZ-DPSK transmitter?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.8658878803253174
+    },
+    {
+      "id": 130,
+      "subject": "Research publications",
+      "question": "How does PLS (physical layer security) leverage the physical properties of the radio channel?",
+      "correct_answer": 3,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.7072410583496094
+    },
+    {
+      "id": 131,
+      "subject": "Research publications",
+      "question": "What is one benefit of RL (Reinforcement learning) algorithms in comparison to supervised and unsupervised learning?",
+      "correct_answer": 2,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.8559021949768066
+    },
+    {
+      "id": 132,
+      "subject": "Research publications",
+      "question": "With full CSI, what strategy achieves the capacity of the fast fading downlink channel?",
+      "correct_answer": 1,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.7821340560913086
+    },
+    {
+      "id": 133,
+      "subject": "Standards overview",
+      "question": "What does each port of a switch close? [IEEE 802.3]",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.8681399822235107
+    },
+    {
+      "id": 134,
+      "subject": "Research overview",
+      "question": "What is the convergence time of the subgradient method on complete graphs?",
+      "correct_answer": 3,
+      "predicted_answer": 0,
+      "is_correct": false,
+      "elapsed": 0.6139018535614014
+    },
+    {
+      "id": 135,
+      "subject": "Research publications",
+      "question": "Which dispersion mechanism results from the propagation delay differences between modes within a multimode fiber?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.7015867233276367
+    },
+    {
+      "id": 136,
+      "subject": "Research publications",
+      "question": "Which regularization technique penalizes the discriminator in generative adversarial networks based on the gradient?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.7945940494537354
+    },
+    {
+      "id": 137,
+      "subject": "Standards specifications",
+      "question": "When can target UEs be positioned for lawful interception services? [3GPP Release 17]",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.7926981449127197
+    },
+    {
+      "id": 138,
+      "subject": "Research publications",
+      "question": "What does QoE (quality of experience) measure in the online streaming controller?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.7774002552032471
+    },
+    {
+      "id": 139,
+      "subject": "Research publications",
+      "question": "What is the interface between the control layer and the infrastructure layer called?",
+      "correct_answer": 3,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.7315309047698975
+    },
+    {
+      "id": 140,
+      "subject": "Research publications",
+      "question": "Which component validates the EAP (Extensible Authentication Protocol) peer's credentials and authorizes access to the network?",
+      "correct_answer": 2,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.7843499183654785
+    },
+    {
+      "id": 141,
+      "subject": "Research publications",
+      "question": "What is the role of SDN (software defined networking) controllers in handover management in network slicing based 5G systems?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.8774580955505371
+    },
+    {
+      "id": 142,
+      "subject": "Research publications",
+      "question": "What technique is used to cancel interference signals in NOMA (Non-orthogonal multiple access)?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.6939311027526855
+    },
+    {
+      "id": 143,
+      "subject": "Research publications",
+      "question": "What is the maximum entropy density for Y=X1+X2, if X1 and X2 are independent?",
+      "correct_answer": 3,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.6913008689880371
+    },
+    {
+      "id": 144,
+      "subject": "Research publications",
+      "question": "What is the channel spacing for CWDM (coarse wavelength division multiplexing)?",
+      "correct_answer": 0,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.7887568473815918
+    },
+    {
+      "id": 145,
+      "subject": "Research overview",
+      "question": "Which of the following statements about UAV-assisted D2D (device-to-device) networks is true?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.9252328872680664
+    },
+    {
+      "id": 146,
+      "subject": "Research publications",
+      "question": "What is the definition of bit error rate (BER)?",
+      "correct_answer": 3,
+      "predicted_answer": 0,
+      "is_correct": false,
+      "elapsed": 0.7144250869750977
+    },
+    {
+      "id": 147,
+      "subject": "Standards overview",
+      "question": "What is the main role of the UTM (UAS Traffic Management) in the 3GPP network?",
+      "correct_answer": 0,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.8755409717559814
+    },
+    {
+      "id": 148,
+      "subject": "Research overview",
+      "question": "What is the time-reversal property of an isotropic dielectric material?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.8713910579681396
+    },
+    {
+      "id": 149,
+      "subject": "Research publications",
+      "question": "What is the consequence of the fact that the total power radiated varies as the square of the frequency of the oscillation?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.9669778347015381
+    },
+    {
+      "id": 150,
+      "subject": "Lexicon",
+      "question": "What does the acronym VPN stand for?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.6877379417419434
+    },
+    {
+      "id": 151,
+      "subject": "Standards specifications",
+      "question": "What does an authentication service producer provide? [3GPP Release 17]",
+      "correct_answer": 0,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.7872817516326904
+    },
+    {
+      "id": 152,
+      "subject": "Research overview",
+      "question": "What is the goal of the multi-leader multi-follower Stackelberg game in mobile edge computing services?",
+      "correct_answer": 1,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.78000807762146
+    },
+    {
+      "id": 153,
+      "subject": "Research publications",
+      "question": "What is the strict latency requirement for applications like factory automation and tele-surgery in 5G URLLC (ultra-reliable low latency communication)?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.8662090301513672
+    },
+    {
+      "id": 154,
+      "subject": "Standards overview",
+      "question": "What is the main objective of intent driven management for service or network management? [3GPP Release 17]",
+      "correct_answer": 3,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.8772122859954834
+    },
+    {
+      "id": 155,
+      "subject": "Research publications",
+      "question": "Which technique suffers severe power losses due to chromatic dispersion?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.7820587158203125
+    },
+    {
+      "id": 156,
+      "subject": "Standards specifications",
+      "question": "What does scheduling the periods of location monitoring and reporting help reduce? [3GPP Release 17]",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.8165450096130371
+    },
+    {
+      "id": 157,
+      "subject": "Research publications",
+      "question": "In a closed network, what condition must be satisfied for the actual throughputs to be determined?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.7225079536437988
+    },
+    {
+      "id": 158,
+      "subject": "Research overview",
+      "question": "Which topology is commonly used in inductive coupling systems?",
+      "correct_answer": 1,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.7224149703979492
+    },
+    {
+      "id": 159,
+      "subject": "Standards specifications",
+      "question": "What is the term for the small amount of time each frequency is used in frequency-hopping systems? [IEEE 802.11]",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.6986300945281982
+    },
+    {
+      "id": 160,
+      "subject": "Standards overview",
+      "question": "What happens in the EAP-based Network Slice-Specific authentication procedure? [3GPP Release 16]",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.8002290725708008
+    },
+    {
+      "id": 161,
+      "subject": "Standards specifications",
+      "question": "How does a STA respond to an individually addressed Poll frame? [IEEE 802.11]",
+      "correct_answer": 1,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.7886340618133545
+    },
+    {
+      "id": 162,
+      "subject": "Research publications",
+      "question": "What is the major driving force for wireless operators to reduce energy consumption in wireless networks?",
+      "correct_answer": 4,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.7926368713378906
+    },
+    {
+      "id": 163,
+      "subject": "Research overview",
+      "question": "What are the components of a practical PHY (physical) layer architecture for RSMA (Rate-splitting multiple access)?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.7958710193634033
+    },
+    {
+      "id": 164,
+      "subject": "Standards specifications",
+      "question": "How can the K-factor of LOS channel models be changed? [3GPP Release 17]",
+      "correct_answer": 2,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.8035008907318115
+    },
+    {
+      "id": 165,
+      "subject": "Lexicon",
+      "question": "What is the definition of residual error rate?",
+      "correct_answer": 0,
+      "predicted_answer": 4,
+      "is_correct": false,
+      "elapsed": 0.6933896541595459
+    },
+    {
+      "id": 166,
+      "subject": "Research publications",
+      "question": "What is the purpose of EAP (Extensible Authentication Protocol) exchanges?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.7901580333709717
+    },
+    {
+      "id": 167,
+      "subject": "Standards specifications",
+      "question": "When does authentication (charging/billing network) occur in order to get access to services? [3GPP Release 18]",
+      "correct_answer": 0,
+      "predicted_answer": 4,
+      "is_correct": false,
+      "elapsed": 0.731447696685791
+    },
+    {
+      "id": 168,
+      "subject": "Research overview",
+      "question": "What is the main purpose of generating adversarial examples?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.8064610958099365
+    },
+    {
+      "id": 169,
+      "subject": "Standards specifications",
+      "question": "What is the purpose of the 'Subscribe-notify' communication paradigm in management service interactions? [3GPP Release 17]",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.8952121734619141
+    },
+    {
+      "id": 170,
+      "subject": "Research publications",
+      "question": "What is the purpose of cloud radio access networks (CRAN)?",
+      "correct_answer": 0,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.7781708240509033
+    },
+    {
+      "id": 171,
+      "subject": "Research overview",
+      "question": "What is the purpose of conducting system-level and network-level performance analysis in mmWave-UAV communications?",
+      "correct_answer": 2,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.9650640487670898
+    },
+    {
+      "id": 172,
+      "subject": "Research publications",
+      "question": "Which PUCCH (physical uplink control channel) format uses supplemental ZC (Zadoff Chu) sequences for control information transmission in LTE?",
+      "correct_answer": 3,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.885732889175415
+    },
+    {
+      "id": 173,
+      "subject": "Research publications",
+      "question": "What is the purpose of traffic classification?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.7133028507232666
+    },
+    {
+      "id": 174,
+      "subject": "Research overview",
+      "question": "What are the limitations of functional repair?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.7107088565826416
+    },
+    {
+      "id": 175,
+      "subject": "Research publications",
+      "question": "What is the purpose of the network digital twin (NDT)?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.7177262306213379
+    },
+    {
+      "id": 176,
+      "subject": "Standards overview",
+      "question": "What is the recommended guard time for OFDM systems? [IEEE 802.11]",
+      "correct_answer": 2,
+      "predicted_answer": 0,
+      "is_correct": false,
+      "elapsed": 0.7061550617218018
+    },
+    {
+      "id": 177,
+      "subject": "Research publications",
+      "question": "Which of the following is an advantage of using Low Earth Orbit (LEO) satellites?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.7213749885559082
+    },
+    {
+      "id": 178,
+      "subject": "Research overview",
+      "question": "What are the objectives of integrating special hardware or software modules in accelerator systems for sparse and irregular tensor computations?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.7990317344665527
+    },
+    {
+      "id": 179,
+      "subject": "Research publications",
+      "question": "What is the primary role of Wireless Networked Control Systems (WNCS) in Industry 4.0?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.7806069850921631
+    },
+    {
+      "id": 180,
+      "subject": "Research publications",
+      "question": "Which part of the radio access network consumes the most energy?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.6191627979278564
+    },
+    {
+      "id": 181,
+      "subject": "Research overview",
+      "question": "Which of the following is a challenge of remote storage using traditional servers?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.6899080276489258
+    },
+    {
+      "id": 182,
+      "subject": "Research publications",
+      "question": "What are the three types of devices defined by LoRaWAN?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.8051800727844238
+    },
+    {
+      "id": 183,
+      "subject": "Standards overview",
+      "question": "What is the number of fundamental arithmetic multiplications performed using the classical schoolbook multiplication method when two N-digit numbers are multiplied?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.7163159847259521
+    },
+    {
+      "id": 184,
+      "subject": "Standards specifications",
+      "question": "What is the purpose of the Media Handling Extensions of IMS-based Telepresence work item? [3GPP Release 14]",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.800684928894043
+    },
+    {
+      "id": 185,
+      "subject": "Research publications",
+      "question": "What is the concept of communication aided sensing?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.7025458812713623
+    },
+    {
+      "id": 186,
+      "subject": "Research publications",
+      "question": "Which of the following methods are considered to be the dominant wireless power transfer (WPT) technologies for charging vehicles?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.7943129539489746
+    },
+    {
+      "id": 187,
+      "subject": "Research publications",
+      "question": "What is the main condition for achieving perfectly secure data transmission in physical-layer security?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.8675580024719238
+    },
+    {
+      "id": 188,
+      "subject": "Research publications",
+      "question": "Which regulations cover the design, manufacture, and operation of drones?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.8902840614318848
+    },
+    {
+      "id": 189,
+      "subject": "Standards overview",
+      "question": "What is the drawback of user-centric clustering (UCC) in CF (Cell-free) mMIMO (massive multiple-input-multiple-output) networks?",
+      "correct_answer": 3,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.7073118686676025
+    },
+    {
+      "id": 190,
+      "subject": "Research publications",
+      "question": "What is the advantage of using mmWave in UDN (Ultra-dense network) backhaul?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.697843074798584
+    },
+    {
+      "id": 191,
+      "subject": "Research overview",
+      "question": "What is one disadvantage of using satellite links for tracking aircraft?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.7743909358978271
+    },
+    {
+      "id": 192,
+      "subject": "Research publications",
+      "question": "What are the three layers in the TrasoNET (Traffic-Social Network) framework?",
+      "correct_answer": 4,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.8287539482116699
+    },
+    {
+      "id": 193,
+      "subject": "Research publications",
+      "question": "Which wireless technology is commonly used for localization when the GPS (Global Positioning System) is inadequate?",
+      "correct_answer": 3,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.6251821517944336
+    },
+    {
+      "id": 194,
+      "subject": "Standards specifications",
+      "question": "How does the DCCF determine the NF instance that can be a Data Source? [3GPP Release 18]",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.7063601016998291
+    },
+    {
+      "id": 195,
+      "subject": "Standards overview",
+      "question": "Which enhancement is applicable to 'on-network' operation in MCPTT service? [3GPP Release 14]",
+      "correct_answer": 0,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.7812557220458984
+    },
+    {
+      "id": 196,
+      "subject": "Standards overview",
+      "question": "Which entity controls the packet duplication functionality in DC (dual connectivity)?",
+      "correct_answer": 3,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.7020139694213867
+    },
+    {
+      "id": 197,
+      "subject": "Research publications",
+      "question": "What is the purpose of a BLE (Bluetooth Low Energy) beacon?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.8696091175079346
+    },
+    {
+      "id": 198,
+      "subject": "Research publications",
+      "question": "What is the probability simplex?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.8243668079376221
+    },
+    {
+      "id": 199,
+      "subject": "Research publications",
+      "question": "Where can reconfigurable intelligent surfaces (RISs) be installed?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.7858428955078125
+    },
+    {
+      "id": 200,
+      "subject": "Standards specifications",
+      "question": "What is the scrambling sequence initialized with at the start of each SS/PBCH block? [3GPP Release 17]",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.8227441310882568
+    },
+    {
+      "id": 201,
+      "subject": "Research publications",
+      "question": "What is the size of the key space for DES (Data Encryption Standard)?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.7772378921508789
+    },
+    {
+      "id": 202,
+      "subject": "Standards overview",
+      "question": "Which standard enables building Digital Twins of different Physical Twins using combinations of XML (eXtensible Markup Language) and C codes?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.8101248741149902
+    },
+    {
+      "id": 203,
+      "subject": "Standards specifications",
+      "question": "Is supporting periodic location reporting a requirement for Emergency Services? [3GPP Release 17]",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.7663900852203369
+    },
+    {
+      "id": 204,
+      "subject": "Research publications",
+      "question": "What is the purpose of a regenerator circuit in digital transmission?",
+      "correct_answer": 4,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.7390670776367188
+    },
+    {
+      "id": 205,
+      "subject": "Standards overview",
+      "question": "What is the purpose of trunking in VLANs? [IEEE 802.3]",
+      "correct_answer": 2,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.6995770931243896
+    },
+    {
+      "id": 206,
+      "subject": "Standards specifications",
+      "question": "What does EN-DC stand for? [3GPP Release 18]",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.8684170246124268
+    },
+    {
+      "id": 207,
+      "subject": "Research publications",
+      "question": "What does the floquet-bloch theorem state?",
+      "correct_answer": 0,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.89546799659729
+    },
+    {
+      "id": 208,
+      "subject": "Research publications",
+      "question": "What are some ways to achieve data integrity in resource-constrained IoT (Internet of Thing) networks?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.8073196411132812
+    },
+    {
+      "id": 209,
+      "subject": "Research publications",
+      "question": "What is the name of the strategy that aligns the transmit signal in the direction of the transmit antenna array pattern?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.6282260417938232
+    },
+    {
+      "id": 210,
+      "subject": "Research publications",
+      "question": "What sparsity property do mmWave massive MIMO channels exhibit?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.6328909397125244
+    },
+    {
+      "id": 211,
+      "subject": "Standards specifications",
+      "question": "Which transmission mode does the RLC sublayer use for dedicated traffic channels (DTCH)? [3GPP Release 18]",
+      "correct_answer": 2,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.7127470970153809
+    },
+    {
+      "id": 212,
+      "subject": "Standards overview",
+      "question": "Which protocol does IEEE 802.1x use to exchange information with a device/user requesting access to a port? [IEEE 802.3]",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.6861622333526611
+    },
+    {
+      "id": 213,
+      "subject": "Lexicon",
+      "question": "What is Flexible Layer One?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.8968570232391357
+    },
+    {
+      "id": 214,
+      "subject": "Standards overview",
+      "question": "What is the purpose of the Master/Slave communication protocol?",
+      "correct_answer": 3,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.7921831607818604
+    },
+    {
+      "id": 215,
+      "subject": "Research publications",
+      "question": "What is the main principle behind SimCLR (simple framework for contrastive learning)?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.7970421314239502
+    },
+    {
+      "id": 216,
+      "subject": "Research publications",
+      "question": "What impact does the frequency of device mobility have on training time?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.8055269718170166
+    },
+    {
+      "id": 217,
+      "subject": "Research publications",
+      "question": "How can valuable nodes be identified before dropping them in the FL (Federated learning) process?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.8788661956787109
+    },
+    {
+      "id": 218,
+      "subject": "Standards specifications",
+      "question": "What is a multi-modal communication service? [3GPP Release 17]",
+      "correct_answer": 2,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.7783069610595703
+    },
+    {
+      "id": 219,
+      "subject": "Standards overview",
+      "question": "What does MSTP stand for? [IEEE 802.3]",
+      "correct_answer": 1,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.6879699230194092
+    },
+    {
+      "id": 220,
+      "subject": "Research publications",
+      "question": "What is the purpose of model-weighting in asynchronous federated learning?",
+      "correct_answer": 3,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.6318440437316895
+    },
+    {
+      "id": 221,
+      "subject": "Standards specifications",
+      "question": "What does the SN-DU send to the SN-CU after receiving the UE CONTEXT SETUP REQUEST message? [3GPP Release 17]",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.8069429397583008
+    },
+    {
+      "id": 222,
+      "subject": "Standards specifications",
+      "question": "What is the purpose of the BEARER CONTEXT SETUP REQUEST message in the UE Initial Access procedure? [3GPP Release 17]",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.8011682033538818
+    },
+    {
+      "id": 223,
+      "subject": "Standards specifications",
+      "question": "Which interface is used to support mobility and bearer management between the MME and S-GW? [3GPP Release 17]",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.77034592628479
+    },
+    {
+      "id": 224,
+      "subject": "Research overview",
+      "question": "Which type of LS-MIMO system deals with the MIMO detection problem on an underloaded uplink?",
+      "correct_answer": 1,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.7281579971313477
+    },
+    {
+      "id": 225,
+      "subject": "Research overview",
+      "question": "What is one of the deployment requirements for an open RAN solution? ",
+      "correct_answer": 3,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.6136870384216309
+    },
+    {
+      "id": 226,
+      "subject": "Research overview",
+      "question": "What are the two major types of spectrum access?",
+      "correct_answer": 0,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.6851949691772461
+    },
+    {
+      "id": 227,
+      "subject": "Research publications",
+      "question": "What SA is established in the first exchange of the IKEv2 protocol?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.6397430896759033
+    },
+    {
+      "id": 228,
+      "subject": "Standards specifications",
+      "question": "Which reference point provides similar functionality for online charging as Ro? [3GPP Release 18]",
+      "correct_answer": 1,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.7089769840240479
+    },
+    {
+      "id": 229,
+      "subject": "Research publications",
+      "question": "Which concept allows for the creation of multiple logical networks that are isolated and independent from each other?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.7156729698181152
+    },
+    {
+      "id": 230,
+      "subject": "Research publications",
+      "question": "What is one of the security challenges posed by wearable devices?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.8607571125030518
+    },
+    {
+      "id": 231,
+      "subject": "Research publications",
+      "question": "Which interface allows communication between two eNBs (E-UTRAN Node Bs)?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.7103159427642822
+    },
+    {
+      "id": 232,
+      "subject": "Standards overview",
+      "question": "What is the purpose of the charging extensions in the feature related to WLAN access in EPC? [3GPP Release 15]",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.7140059471130371
+    },
+    {
+      "id": 233,
+      "subject": "Research overview",
+      "question": "What is the fundamental principle of RS (Rate-splitting) in wireless networks?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.8726611137390137
+    },
+    {
+      "id": 234,
+      "subject": "Research publications",
+      "question": "What is the role of multipath in the MIMO channel with two multipaths?",
+      "correct_answer": 4,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.7137970924377441
+    },
+    {
+      "id": 235,
+      "subject": "Research publications",
+      "question": "Where may location-related computation be executed for positioning solutions?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.8593332767486572
+    },
+    {
+      "id": 236,
+      "subject": "Standards specifications",
+      "question": "Which performance criterion is used to minimize cell congestion in the Evolved Packet System? [3GPP Release 17]",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.6434087753295898
+    },
+    {
+      "id": 237,
+      "subject": "Research publications",
+      "question": "What is the tradeoff between coverage and capacity in conventional direct transmission systems?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.7012100219726562
+    },
+    {
+      "id": 238,
+      "subject": "Standards specifications",
+      "question": "What happens when an acknowledgment is expected but does not arrive? [IEEE 802.11]",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.7062311172485352
+    },
+    {
+      "id": 239,
+      "subject": "Standards specifications",
+      "question": "What is the purpose of control frames in 802.11? [IEEE 802.11]",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.8102331161499023
+    },
+    {
+      "id": 240,
+      "subject": "Standards specifications",
+      "question": "What is the wireless distribution system configuration often called? [IEEE 802.11]",
+      "correct_answer": 4,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.7076308727264404
+    },
+    {
+      "id": 241,
+      "subject": "Research overview",
+      "question": "How can asset management benefit from tracking?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.6936461925506592
+    },
+    {
+      "id": 242,
+      "subject": "Research publications",
+      "question": "What is the name given to modes with positive (negative) eigenvalues?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.805042028427124
+    },
+    {
+      "id": 243,
+      "subject": "Research overview",
+      "question": "Which of the following services requires the highest throughput in Aeronautical Ad-hoc Networks?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.7012128829956055
+    },
+    {
+      "id": 244,
+      "subject": "Standards overview",
+      "question": "What is the maximum segment length for Ethernet over twisted pair (10Base-T)? [IEEE 802.3]",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.810823917388916
+    },
+    {
+      "id": 245,
+      "subject": "Research overview",
+      "question": "Which modeling approach assumes random scatters in the environment?",
+      "correct_answer": 2,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.8071749210357666
+    },
+    {
+      "id": 246,
+      "subject": "Standards overview",
+      "question": "What are the challenges for positioning algorithms in vehicle-to-everything and rail transport scenarios?",
+      "correct_answer": 1,
+      "predicted_answer": 0,
+      "is_correct": false,
+      "elapsed": 0.9675111770629883
+    },
+    {
+      "id": 247,
+      "subject": "Research publications",
+      "question": "Which approach involves linking segmentation and classification in hyperspectral image analysis?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.7097680568695068
+    },
+    {
+      "id": 248,
+      "subject": "Lexicon",
+      "question": "What does the abbreviation 'UL-SCH' stand for?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.7028946876525879
+    },
+    {
+      "id": 249,
+      "subject": "Standards overview",
+      "question": "What is the purpose of remote identification for UAS (unmanned aircraft system) nodes?",
+      "correct_answer": 0,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 1.0012478828430176
+    },
+    {
+      "id": 250,
+      "subject": "Research publications",
+      "question": "What does WLAN stand for?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.8852617740631104
+    },
+    {
+      "id": 251,
+      "subject": "Research publications",
+      "question": "What is the difference between a secret key and a private key in public-key encryption?",
+      "correct_answer": 0,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.7891719341278076
+    },
+    {
+      "id": 252,
+      "subject": "Standards specifications",
+      "question": "In which phase does MDA identify ongoing issues and potential risks? [3GPP Release 17]",
+      "correct_answer": 4,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.6709270477294922
+    },
+    {
+      "id": 253,
+      "subject": "Research publications",
+      "question": "What is the advantage of decentralized implementation?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.6976697444915771
+    },
+    {
+      "id": 254,
+      "subject": "Research publications",
+      "question": "What happens to the coverage probability as the constellation height increases?",
+      "correct_answer": 1,
+      "predicted_answer": 0,
+      "is_correct": false,
+      "elapsed": 0.8914899826049805
+    },
+    {
+      "id": 255,
+      "subject": "Research publications",
+      "question": "What is the purpose of RIS-based reflection in the JRCC (joint radar and covert communication) system?",
+      "correct_answer": 3,
+      "predicted_answer": 4,
+      "is_correct": false,
+      "elapsed": 0.8707351684570312
+    },
+    {
+      "id": 256,
+      "subject": "Research overview",
+      "question": "In wireless power transfer (WPT), what is the primary purpose of the signal optimization module?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.7806038856506348
+    },
+    {
+      "id": 257,
+      "subject": "Research publications",
+      "question": "What is the main difference between the reciprocal and nonreciprocal unit cells?",
+      "correct_answer": 3,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.7074599266052246
+    },
+    {
+      "id": 258,
+      "subject": "Research overview",
+      "question": "What are the factors that affect AG (air to ground) link performance?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.7840361595153809
+    },
+    {
+      "id": 259,
+      "subject": "Lexicon",
+      "question": "What is the definition of Operating Band?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.779644250869751
+    },
+    {
+      "id": 260,
+      "subject": "Standards specifications",
+      "question": "Which logical architectures correspond to LIPA? [3GPP Release 17]",
+      "correct_answer": 2,
+      "predicted_answer": 0,
+      "is_correct": false,
+      "elapsed": 0.7063970565795898
+    },
+    {
+      "id": 261,
+      "subject": "Research overview",
+      "question": "What is the definition of the domain in transfer learning?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.775925874710083
+    },
+    {
+      "id": 262,
+      "subject": "Research overview",
+      "question": "In the context of quantum computing, what is a model circuit?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.8536741733551025
+    },
+    {
+      "id": 263,
+      "subject": "Research publications",
+      "question": "What are the advantages of the proposed metasurface-based RF (radio frequency) chain-free transmitter and space-down-conversion receiver?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.7811462879180908
+    },
+    {
+      "id": 264,
+      "subject": "Research publications",
+      "question": "What is the epigraph of a function?",
+      "correct_answer": 1,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.7983307838439941
+    },
+    {
+      "id": 265,
+      "subject": "Research publications",
+      "question": "What can mobiles in D2D (Device-to-Device) LAN (Local Area Network) serve as when some users are out of the coverage of the eNB (evolved Node B)?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.8674578666687012
+    },
+    {
+      "id": 266,
+      "subject": "Research publications",
+      "question": "What is the difference between mixed digital-optical beamforming and hybrid digital-analog beamforming?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.9700288772583008
+    },
+    {
+      "id": 267,
+      "subject": "Research overview",
+      "question": "Which company developed the Tensor Processing Unit (TPU)?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.6078810691833496
+    },
+    {
+      "id": 268,
+      "subject": "Research publications",
+      "question": "How many bits per hertz can be achieved practically with QPSK (QuadraturePhase Shift Keying) modulation?",
+      "correct_answer": 1,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.8077390193939209
+    },
+    {
+      "id": 269,
+      "subject": "Research overview",
+      "question": "What are the three typical dependency models of sub-tasks in the task-call graph?",
+      "correct_answer": 0,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.8823530673980713
+    },
+    {
+      "id": 270,
+      "subject": "Research publications",
+      "question": "What is the maximum acceptable lapse between a moment (e.g. head rotation) and a frame's pixels corresponding to the new field of view (FOV) for providing a pleasant immersive VR (Virtual Reality) experience?",
+      "correct_answer": 1,
+      "predicted_answer": 0,
+      "is_correct": false,
+      "elapsed": 0.8763608932495117
+    },
+    {
+      "id": 271,
+      "subject": "Lexicon",
+      "question": "What is the definition of user experienced data rate?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.895611047744751
+    },
+    {
+      "id": 272,
+      "subject": "Research overview",
+      "question": "What are the socio-technical concerns of drones?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.7042098045349121
+    },
+    {
+      "id": 273,
+      "subject": "Research overview",
+      "question": "Which compression strategy is based on the compress-and-forward relaying strategy?",
+      "correct_answer": 4,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.6173288822174072
+    },
+    {
+      "id": 274,
+      "subject": "Research publications",
+      "question": "What is the purpose of trusted-repeater networks in the Quantum internet (Qinternet)?",
+      "correct_answer": 1,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.7938649654388428
+    },
+    {
+      "id": 275,
+      "subject": "Research overview",
+      "question": "What is one of the advantages of performing a CMA (Cloud-based Mobile Augmentation) process on mobile computing?",
+      "correct_answer": 4,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 1.0964107513427734
+    },
+    {
+      "id": 276,
+      "subject": "Research overview",
+      "question": "What does MDP stand for?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.7053399085998535
+    },
+    {
+      "id": 277,
+      "subject": "Standards overview",
+      "question": "Which platform is used for data movement services from any source to any target?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.7139568328857422
+    },
+    {
+      "id": 278,
+      "subject": "Standards specifications",
+      "question": "How is the energy detection threshold adapted for channel access? [3GPP Release 17]",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.8876101970672607
+    },
+    {
+      "id": 279,
+      "subject": "Research publications",
+      "question": "What are the limitations of centralized computing for ML training in edge/fog networks?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.7852110862731934
+    },
+    {
+      "id": 280,
+      "subject": "Research overview",
+      "question": "In which MEC (mobile edge computing) concept are the cloud resources located at operator's clouds within the RAN (Radio Access Network) or close to RAN?",
+      "correct_answer": 2,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.7965660095214844
+    },
+    {
+      "id": 281,
+      "subject": "Research publications",
+      "question": "What is slicing in the context of holographic applications?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.7748658657073975
+    },
+    {
+      "id": 282,
+      "subject": "Research publications",
+      "question": "What are the requirements for the cladding material?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.7923710346221924
+    },
+    {
+      "id": 283,
+      "subject": "Research publications",
+      "question": "What can multihop communication techniques in mmWave networks compensate for?",
+      "correct_answer": 3,
+      "predicted_answer": 0,
+      "is_correct": false,
+      "elapsed": 0.6978960037231445
+    },
+    {
+      "id": 284,
+      "subject": "Research publications",
+      "question": "What is the operating altitude range of HAPS (high altitude platform station) systems according to the ITU (International Telecommunications Union)?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.7985022068023682
+    },
+    {
+      "id": 285,
+      "subject": "Standards specifications",
+      "question": "What is the purpose of S-NSSAI based congestion control? [3GPP Release 18]",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.8613607883453369
+    },
+    {
+      "id": 286,
+      "subject": "Research publications",
+      "question": "What is an advantage of federated learning (FL) compared to centralized learning (CL)?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.7918791770935059
+    },
+    {
+      "id": 287,
+      "subject": "Standards specifications",
+      "question": "What is the purpose of management frames in 802.11? [IEEE 802.11]",
+      "correct_answer": 2,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.8706669807434082
+    },
+    {
+      "id": 288,
+      "subject": "Research publications",
+      "question": "What are the main functions of transponders in optical networks?",
+      "correct_answer": 0,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.6997787952423096
+    },
+    {
+      "id": 289,
+      "subject": "Lexicon",
+      "question": "What does V2I stand for?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.7826390266418457
+    },
+    {
+      "id": 290,
+      "subject": "Standards specifications",
+      "question": "What is the purpose of EAS Relocation on Release 16 capabilities? [3GPP Release 18]",
+      "correct_answer": 3,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.7982659339904785
+    },
+    {
+      "id": 291,
+      "subject": "Standards specifications",
+      "question": "What is the formula to calculate the DL and UL max data rate supported by the UE? [3GPP Release 17]",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 1.2314798831939697
+    },
+    {
+      "id": 292,
+      "subject": "Research publications",
+      "question": "What causes modal noise in multimode optical fibers?",
+      "correct_answer": 0,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.7699790000915527
+    },
+    {
+      "id": 293,
+      "subject": "Standards overview",
+      "question": "Which IEEE standard introduced the Q tag with VLAN and priority information?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.79158616065979
+    },
+    {
+      "id": 294,
+      "subject": "Standards specifications",
+      "question": "What is the range of frequencies for the transmitter spurious emission limits? [3GPP Release 18]",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.8978481292724609
+    },
+    {
+      "id": 295,
+      "subject": "Standards overview",
+      "question": "What are some aspects of NFVI provisioning and HW/SW management that are expected to be affected in vRAN deployments? [ETSI NFV Release 5]",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.7761921882629395
+    },
+    {
+      "id": 296,
+      "subject": "Research overview",
+      "question": "Deep Taylor Decomposition (DTD) decomposes the attribution of a function onto input features by performing a Taylor decomposition at:",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.7942891120910645
+    },
+    {
+      "id": 297,
+      "subject": "Research publications",
+      "question": "What is the purpose of the Heartbeat protocol in TLS (Transport Layer Security)?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.7071599960327148
+    },
+    {
+      "id": 298,
+      "subject": "Standards specifications",
+      "question": "What is the purpose of the 'Connect-streaming' communication paradigm in management service interactions? [3GPP Release 17]",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.8585567474365234
+    },
+    {
+      "id": 299,
+      "subject": "Research publications",
+      "question": "Which layer of the OSI (Open System Interconnection) model is responsible for input/output ports of a data device?",
+      "correct_answer": 0,
+      "predicted_answer": -1,
+      "is_correct": false,
+      "elapsed": 1.8472881317138672
+    },
+    {
+      "id": 300,
+      "subject": "Research publications",
+      "question": "What advantages do measurements from user equipment (UE) have over drive tests in disaster small cell networks?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.6944928169250488
+    },
+    {
+      "id": 301,
+      "subject": "Research publications",
+      "question": "What is the purpose of diversity gain in MIMO?",
+      "correct_answer": 2,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.7877590656280518
+    },
+    {
+      "id": 302,
+      "subject": "Standards overview",
+      "question": "Which key issues are related to the process of migration of NFV-MANO system towards SBA? [ETSI NFV Release 5]",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.7875192165374756
+    },
+    {
+      "id": 303,
+      "subject": "Standards specifications",
+      "question": "What is expected in terms of unauthorized UEs accessing non-public networks? [3GPP Release 17]",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.8051269054412842
+    },
+    {
+      "id": 304,
+      "subject": "Research overview",
+      "question": "What is the purpose of AoA (angle-of-arrival) signature-based authentication in IEEE 802.11 networks?",
+      "correct_answer": 3,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.7302100658416748
+    },
+    {
+      "id": 305,
+      "subject": "Research publications",
+      "question": "What are the two main approaches to solving RL problems?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.8638820648193359
+    },
+    {
+      "id": 306,
+      "subject": "Research overview",
+      "question": "What does the function output represent in the context of ML classification?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.7679698467254639
+    },
+    {
+      "id": 307,
+      "subject": "Research overview",
+      "question": "What is the main requirement for realizing High Altitude Platform Station-based Mobile Edge Computing?",
+      "correct_answer": 0,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.8724269866943359
+    },
+    {
+      "id": 308,
+      "subject": "Standards specifications",
+      "question": "What can the DCCF do in the 5G system architecture? [3GPP Release 18]",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.7117366790771484
+    },
+    {
+      "id": 309,
+      "subject": "Standards specifications",
+      "question": "How does a supporting UE determine available core network operators in a shared network? [3GPP Release 17]",
+      "correct_answer": 3,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.7821059226989746
+    },
+    {
+      "id": 310,
+      "subject": "Research publications",
+      "question": "Which channel coding technique combines a parallel concatenation of two convolutional encoders and iterative maximum a-posteriori (MAP) decoding?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.8689632415771484
+    },
+    {
+      "id": 311,
+      "subject": "Research overview",
+      "question": "What are some optimization objectives for a quantum compiler?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.8779981136322021
+    },
+    {
+      "id": 312,
+      "subject": "Research publications",
+      "question": "What is the purpose of precoding in an antenna array?",
+      "correct_answer": 2,
+      "predicted_answer": 4,
+      "is_correct": false,
+      "elapsed": 0.7202370166778564
+    },
+    {
+      "id": 313,
+      "subject": "Lexicon",
+      "question": "What does GERAN stand for?",
+      "correct_answer": 3,
+      "predicted_answer": 4,
+      "is_correct": false,
+      "elapsed": 0.7719430923461914
+    },
+    {
+      "id": 314,
+      "subject": "Research overview",
+      "question": "What is the Time To First Fix?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.9653828144073486
+    },
+    {
+      "id": 315,
+      "subject": "Standards overview",
+      "question": "What does the Relaxed monitoring for cell reselection feature in NB-IoT allow the UE to do? [3GPP Release 15]",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.968120813369751
+    },
+    {
+      "id": 316,
+      "subject": "Research overview",
+      "question": "What is the primary issue related to user mobility in HetNets (heterogeneous networks)?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.7116248607635498
+    },
+    {
+      "id": 317,
+      "subject": "Standards specifications",
+      "question": "Which waveform is used for downlink transmission? [3GPP Release 18]",
+      "correct_answer": 2,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.7958071231842041
+    },
+    {
+      "id": 318,
+      "subject": "Research publications",
+      "question": "What impurities in glass cause absorption and contribute to attenuation in fibers?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.614224910736084
+    },
+    {
+      "id": 319,
+      "subject": "Research publications",
+      "question": "Which organization is jointly framing the concepts of operations for UAV (Unmanned Aerial Vehicle) traffic management in the USA?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.8077700138092041
+    },
+    {
+      "id": 320,
+      "subject": "Standards specifications",
+      "question": "What is the reference point between the PDG and a packet data network? [3GPP Release 17]",
+      "correct_answer": 4,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.7911911010742188
+    },
+    {
+      "id": 321,
+      "subject": "Research publications",
+      "question": "Which organization developed the EIA-232E standard?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.7948501110076904
+    },
+    {
+      "id": 322,
+      "subject": "Research overview",
+      "question": "Which company published AWS (Amazon Web Services) IoT (Internet of Things) Greengrass ML Inference?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.7111928462982178
+    },
+    {
+      "id": 323,
+      "subject": "Research overview",
+      "question": "Why are DL (Deep Learning) services currently deployed in cloud data centers?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.7142257690429688
+    },
+    {
+      "id": 324,
+      "subject": "Research publications",
+      "question": "What are the two major methods for radio resource allocation between M2M (Machine-to-machine) and H2H (human-to-human) communications?",
+      "correct_answer": 0,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.7869288921356201
+    },
+    {
+      "id": 325,
+      "subject": "Research publications",
+      "question": "How can channel feedback delay be reduced?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.7955012321472168
+    },
+    {
+      "id": 326,
+      "subject": "Research publications",
+      "question": "In terms of goodput, which LR-FHSS (Long Range - Frequency Hopping Spread Spectrum) DR performs better on channels with significant interference?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.7182259559631348
+    },
+    {
+      "id": 327,
+      "subject": "Research publications",
+      "question": "What is the advantage of using Elliptic Curve Digital Signature Algorithm in Vehicular Communication Systems?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.7642970085144043
+    },
+    {
+      "id": 328,
+      "subject": "Standards specifications",
+      "question": "What does the DCCF do when a requested data is already being collected from a Data Source? [3GPP Release 18]",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.8856019973754883
+    },
+    {
+      "id": 329,
+      "subject": "Research publications",
+      "question": "What are the four layers proposed in the ETSI (European Telecommunications Standards Institute) GANA (Generic Autonomic Networking Architecture) model?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 1.0432400703430176
+    },
+    {
+      "id": 330,
+      "subject": "Research publications",
+      "question": "What is the seed length in the CTR_DRBG when using AES-256?",
+      "correct_answer": 3,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.648421049118042
+    },
+    {
+      "id": 331,
+      "subject": "Lexicon",
+      "question": "What is the definition of Fallback per CC feature set?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.8541619777679443
+    },
+    {
+      "id": 332,
+      "subject": "Research publications",
+      "question": "Why is channel estimation with hardware impairments more challenging?",
+      "correct_answer": 3,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.7965919971466064
+    },
+    {
+      "id": 333,
+      "subject": "Research publications",
+      "question": "How does the enhanced DBP (dynamic backpressure algorithm) routing algorithm reduce delay?",
+      "correct_answer": 4,
+      "predicted_answer": 0,
+      "is_correct": false,
+      "elapsed": 0.8507969379425049
+    },
+    {
+      "id": 334,
+      "subject": "Research overview",
+      "question": "What is the advantage of the data-driven deep learning approach in estimating CSI (channel state information)?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.9416651725769043
+    },
+    {
+      "id": 335,
+      "subject": "Research overview",
+      "question": "Which of the following caching schemes delivers the requested content by accessing it from the local SBS (Small-cell Base Station) if it is available?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.7871878147125244
+    },
+    {
+      "id": 336,
+      "subject": "Research publications",
+      "question": "What is a disadvantage of the Hold-Down feature in the RIP protocol?",
+      "correct_answer": 3,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.6275629997253418
+    },
+    {
+      "id": 337,
+      "subject": "Research publications",
+      "question": "What is the key benefit of having multiple antennas in a UE (User Equipment)?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.7168869972229004
+    },
+    {
+      "id": 338,
+      "subject": "Research publications",
+      "question": "What is prioritization of URLLC (Ultra-Reliable Low Latency Communication) traffic?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.6841909885406494
+    },
+    {
+      "id": 339,
+      "subject": "Standards specifications",
+      "question": "What must a multi-mode terminal do when it enters 3GPP mode of operation? [3GPP Release 18]",
+      "correct_answer": 0,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.9568278789520264
+    },
+    {
+      "id": 340,
+      "subject": "Research publications",
+      "question": "What is the main advantage of HetNets (Heterogeneous Networks)?",
+      "correct_answer": 1,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.8817899227142334
+    },
+    {
+      "id": 341,
+      "subject": "Research overview",
+      "question": "In which scenario are Ground Stations typically deployed?",
+      "correct_answer": 1,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.7160191535949707
+    },
+    {
+      "id": 342,
+      "subject": "Standards specifications",
+      "question": "When is the list of PAN descriptor structures stored by the MAC sublayer? [IEEE 802.15.4]",
+      "correct_answer": 1,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.7797479629516602
+    },
+    {
+      "id": 343,
+      "subject": "Standards overview",
+      "question": "What security mechanism is used for UE initiated messages in V2X communication? [3GPP Release 14]",
+      "correct_answer": 3,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.8678510189056396
+    },
+    {
+      "id": 344,
+      "subject": "Research publications",
+      "question": "What is the term used for antennas that respond to EM (electromagnetic) waves with only one polarization direction?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.7118902206420898
+    },
+    {
+      "id": 345,
+      "subject": "Standards specifications",
+      "question": "What happens when the BWP inactivity timer expires? [3GPP Release 18]",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.6978371143341064
+    },
+    {
+      "id": 346,
+      "subject": "Research publications",
+      "question": "What can happen when an EM (electromagnetic) plane wave propagates through the interface of two media with different electrical properties?",
+      "correct_answer": 3,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.7963178157806396
+    },
+    {
+      "id": 347,
+      "subject": "Lexicon",
+      "question": "What is a network access server (NAS) client?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.9749879837036133
+    },
+    {
+      "id": 348,
+      "subject": "Research overview",
+      "question": "What is the process of generating the MRF (Markov Random Field) graph based on logical rules called?",
+      "correct_answer": 0,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.6031448841094971
+    },
+    {
+      "id": 349,
+      "subject": "Research publications",
+      "question": "Research Papers",
+      "correct_answer": 3,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.8005878925323486
+    },
+    {
+      "id": 350,
+      "subject": "Research publications",
+      "question": "Which layer in the network stack is responsible for flow and congestion control?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.6154031753540039
+    },
+    {
+      "id": 351,
+      "subject": "Standards specifications",
+      "question": "What does EARFCN stand for? [3GPP Release 18]",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.7151811122894287
+    },
+    {
+      "id": 352,
+      "subject": "Standards specifications",
+      "question": "What are the requirements for relay UE selection for Evolved ProSe Remote UE access? [3GPP Release 17]",
+      "correct_answer": 4,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 1.1083950996398926
+    },
+    {
+      "id": 353,
+      "subject": "Standards specifications",
+      "question": "What is the MDA capability for paging optimization analysis used for? [3GPP Release 17]",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.7686667442321777
+    },
+    {
+      "id": 354,
+      "subject": "Research overview",
+      "question": "What is the round trip latency allowed for education and culture applications?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.552321195602417
+    },
+    {
+      "id": 355,
+      "subject": "Research overview",
+      "question": "Which sense represents the primary focus in immersive virtual reality (IVR) technology?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.6794958114624023
+    },
+    {
+      "id": 356,
+      "subject": "Research overview",
+      "question": "What is the advantage of using IRS (intelligent reflecting surface) in wireless communications?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.6923651695251465
+    },
+    {
+      "id": 357,
+      "subject": "Research publications",
+      "question": "What are the benefits of implementing IPsec in a firewall or router?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.9729032516479492
+    },
+    {
+      "id": 358,
+      "subject": "Research publications",
+      "question": "What should be done in addition to measuring the array response on a strong point source in FPA (focal plane array) beamforming?",
+      "correct_answer": 1,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.8880770206451416
+    },
+    {
+      "id": 359,
+      "subject": "Research publications",
+      "question": "What is the deferred measurement principle?",
+      "correct_answer": 1,
+      "predicted_answer": 0,
+      "is_correct": false,
+      "elapsed": 0.7956929206848145
+    },
+    {
+      "id": 360,
+      "subject": "Research overview",
+      "question": "What are the three architectures of distributed DNN (deep neural network) training at the edge?",
+      "correct_answer": 3,
+      "predicted_answer": 0,
+      "is_correct": false,
+      "elapsed": 0.7861933708190918
+    },
+    {
+      "id": 361,
+      "subject": "Research publications",
+      "question": "What are the characteristics of the Satellite-Terrestrial Integrated Network use case in 6G?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.865880012512207
+    },
+    {
+      "id": 362,
+      "subject": "Lexicon",
+      "question": "What does AoA stand for?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.7021949291229248
+    },
+    {
+      "id": 363,
+      "subject": "Research publications",
+      "question": "What does resource allocation in computation offloading depend on?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.6421847343444824
+    },
+    {
+      "id": 364,
+      "subject": "Research publications",
+      "question": "How does the power consumption of ADCs (Analog Digital Converters) grow with the number of antennas?",
+      "correct_answer": 3,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.7041327953338623
+    },
+    {
+      "id": 365,
+      "subject": "Research overview",
+      "question": "What is the purpose of the block proposal component in a blockchain consensus protocol?",
+      "correct_answer": 0,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.8879821300506592
+    },
+    {
+      "id": 366,
+      "subject": "Research publications",
+      "question": "What is the purpose of a continual learning model?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.6303267478942871
+    },
+    {
+      "id": 367,
+      "subject": "Standards specifications",
+      "question": "What does the Power Of Two Horizontal Error field indicate? [IEEE 802.11]",
+      "correct_answer": 1,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.799811840057373
+    },
+    {
+      "id": 368,
+      "subject": "Standards overview",
+      "question": "What does CSAT stand for?",
+      "correct_answer": 1,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.8584771156311035
+    },
+    {
+      "id": 369,
+      "subject": "Research overview",
+      "question": "What does HTTP stand for?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.6908218860626221
+    },
+    {
+      "id": 370,
+      "subject": "Standards overview",
+      "question": "What is the target coverage requirement for each channel of a RedCap (reduced capability) device?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.7917771339416504
+    },
+    {
+      "id": 371,
+      "subject": "Standards specifications",
+      "question": "How is the 4-octet FCS calculated? [IEEE 802.15.4]",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.8612520694732666
+    },
+    {
+      "id": 372,
+      "subject": "Standards specifications",
+      "question": "What is Small Data Transmission (SDT)? [3GPP Release 18]",
+      "correct_answer": 4,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.8198201656341553
+    },
+    {
+      "id": 373,
+      "subject": "Standards specifications",
+      "question": "What does a Measurement Method field value of 0 indicate in IEEE Std 802.11-2020? [IEEE 802.11]",
+      "correct_answer": 4,
+      "predicted_answer": 0,
+      "is_correct": false,
+      "elapsed": 0.7087740898132324
+    },
+    {
+      "id": 374,
+      "subject": "Research overview",
+      "question": "What is the maximum capacity that can be transported using a single channel in the E-Band? ",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.7145609855651855
+    },
+    {
+      "id": 375,
+      "subject": "Research overview",
+      "question": "What does the expected regret at time t represent?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.9423532485961914
+    },
+    {
+      "id": 376,
+      "subject": "Research overview",
+      "question": "Which equation describes wave propagation in magneto-optical materials under restricted time reversal?",
+      "correct_answer": 3,
+      "predicted_answer": 4,
+      "is_correct": false,
+      "elapsed": 0.7566611766815186
+    },
+    {
+      "id": 377,
+      "subject": "Research overview",
+      "question": "What type of channel condition is characterized in the AG (air to ground) channel?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.7540900707244873
+    },
+    {
+      "id": 378,
+      "subject": "Standards specifications",
+      "question": "What is the purpose of scrambling in the physical uplink shared channel? [3GPP Release 17]",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.712756872177124
+    },
+    {
+      "id": 379,
+      "subject": "Research publications",
+      "question": "What effect does transmitter CSI (channel state information) have on the sum capacity in a fading channel?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.8096919059753418
+    },
+    {
+      "id": 380,
+      "subject": "Research overview",
+      "question": "What are the three generic and distinct services targeted by 5G requirements?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.8257369995117188
+    },
+    {
+      "id": 381,
+      "subject": "Research overview",
+      "question": "What is the name of the original wiretap channel proposed by Wyner?",
+      "correct_answer": 3,
+      "predicted_answer": 0,
+      "is_correct": false,
+      "elapsed": 0.7040278911590576
+    },
+    {
+      "id": 382,
+      "subject": "Research publications",
+      "question": "What is the second largest traffic volume contributor?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.7117366790771484
+    },
+    {
+      "id": 383,
+      "subject": "Research publications",
+      "question": "What is the purpose of Sharpness-Aware Minimization?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.900407075881958
+    },
+    {
+      "id": 384,
+      "subject": "Standards specifications",
+      "question": "Which of the following network functions is responsible for session management? [3GPP Release 18]",
+      "correct_answer": 1,
+      "predicted_answer": 0,
+      "is_correct": false,
+      "elapsed": 0.6154508590698242
+    },
+    {
+      "id": 385,
+      "subject": "Research overview",
+      "question": "Which communication system uses Airborne Collision Avoidance System to warn pilots of approaching aircraft?",
+      "correct_answer": 0,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.710334062576294
+    },
+    {
+      "id": 386,
+      "subject": "Lexicon",
+      "question": "What is an Allowable PLMN?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.8576619625091553
+    },
+    {
+      "id": 387,
+      "subject": "Standards specifications",
+      "question": "How does the NWDAF with accuracy checking capability decide to initiate analytics accuracy monitoring? [3GPP Release 18]",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.7661409378051758
+    },
+    {
+      "id": 388,
+      "subject": "Research publications",
+      "question": "What is the purpose of a loss function in a neural network?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.7319653034210205
+    },
+    {
+      "id": 389,
+      "subject": "Research publications",
+      "question": "What are the challenges faced by FSO (Free-space optical) systems?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.6945488452911377
+    },
+    {
+      "id": 390,
+      "subject": "Standards specifications",
+      "question": "What does AMF stand for in the 5G System? [3GPP Release 18]",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.7195026874542236
+    },
+    {
+      "id": 391,
+      "subject": "Research overview",
+      "question": "Which LPWA (Low Power Wide Area) technology offers end-to-end solutions for smart city applications?",
+      "correct_answer": 3,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.7952587604522705
+    },
+    {
+      "id": 392,
+      "subject": "Standards overview",
+      "question": "Which IEEE standard introduced the 10Base-T technology? [IEEE 802.3]",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.7884521484375
+    },
+    {
+      "id": 393,
+      "subject": "Research publications",
+      "question": "What are some system configurations that can achieve the Energy efficiency (EE)-Spectral efficiency (SE) tradeoff?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.8568909168243408
+    },
+    {
+      "id": 394,
+      "subject": "Research overview",
+      "question": "What are the different applications of MDPs (Markov decision processes) in data exchange and topology maintenance problems in WSNs (Wireless sensor networks)?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.8875150680541992
+    },
+    {
+      "id": 395,
+      "subject": "Research overview",
+      "question": "Which sector of AI has made substantial breakthroughs in fields like computer vision, speech recognition, and natural language processing?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.7810401916503906
+    },
+    {
+      "id": 396,
+      "subject": "Standards specifications",
+      "question": "In the NWDAF providing PDU Session traffic analytics, who requests or subscribes to the NWDAF? [3GPP Release 18]",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.7892601490020752
+    },
+    {
+      "id": 397,
+      "subject": "Research publications",
+      "question": "In URLLC, is deterministic medium access more likely to be adopted than random medium access?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.6212921142578125
+    },
+    {
+      "id": 398,
+      "subject": "Research overview",
+      "question": "Which deployment scenario in O-RAN Town involves vO-DU on the cell site and vO-CU at the aggregation location? ",
+      "correct_answer": 1,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.7148690223693848
+    },
+    {
+      "id": 399,
+      "subject": "Standards overview",
+      "question": "What does V2X stand for in the context of the document? [3GPP Release 15]",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.7107441425323486
+    },
+    {
+      "id": 400,
+      "subject": "Standards specifications",
+      "question": "Which interface is used to carry information concerning BSS management, call handling, and mobility management between the MSC and BSS? [3GPP Release 17]",
+      "correct_answer": 2,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.8588731288909912
+    },
+    {
+      "id": 401,
+      "subject": "Research overview",
+      "question": "What is the purpose of using the Boltzmann decision rule in the stochastic UCL (upper credible limit) algorithm?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.882749080657959
+    },
+    {
+      "id": 402,
+      "subject": "Research publications",
+      "question": "What does the imaginary part of the surface admittance determine?",
+      "correct_answer": 3,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.7464859485626221
+    },
+    {
+      "id": 403,
+      "subject": "Research overview",
+      "question": "What is the mobility management approach in cases of low mobility?",
+      "correct_answer": 2,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.5892729759216309
+    },
+    {
+      "id": 404,
+      "subject": "Research publications",
+      "question": "What is QRAM used for in the context of quantum networks?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.619210958480835
+    },
+    {
+      "id": 405,
+      "subject": "Research publications",
+      "question": "Which technology can achieve a ranging accuracy on the order of centimeters?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.5558371543884277
+    },
+    {
+      "id": 406,
+      "subject": "Research publications",
+      "question": "Which scenarios can be simulated using the non-terrestrial network channel model?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.8541781902313232
+    },
+    {
+      "id": 407,
+      "subject": "Standards overview",
+      "question": "What kind of secrecy strategies need to be adopted in resource-constrained IoT (Internet of things) systems?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.7929060459136963
+    },
+    {
+      "id": 408,
+      "subject": "Research publications",
+      "question": "What is the system handling drone air traffic management called?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.7782793045043945
+    },
+    {
+      "id": 409,
+      "subject": "Research publications",
+      "question": "Which technology is a promising candidate complementary to microwave technology and optical fiber for fronthaul in traditional cellular networks?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.704571008682251
+    },
+    {
+      "id": 410,
+      "subject": "Standards overview",
+      "question": "What is grant-free non-orthogonal multiple access (NOMA)?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.8964328765869141
+    },
+    {
+      "id": 411,
+      "subject": "Research publications",
+      "question": "What are the two fundamental functionalities recognized to be indispensable in the design and implementation of IoT (Internet of Things) devices?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.783308744430542
+    },
+    {
+      "id": 412,
+      "subject": "Standards overview",
+      "question": "What is the purpose of Enhanced Closed loop SLS Assurance solution? [3GPP Release 17]",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.8730340003967285
+    },
+    {
+      "id": 413,
+      "subject": "Research overview",
+      "question": "Which method models a decision making problem, where an agent is faced with a dilemma of K different actions and receives a reward relying on a stationary probability distribution associated with its decision?",
+      "correct_answer": 2,
+      "predicted_answer": 0,
+      "is_correct": false,
+      "elapsed": 0.7954308986663818
+    },
+    {
+      "id": 414,
+      "subject": "Research publications",
+      "question": "What is the purpose of the beacon interval in the IEEE 802.11ad standard?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.7042129039764404
+    },
+    {
+      "id": 415,
+      "subject": "Standards specifications",
+      "question": "What does Layer 3 filtering apply to in CLI measurement results? [3GPP Release 18]",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.7965078353881836
+    },
+    {
+      "id": 416,
+      "subject": "Research publications",
+      "question": "What is the term used to refer to the non-idealities in hardware components?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.6206729412078857
+    },
+    {
+      "id": 417,
+      "subject": "Research overview",
+      "question": "Which method involves approximating the spike generation function to a continuous function during the backward pass?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.6991889476776123
+    },
+    {
+      "id": 418,
+      "subject": "Research publications",
+      "question": "In the presence of channel uncertainty, what type of detection may be preferred?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.7733588218688965
+    },
+    {
+      "id": 419,
+      "subject": "Research overview",
+      "question": "What is the main advantage of using Uplink-Downlink Asymmetric MSI (model state information) Exchange in edge ML?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.8749668598175049
+    },
+    {
+      "id": 420,
+      "subject": "Research overview",
+      "question": "In the system model for linear memoryless MIMO channels, what does Nt represent?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.7717678546905518
+    },
+    {
+      "id": 421,
+      "subject": "Standards specifications",
+      "question": "What is used in CCK to carry information and spread the signal? [IEEE 802.11]",
+      "correct_answer": 4,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.8091440200805664
+    },
+    {
+      "id": 422,
+      "subject": "Standards overview",
+      "question": "Which pair of wires is connected to pin 3 and pin 6 in the 10/100Base-T connector? [IEEE 802.3]",
+      "correct_answer": 2,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.8760969638824463
+    },
+    {
+      "id": 423,
+      "subject": "Research overview",
+      "question": "What is one of the challenges of using encryption in ADS-B?",
+      "correct_answer": 0,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.713670015335083
+    },
+    {
+      "id": 424,
+      "subject": "Lexicon",
+      "question": "What does the 3GPP system consist of?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.8698599338531494
+    },
+    {
+      "id": 425,
+      "subject": "Research publications",
+      "question": "What does a dApp do in the Web3 ecosystem?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.96315598487854
+    },
+    {
+      "id": 426,
+      "subject": "Research publications",
+      "question": "What type of sequences are used for DM-RS in the 5G NR (new radio) uplink when OFDMA (orthogonal frequency division multiple access) is used?",
+      "correct_answer": 2,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.8146135807037354
+    },
+    {
+      "id": 427,
+      "subject": "Research publications",
+      "question": "What are the correct boundary conditions to describe the field behavior on a metasurface?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.7650291919708252
+    },
+    {
+      "id": 428,
+      "subject": "Standards overview",
+      "question": "What technology does Wi-Fi employ to ensure fair coexistence with other technologies in the unlicensed band?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.7858507633209229
+    },
+    {
+      "id": 429,
+      "subject": "Standards specifications",
+      "question": "How do stations remain synchronized with the global timing in an infrastructure network? [IEEE 802.11]",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.8681018352508545
+    },
+    {
+      "id": 430,
+      "subject": "Research publications",
+      "question": "What is the advantage of the Open RAN (Radio Access Network) approach?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.7791972160339355
+    },
+    {
+      "id": 431,
+      "subject": "Research publications",
+      "question": "Why are low-latency requirements necessary for remote control of unmanned robotics?",
+      "correct_answer": 4,
+      "predicted_answer": 0,
+      "is_correct": false,
+      "elapsed": 0.8014490604400635
+    },
+    {
+      "id": 432,
+      "subject": "Research overview",
+      "question": "What wireless technologies can be adopted for outband D2D (Device-to-Device) communication?",
+      "correct_answer": 1,
+      "predicted_answer": 0,
+      "is_correct": false,
+      "elapsed": 0.783627986907959
+    },
+    {
+      "id": 433,
+      "subject": "Research publications",
+      "question": "Which of the following is a key term used to describe schemes that depend on the knowledge of instantaneous interference at the receiver?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.7007849216461182
+    },
+    {
+      "id": 434,
+      "subject": "Standards specifications",
+      "question": "What does the ZSM framework reference architecture enable? [3GPP Release 17]",
+      "correct_answer": 0,
+      "predicted_answer": 4,
+      "is_correct": false,
+      "elapsed": 0.778289794921875
+    },
+    {
+      "id": 435,
+      "subject": "Research publications",
+      "question": "What does the primary carrier in the network architecture use to transmit control signaling, user data, and mobility signaling?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.6998732089996338
+    },
+    {
+      "id": 436,
+      "subject": "Research publications",
+      "question": "What is the goal of the global combining stage in federated learning?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.7915618419647217
+    },
+    {
+      "id": 437,
+      "subject": "Lexicon",
+      "question": "What is the definition of end-to-end latency?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.9690268039703369
+    },
+    {
+      "id": 438,
+      "subject": "Research publications",
+      "question": "What is the purpose of grant-free access?",
+      "correct_answer": 1,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.7989809513092041
+    },
+    {
+      "id": 439,
+      "subject": "Standards overview",
+      "question": "What type of information can the Service & Computation Orchestrator obtain from the underlying resource layer?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.8794972896575928
+    },
+    {
+      "id": 440,
+      "subject": "Research publications",
+      "question": "What is the target user plane latency for URLLC (Ultra-reliable low-latency communications) in 5G NR?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.9695401191711426
+    },
+    {
+      "id": 441,
+      "subject": "Research publications",
+      "question": "What are the primary neural network architectures in deep learning?",
+      "correct_answer": 0,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 1.0560541152954102
+    },
+    {
+      "id": 442,
+      "subject": "Research overview",
+      "question": "Which method constructs a hyperplane or a set of hyperplanes in a high-dimensional space for classification?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.7425961494445801
+    },
+    {
+      "id": 443,
+      "subject": "Research publications",
+      "question": "Which regulatory bodies currently restrict UAVs (Unmanned aerial vehicles) below a certain take-off weight to operate at heights below 120m?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.7924108505249023
+    },
+    {
+      "id": 444,
+      "subject": "Research publications",
+      "question": "What is the purpose of the Two Time-scale Update Rule (TTUR)?",
+      "correct_answer": 3,
+      "predicted_answer": 0,
+      "is_correct": false,
+      "elapsed": 0.8891801834106445
+    },
+    {
+      "id": 445,
+      "subject": "Standards specifications",
+      "question": "What triggers Edge Relocation in the network? [3GPP Release 18]",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.6881539821624756
+    },
+    {
+      "id": 446,
+      "subject": "Research publications",
+      "question": "Which IEEE standard uses the unlicensed 60 GHz millimeter-wave band?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.7022831439971924
+    },
+    {
+      "id": 447,
+      "subject": "Research publications",
+      "question": "What kind of system is the wireless channel in wireless communication?",
+      "correct_answer": 2,
+      "predicted_answer": 0,
+      "is_correct": false,
+      "elapsed": 0.6896810531616211
+    },
+    {
+      "id": 448,
+      "subject": "Standards specifications",
+      "question": "What are the main services and functions of the RRC sublayer over the Uu interface? [3GPP Release 18]",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.8917911052703857
+    },
+    {
+      "id": 449,
+      "subject": "Standards overview",
+      "question": "What is the main goal of the O-RAN architecture?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.7002921104431152
+    },
+    {
+      "id": 450,
+      "subject": "Research overview",
+      "question": "What is the main advantage of using a random spatial model for modeling the topology of wireless networks?",
+      "correct_answer": 0,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.9857211112976074
+    },
+    {
+      "id": 451,
+      "subject": "Standards specifications",
+      "question": "What are the two options for the PLCP framing in the HR/DSSS PHY? [IEEE 802.11]",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.729917049407959
+    },
+    {
+      "id": 452,
+      "subject": "Research publications",
+      "question": "What is the exponential distribution used to model in the birth-and-death process?",
+      "correct_answer": 2,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.7909390926361084
+    },
+    {
+      "id": 453,
+      "subject": "Standards specifications",
+      "question": "In what market sector are 3GPP networks expected to become an important tool? [3GPP Release 17]",
+      "correct_answer": 1,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.7977211475372314
+    },
+    {
+      "id": 454,
+      "subject": "Research overview",
+      "question": "Which LPWA (Low Power Wide Area) technology operates in 2.4 GHz ISM (Industrial scientific and medical) band?",
+      "correct_answer": 2,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.7860782146453857
+    },
+    {
+      "id": 455,
+      "subject": "Research publications",
+      "question": "What does the capacity of an n by n MIMO channel depend on?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.8716440200805664
+    },
+    {
+      "id": 456,
+      "subject": "Standards overview",
+      "question": "What is the purpose of the Early data transmission feature in NB-IoT? [3GPP Release 15]",
+      "correct_answer": 0,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 1.0833499431610107
+    },
+    {
+      "id": 457,
+      "subject": "Research overview",
+      "question": "What is the impact of increasing the number of antennas on energy efficiency?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.8440382480621338
+    },
+    {
+      "id": 458,
+      "subject": "Research overview",
+      "question": "Which of the following is not one of the enablers for implementing deep learning in mobile networks?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.8247931003570557
+    },
+    {
+      "id": 459,
+      "subject": "Research publications",
+      "question": "What is the aim of autonomous spectrum sharing in 6G?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.9328010082244873
+    },
+    {
+      "id": 460,
+      "subject": "Standards specifications",
+      "question": "What conditions must be met for voice call continuity during emergency calls? [3GPP Release 18]",
+      "correct_answer": 0,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.9889862537384033
+    },
+    {
+      "id": 461,
+      "subject": "Standards specifications",
+      "question": "Which models are constructed for LOS channel profiles? [3GPP Release 18]",
+      "correct_answer": 2,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.8557419776916504
+    },
+    {
+      "id": 462,
+      "subject": "Standards specifications",
+      "question": "In case of 15 kHz sub-carrier spacing, how many cyclic-prefix lengths are there? [3GPP Release 17]",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.784430980682373
+    },
+    {
+      "id": 463,
+      "subject": "Standards overview",
+      "question": "What is the purpose of resending datagrams in TCP to achieve reliability? [TCP/IP]",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.7911679744720459
+    },
+    {
+      "id": 464,
+      "subject": "Standards overview",
+      "question": "Which 3GPP Technical Specification covers the service requirements for maritime communication over 5G systems? [3GPP Release 16]",
+      "correct_answer": 2,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.9185299873352051
+    },
+    {
+      "id": 465,
+      "subject": "Research publications",
+      "question": "What is commonly used as the monitor detector in laser drive circuits?",
+      "correct_answer": 4,
+      "predicted_answer": 4,
+      "is_correct": true,
+      "elapsed": 0.74127197265625
+    },
+    {
+      "id": 466,
+      "subject": "Research overview",
+      "question": "What is the key component of a data transport network? ",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.764042854309082
+    },
+    {
+      "id": 467,
+      "subject": "Research publications",
+      "question": "What is the model of the complex visibility at the observed spatial frequencies?",
+      "correct_answer": 2,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.8331501483917236
+    },
+    {
+      "id": 468,
+      "subject": "Research publications",
+      "question": "What is the typical coverage range of LPWANs (Low-Power Wide Area Networks) in urban areas?",
+      "correct_answer": 1,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.6401941776275635
+    },
+    {
+      "id": 469,
+      "subject": "Research overview",
+      "question": "What is the general sense of electromagnetic nonreciprocity?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.890625
+    },
+    {
+      "id": 470,
+      "subject": "Research publications",
+      "question": "What are some complexity reduction techniques for large-scale data processing?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.6661651134490967
+    },
+    {
+      "id": 471,
+      "subject": "Research overview",
+      "question": "What is the primary characteristic used to describe small scale amplitude fading in AG (air to ground) propagation channels?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.7439079284667969
+    },
+    {
+      "id": 472,
+      "subject": "Standards specifications",
+      "question": "What is the distinction between the transmitter and the source in 802.11 frames? [IEEE 802.11]",
+      "correct_answer": 0,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.7772262096405029
+    },
+    {
+      "id": 473,
+      "subject": "Research publications",
+      "question": "What is the communication cost in the context of FL?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.7797369956970215
+    },
+    {
+      "id": 474,
+      "subject": "Research publications",
+      "question": "What is the system coverage probability in the hybrid network scenario?",
+      "correct_answer": 0,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.7939341068267822
+    },
+    {
+      "id": 475,
+      "subject": "Research publications",
+      "question": "What is the duality between transmit beamforming with precoding in the downlink and receive beamforming with SIC (Successive interference cancellation) in the uplink?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.8796191215515137
+    },
+    {
+      "id": 476,
+      "subject": "Research publications",
+      "question": "What type of receiver is used in a coherent optical QPSK (Quadrature (Quaternary) Phase Shift Keying) intradyne system?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.769495964050293
+    },
+    {
+      "id": 477,
+      "subject": "Research publications",
+      "question": "What is done to reduce the quantization error on small-amplitude analog signal levels when encoding from PAM (pulse amplitude modulation) to PCM (pulse code modulation)?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.781749963760376
+    },
+    {
+      "id": 478,
+      "subject": "Standards overview",
+      "question": "What is the purpose of using chipping sequences in direct-sequence modulation? [IEEE 802.11]",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.7955231666564941
+    },
+    {
+      "id": 479,
+      "subject": "Research publications",
+      "question": "What is the delay-limited capacity?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.7919220924377441
+    },
+    {
+      "id": 480,
+      "subject": "Research overview",
+      "question": "What are the potential advantages of using Multi-Tier ARAN (aerial radio access network) networks in underserved areas?",
+      "correct_answer": 0,
+      "predicted_answer": 1,
+      "is_correct": false,
+      "elapsed": 0.8773620128631592
+    },
+    {
+      "id": 481,
+      "subject": "Research overview",
+      "question": "Which channel model assumes a dyad with one degree of freedom for the RIS-MIMO channel?",
+      "correct_answer": 4,
+      "predicted_answer": 0,
+      "is_correct": false,
+      "elapsed": 0.4539220333099365
+    },
+    {
+      "id": 482,
+      "subject": "Standards overview",
+      "question": "How does MulteFire compare to Wi-Fi in terms of manufacturing cost for chips?",
+      "correct_answer": 1,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.4532191753387451
+    },
+    {
+      "id": 483,
+      "subject": "Standards specifications",
+      "question": "What is the purpose of the power headroom reports (PHR)? [3GPP Release 18]",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.5364480018615723
+    },
+    {
+      "id": 484,
+      "subject": "Research publications",
+      "question": "What are the potential applications of WNCS (Wireless networked control systems)?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.3659780025482178
+    },
+    {
+      "id": 485,
+      "subject": "Standards specifications",
+      "question": "What does Edge Relocation refer to? [3GPP Release 18]",
+      "correct_answer": 3,
+      "predicted_answer": 2,
+      "is_correct": false,
+      "elapsed": 0.4347231388092041
+    },
+    {
+      "id": 486,
+      "subject": "Standards specifications",
+      "question": "What capability should the 5G system provide for a UE to assist another UE in ranging of a third UE? [3GPP Release 17]",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.4482598304748535
+    },
+    {
+      "id": 487,
+      "subject": "Research publications",
+      "question": "What are the general directions for communication-efficient distributed learning methods?",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.35876893997192383
+    },
+    {
+      "id": 488,
+      "subject": "Research publications",
+      "question": "What are some examples of wireless networks?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.3564732074737549
+    },
+    {
+      "id": 489,
+      "subject": "Standards specifications",
+      "question": "What does NEF translate into a SUPI or Internal-Group-Id? [3GPP Release 18]",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.43810296058654785
+    },
+    {
+      "id": 490,
+      "subject": "Research overview",
+      "question": "Which RIC layer has a control frequency below 1 second? ",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.36252808570861816
+    },
+    {
+      "id": 491,
+      "subject": "Research overview",
+      "question": "What advantages does the heterogeneous implementation framework offer for 5G networks?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.44324707984924316
+    },
+    {
+      "id": 492,
+      "subject": "Standards specifications",
+      "question": "What should a 5G Visited Mobile Network have in order to allow a UE with a 5G subscription to roam into it? [3GPP Release 17]",
+      "correct_answer": 0,
+      "predicted_answer": 0,
+      "is_correct": true,
+      "elapsed": 0.44513392448425293
+    },
+    {
+      "id": 493,
+      "subject": "Research overview",
+      "question": "Which type of antenna is characterized by high gain, wide bandwidth, and low cost?",
+      "correct_answer": 1,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.34979891777038574
+    },
+    {
+      "id": 494,
+      "subject": "Research publications",
+      "question": "In which regime is the capacity proportional to the total received power across the entire bandwidth?",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.36779022216796875
+    },
+    {
+      "id": 495,
+      "subject": "Standards specifications",
+      "question": "Which of the following is NOT a type of V2X application? [3GPP Release 17]",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.43500804901123047
+    },
+    {
+      "id": 496,
+      "subject": "Standards overview",
+      "question": "Which IEEE standard introduced the thin Ethernet, also known as cheapernet or 10Base2? [IEEE 802.3]",
+      "correct_answer": 0,
+      "predicted_answer": 3,
+      "is_correct": false,
+      "elapsed": 0.43749284744262695
+    },
+    {
+      "id": 497,
+      "subject": "Research publications",
+      "question": "What is LPWA (Low-Power Wide Area) technology primarily designed for?",
+      "correct_answer": 2,
+      "predicted_answer": 2,
+      "is_correct": true,
+      "elapsed": 0.4476809501647949
+    },
+    {
+      "id": 498,
+      "subject": "Research overview",
+      "question": "Which deep learning architecture is primarily used for spatial data modeling?",
+      "correct_answer": 3,
+      "predicted_answer": 3,
+      "is_correct": true,
+      "elapsed": 0.44411277770996094
+    },
+    {
+      "id": 499,
+      "subject": "Standards specifications",
+      "question": "What is the purpose of PDU Session traffic analytics? [3GPP Release 18]",
+      "correct_answer": 1,
+      "predicted_answer": 1,
+      "is_correct": true,
+      "elapsed": 0.5180809497833252
+    }
+  ]
+}

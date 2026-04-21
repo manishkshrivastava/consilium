@@ -1,0 +1,54 @@
+# =============================================================================
+# Telco SLM Training Configuration
+# =============================================================================
+# Modify these values and pass to training script
+# Keep defaults as-is for first run
+
+# Base model
+model:
+  name: "unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit"
+  max_seq_length: 4096
+  load_in_4bit: true
+
+# LoRA adapter configuration
+lora:
+  r: 32
+  alpha: 64
+  dropout: 0.05
+  target_modules:
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+    - gate_proj
+    - up_proj
+    - down_proj
+
+# Training hyperparameters
+training:
+  batch_size: 2
+  gradient_accumulation_steps: 8
+  learning_rate: 2e-4
+  num_epochs: 3
+  warmup_ratio: 0.05
+  weight_decay: 0.01
+  lr_scheduler: cosine
+  optimizer: adamw_8bit
+  packing: true   # Pack short examples into one sequence
+  save_steps: 200
+  logging_steps: 10
+
+# Data
+data:
+  train_file: "data/processed/train.jsonl"
+  val_file: "data/processed/val.jsonl"
+
+# Output
+# NOTE: If running on OneDrive, consider pointing this to a local path
+# to avoid sync issues during training. Example:
+#   dir: "/Users/manishkumarshrivastava/telco-slm-models/v1"
+output:
+  dir: "models/telco-slm-v1"
+  save_total_limit: 3
+  save_gguf: true
+  gguf_quantization: "q4_k_m"

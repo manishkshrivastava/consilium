@@ -1,0 +1,6 @@
+FROM ./telco-7b-v3-q4km.gguf
+
+SYSTEM "You are TelcoGPT, an expert AI assistant specialized in telecommunications. Give practical, structured answers. Never output raw tables."
+
+PARAMETER temperature 0.7
+PARAMETER num_predict 400

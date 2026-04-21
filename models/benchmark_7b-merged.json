@@ -1,0 +1,1209 @@
+{
+  "model": "TelcoGPT 7B (merged v1+v2, 60/40 weight)",
+  "overall_score": 0.0023529411764705885,
+  "by_category": {
+    "incident": 0.0,
+    "config": 0.01,
+    "kpi": 0.0,
+    "knowledge": 0.0
+  },
+  "results": [
+    {
+      "id": "INC-RAN-01",
+      "category": "incident",
+      "question": "eNodeB ENB-3456 CPU utilization at 97%. Connected UEs: 450. What is the likely cause and resolution?",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "domain": "wrong (expected RAN)",
+        "contains_CPU": false,
+        "contains_handover": false,
+        "contains_connected UE": false,
+        "contains_load balancing": false
+      },
+      "elapsed": 326.350004196167
+    },
+    {
+      "id": "INC-RAN-02",
+      "category": "incident",
+      "question": "RACH failure rate jumped from 2% to 18% on cell CELL-78901 in the last hour. No recent config changes.",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "domain": "wrong (expected RAN)",
+        "contains_PRACH": false,
+        "contains_interference": false,
+        "contains_preamble": false
+      },
+      "elapsed": 0.5305790901184082
+    },
+    {
+      "id": "INC-RAN-03",
+      "category": "incident",
+      "question": "DL throughput dropped 40% on cell CELL-23456. PRB utilization is at 45%, so it's not congestion.",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "domain": "wrong (expected RAN)",
+        "contains_SINR": false,
+        "contains_interference": false,
+        "contains_CQI": false
+      },
+      "elapsed": 0.970689058303833
+    },
+    {
+      "id": "INC-RAN-04",
+      "category": "incident",
+      "question": "Handover success rate between CELL-100 and CELL-200 dropped from 98% to 82%. What should I investigate?",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "domain": "wrong (expected RAN)",
+        "contains_handover": false,
+        "contains_A3": false,
+        "contains_neighbor": false
+      },
+      "elapsed": 0.5555970668792725
+    },
+    {
+      "id": "INC-RAN-05",
+      "category": "incident",
+      "question": "VSWR alarm on sector 2 of site ENB-5678. Return loss is 8dB instead of normal 25dB.",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "domain": "wrong (expected RAN)",
+        "contains_VSWR": false,
+        "contains_connector": false,
+        "contains_feeder": false,
+        "contains_antenna": false
+      },
+      "elapsed": 1.0992028713226318
+    },
+    {
+      "id": "INC-RAN-06",
+      "category": "incident",
+      "question": "PCI collision detected. Both CELL-300 and CELL-400 are using PCI 127 and they are neighbors.",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "domain": "wrong (expected RAN)",
+        "contains_PCI": false,
+        "contains_collision": false,
+        "contains_neighbor": false
+      },
+      "elapsed": 1.0302038192749023
+    },
+    {
+      "id": "INC-RAN-07",
+      "category": "incident",
+      "question": "Cell CELL-500 is completely out of service. BBU is not responding to OAM commands.",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "domain": "wrong (expected RAN)",
+        "contains_BBU": false,
+        "contains_power": false,
+        "contains_hardware": false
+      },
+      "elapsed": 0.571742057800293
+    },
+    {
+      "id": "INC-RAN-08",
+      "category": "incident",
+      "question": "RRC setup success rate is only 85% on gNB GNB-100. What KPIs should I check first?",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "domain": "wrong (expected RAN)",
+        "contains_RRC": false,
+        "contains_PDCCH": false,
+        "contains_RACH": false
+      },
+      "elapsed": 0.9969778060913086
+    },
+    {
+      "id": "INC-RAN-09",
+      "category": "incident",
+      "question": "DL PRB utilization is 92% on CELL-600 during busy hour. Users complain of slow data.",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "domain": "wrong (expected RAN)",
+        "contains_PRB": false,
+        "contains_congestion": false,
+        "contains_capacity": false,
+        "contains_load balancing": false
+      },
+      "elapsed": 1.8967349529266357
+    },
+    {
+      "id": "INC-RAN-10",
+      "category": "incident",
+      "question": "High PDCP packet loss (3.5%) detected on CELL-700. Radio conditions seem normal (SINR > 10dB).",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "domain": "wrong (expected RAN)",
+        "contains_PDCP": false,
+        "contains_backhaul": false,
+        "contains_transport": false
+      },
+      "elapsed": 0.484173059463501
+    },
+    {
+      "id": "INC-CORE-01",
+      "category": "incident",
+      "question": "S1 link failure between eNodeB ENB-8000 and MME MME-02. SCTP association is down.",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "domain": "wrong (expected Core)",
+        "contains_S1": false,
+        "contains_SCTP": false,
+        "contains_MME": false,
+        "contains_transport": false
+      },
+      "elapsed": 1.4164659976959229
+    },
+    {
+      "id": "INC-CORE-02",
+      "category": "incident",
+      "question": "AMF registration failure rate is 15% on AMF-03. Users can't attach to 5G network.",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "domain": "wrong (expected Core)",
+        "contains_AMF": false,
+        "contains_registration": false,
+        "contains_AUSF": false,
+        "contains_UDM": false
+      },
+      "elapsed": 0.8050589561462402
+    },
+    {
+      "id": "INC-CORE-03",
+      "category": "incident",
+      "question": "PDU session establishment failure at 20% on SMF-01. IP pool utilization is at 95%.",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "domain": "wrong (expected Core)",
+        "contains_PDU": false,
+        "contains_SMF": false,
+        "contains_IP pool": false,
+        "contains_UPF": false
+      },
+      "elapsed": 0.9634959697723389
+    },
+    {
+      "id": "INC-CORE-04",
+      "category": "incident",
+      "question": "GTP-U path failure between SGW-01 and PGW-02. Echo requests are timing out.",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "domain": "wrong (expected Core)",
+        "contains_GTP": false,
+        "contains_tunnel": false,
+        "contains_echo": false
+      },
+      "elapsed": 0.48648500442504883
+    },
+    {
+      "id": "INC-CORE-05",
+      "category": "incident",
+      "question": "NRF is not responding to NF discovery requests. Multiple NFs can't find each other.",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "domain": "wrong (expected Core)",
+        "contains_NRF": false,
+        "contains_discovery": false,
+        "contains_NF": false
+      },
+      "elapsed": 1.0104148387908936
+    },
+    {
+      "id": "INC-CORE-06",
+      "category": "incident",
+      "question": "HSS replication lag between primary and standby is 3 seconds and increasing.",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "domain": "wrong (expected Core)",
+        "contains_HSS": false,
+        "contains_replication": false,
+        "contains_failover": false
+      },
+      "elapsed": 0.981259822845459
+    },
+    {
+      "id": "INC-CORE-07",
+      "category": "incident",
+      "question": "Diameter Gx connection lost between PCRF-01 and PGW-01. Port 3868 is unreachable.",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "domain": "wrong (expected Core)",
+        "contains_Diameter": false,
+        "contains_PCRF": false,
+        "contains_Gx": false
+      },
+      "elapsed": 1.0602548122406006
+    },
+    {
+      "id": "INC-CORE-08",
+      "category": "incident",
+      "question": "NSSF is rejecting slice selection requests for SST=1 in tracking area TAC-5000.",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "domain": "wrong (expected Core)",
+        "contains_NSSF": false,
+        "contains_slice": false,
+        "contains_S-NSSAI": false
+      },
+      "elapsed": 1.0963850021362305
+    },
+    {
+      "id": "INC-TRANS-01",
+      "category": "incident",
+      "question": "Packet loss of 4% detected on backhaul link to site ENB-9000. Link is microwave.",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "domain": "wrong (expected Transport)",
+        "contains_microwave": false,
+        "contains_RSL": false,
+        "contains_rain fade": false
+      },
+      "elapsed": 1.0832493305206299
+    },
+    {
+      "id": "INC-TRANS-02",
+      "category": "incident",
+      "question": "BGP peer between PE-NYC-01 and PE-LAX-02 is flapping. Goes down and up every 5 minutes.",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "domain": "wrong (expected Transport)",
+        "contains_BGP": false,
+        "contains_peer": false,
+        "contains_hold timer": false
+      },
+      "elapsed": 0.6086008548736572
+    },
+    {
+      "id": "INC-TRANS-03",
+      "category": "incident",
+      "question": "MPLS LSP for VPN-ENTERPRISE-500 is down. LDP session between PE-01 and PE-02 is lost.",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "domain": "wrong (expected Transport)",
+        "contains_MPLS": false,
+        "contains_LDP": false,
+        "contains_LSP": false
+      },
+      "elapsed": 0.5861907005310059
+    },
+    {
+      "id": "INC-TRANS-04",
+      "category": "incident",
+      "question": "PTP synchronization lost at site ENB-1100. GNSS antenna shows no satellite lock.",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "domain": "wrong (expected Transport)",
+        "contains_PTP": false,
+        "contains_synchronization": false,
+        "contains_GNSS": false
+      },
+      "elapsed": 0.5671501159667969
+    },
+    {
+      "id": "INC-TRANS-05",
+      "category": "incident",
+      "question": "DWDM optical power on lambda 3 dropped by 6dB. OSNR is degrading.",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "domain": "wrong (expected Transport)",
+        "contains_optical": false,
+        "contains_OSNR": false,
+        "contains_amplifier": false
+      },
+      "elapsed": 1.0416309833526611
+    },
+    {
+      "id": "INC-TRANS-06",
+      "category": "incident",
+      "question": "QoS policy on the S1 interface is dropping high-priority voice packets. DSCP marking seems wrong.",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "domain": "wrong (expected Transport)",
+        "contains_QoS": false,
+        "contains_DSCP": false,
+        "contains_priority": false
+      },
+      "elapsed": 0.9774801731109619
+    },
+    {
+      "id": "INC-IMS-01",
+      "category": "incident",
+      "question": "VoLTE call setup failure rate is 12% in the South region. Most failures are SIP 503 from S-CSCF.",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "domain": "wrong (expected IMS)",
+        "contains_IMS": false,
+        "contains_S-CSCF": false,
+        "contains_SIP": false,
+        "contains_503": false
+      },
+      "elapsed": 0.9322030544281006
+    },
+    {
+      "id": "INC-IMS-02",
+      "category": "incident",
+      "question": "One-way audio reported on VoLTE calls. Caller can hear callee but callee hears nothing.",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "domain": "wrong (expected IMS)",
+        "contains_RTP": false,
+        "contains_SDP": false,
+        "contains_NAT": false,
+        "contains_media": false
+      },
+      "elapsed": 0.8716559410095215
+    },
+    {
+      "id": "INC-IMS-03",
+      "category": "incident",
+      "question": "SRVCC handover from VoLTE to 3G is failing. Sv interface between MME and MSC is showing errors.",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "domain": "wrong (expected IMS)",
+        "contains_SRVCC": false,
+        "contains_Sv": false,
+        "contains_MSC": false
+      },
+      "elapsed": 1.231982946395874
+    },
+    {
+      "id": "INC-IMS-04",
+      "category": "incident",
+      "question": "Emergency calls (911) over VoLTE are failing. Normal VoLTE calls work fine.",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "domain": "wrong (expected IMS)",
+        "contains_emergency": false,
+        "contains_E-CSCF": false,
+        "contains_PSAP": false
+      },
+      "elapsed": 0.869351863861084
+    },
+    {
+      "id": "INC-IMS-05",
+      "category": "incident",
+      "question": "IMS registration success rate dropped to 92%. P-CSCF is returning 403 Forbidden.",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "domain": "wrong (expected IMS)",
+        "contains_IMS": false,
+        "contains_registration": false,
+        "contains_P-CSCF": false,
+        "contains_403": false
+      },
+      "elapsed": 0.8739960193634033
+    },
+    {
+      "id": "INC-IMS-06",
+      "category": "incident",
+      "question": "SBC is overwhelmed after a network recovery. 50,000 simultaneous IMS re-registrations hitting it.",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "domain": "wrong (expected IMS)",
+        "contains_SBC": false,
+        "contains_registration": false,
+        "contains_rate limiting": false
+      },
+      "elapsed": 0.6288180351257324
+    },
+    {
+      "id": "CFG-01",
+      "category": "config",
+      "question": "Create a network slice for URLLC autonomous vehicles with 10ms latency budget",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "is_yaml_like": false,
+        "contains_sst": false,
+        "contains_URLLC": false,
+        "contains_latency": false,
+        "contains_packet_delay": false
+      },
+      "elapsed": 0.5172469615936279
+    },
+    {
+      "id": "CFG-02",
+      "category": "config",
+      "question": "Configure QoS policy for VoNR with guaranteed 128kbps voice bearer",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "is_yaml_like": false,
+        "contains_5qi": false,
+        "contains_gbr": false,
+        "contains_128": false
+      },
+      "elapsed": 1.0577890872955322
+    },
+    {
+      "id": "CFG-03",
+      "category": "config",
+      "question": "Set up carrier aggregation with n78 as primary cell and n1 as secondary",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "is_yaml_like": false,
+        "contains_n78": false,
+        "contains_n1": false,
+        "contains_pcell": false,
+        "contains_scell": false
+      },
+      "elapsed": 0.9573280811309814
+    },
+    {
+      "id": "CFG-04",
+      "category": "config",
+      "question": "Configure a 5G NR cell on n78 band with 100MHz bandwidth and 4x4 MIMO",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.2,
+      "details": {
+        "is_yaml_like": false,
+        "contains_n78": false,
+        "contains_100": false,
+        "contains_mimo": false,
+        "contains_4": true
+      },
+      "elapsed": 0.42521214485168457
+    },
+    {
+      "id": "CFG-05",
+      "category": "config",
+      "question": "Set up SON with automatic neighbor relations, mobility load balancing, and MRO",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "is_yaml_like": false,
+        "contains_anr": false,
+        "contains_mlb": false,
+        "contains_mro": false
+      },
+      "elapsed": 0.8401191234588623
+    },
+    {
+      "id": "CFG-06",
+      "category": "config",
+      "question": "Configure RAN energy saving with carrier shutdown when PRB utilization below 10%",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "is_yaml_like": false,
+        "contains_energy": false,
+        "contains_carrier": false,
+        "contains_shutdown": false,
+        "contains_prb": false
+      },
+      "elapsed": 0.8729288578033447
+    },
+    {
+      "id": "CFG-07",
+      "category": "config",
+      "question": "Create IoT mMTC network slice with power saving mode and eDRX",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "is_yaml_like": false,
+        "contains_sst": false,
+        "contains_mMTC": false,
+        "contains_power_saving": false,
+        "contains_edrx": false
+      },
+      "elapsed": 0.9488189220428467
+    },
+    {
+      "id": "CFG-08",
+      "category": "config",
+      "question": "Configure IPsec tunnel between eNodeB and security gateway using IKEv2 with AES-256",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "is_yaml_like": false,
+        "contains_ipsec": false,
+        "contains_ike": false,
+        "contains_aes": false,
+        "contains_256": false
+      },
+      "elapsed": 1.1659479141235352
+    },
+    {
+      "id": "CFG-09",
+      "category": "config",
+      "question": "Set up inter-frequency handover from n78 to n1 with A2 and A5 events",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "is_yaml_like": false,
+        "contains_handover": false,
+        "contains_A2": false,
+        "contains_A5": false,
+        "contains_n78": false,
+        "contains_n1": false
+      },
+      "elapsed": 0.86043381690979
+    },
+    {
+      "id": "CFG-10",
+      "category": "config",
+      "question": "Configure UPF for edge computing with ULCL traffic steering to local data network",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "is_yaml_like": false,
+        "contains_upf": false,
+        "contains_ulcl": false,
+        "contains_local": false
+      },
+      "elapsed": 0.8101141452789307
+    },
+    {
+      "id": "CFG-11",
+      "category": "config",
+      "question": "Set up MOCN RAN sharing between two operators on n78 band with 60/40 resource split",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "is_yaml_like": false,
+        "contains_mocn": false,
+        "contains_plmn": false,
+        "contains_60": false,
+        "contains_40": false
+      },
+      "elapsed": 0.9194650650024414
+    },
+    {
+      "id": "CFG-12",
+      "category": "config",
+      "question": "Configure DRX for low latency with 40ms long DRX cycle and 10ms short DRX",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "is_yaml_like": false,
+        "contains_drx": false,
+        "contains_40": false,
+        "contains_10": false
+      },
+      "elapsed": 0.8968057632446289
+    },
+    {
+      "id": "CFG-13",
+      "category": "config",
+      "question": "Set up alarm correlation rules to identify site power failure from multiple alarms",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "is_yaml_like": false,
+        "contains_alarm": false,
+        "contains_correlation": false,
+        "contains_power": false
+      },
+      "elapsed": 0.5180330276489258
+    },
+    {
+      "id": "CFG-14",
+      "category": "config",
+      "question": "Configure PM counters for a RAN KPI dashboard with throughput, RRC success, and ERAB drop rate",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "is_yaml_like": false,
+        "contains_throughput": false,
+        "contains_rrc": false,
+        "contains_erab": false
+      },
+      "elapsed": 1.0005147457122803
+    },
+    {
+      "id": "CFG-15",
+      "category": "config",
+      "question": "Configure NWDAF for network anomaly detection with real-time data collection",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "is_yaml_like": false,
+        "contains_nwdaf": false,
+        "contains_anomaly": false
+      },
+      "elapsed": 0.5098752975463867
+    },
+    {
+      "id": "CFG-16",
+      "category": "config",
+      "question": "Set up O-RAN near-RT RIC xApp for intelligent load balancing across cells",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "is_yaml_like": false,
+        "contains_ric": false,
+        "contains_xapp": false,
+        "contains_load_balancing": false
+      },
+      "elapsed": 0.9220819473266602
+    },
+    {
+      "id": "CFG-17",
+      "category": "config",
+      "question": "Configure CSFB from LTE to 3G for voice calls with redirection to UARFCN 10713",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "is_yaml_like": false,
+        "contains_csfb": false,
+        "contains_redirect": false,
+        "contains_10713": false
+      },
+      "elapsed": 0.9205691814422607
+    },
+    {
+      "id": "CFG-18",
+      "category": "config",
+      "question": "Set up MEC application deployment rules for low-latency video streaming at edge site",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "is_yaml_like": false,
+        "contains_mec": false,
+        "contains_edge": false,
+        "contains_video": false
+      },
+      "elapsed": 0.9803249835968018
+    },
+    {
+      "id": "CFG-19",
+      "category": "config",
+      "question": "Configure inter-PLMN 5G roaming with SEPP on N32 interface using TLS",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "is_yaml_like": false,
+        "contains_sepp": false,
+        "contains_n32": false,
+        "contains_roaming": false,
+        "contains_tls": false
+      },
+      "elapsed": 1.0355472564697266
+    },
+    {
+      "id": "CFG-20",
+      "category": "config",
+      "question": "Set up NF registration in NRF for a new SMF instance with its service profile",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "is_yaml_like": false,
+        "contains_nrf": false,
+        "contains_smf": false,
+        "contains_registration": false
+      },
+      "elapsed": 1.026505947113037
+    },
+    {
+      "id": "KPI-01",
+      "category": "kpi",
+      "question": "ERAB drop rate increased from 0.5% to 2.8% over the past week. How should I investigate?",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "contains_radio": false,
+        "contains_mobility": false,
+        "contains_transport": false,
+        "contains_congestion": false
+      },
+      "elapsed": 0.8543622493743896
+    },
+    {
+      "id": "KPI-02",
+      "category": "kpi",
+      "question": "RRC setup success rate is 87% on cell CELL-800. Target is 95%. What's wrong?",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "contains_PDCCH": false,
+        "contains_RACH": false,
+        "contains_coverage": false
+      },
+      "elapsed": 0.9017791748046875
+    },
+    {
+      "id": "KPI-03",
+      "category": "kpi",
+      "question": "VoLTE MOS score dropped from 3.8 to 3.1. What should I check?",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "contains_jitter": false,
+        "contains_packet loss": false,
+        "contains_codec": false
+      },
+      "elapsed": 0.8751909732818604
+    },
+    {
+      "id": "KPI-04",
+      "category": "kpi",
+      "question": "Average DL user throughput is 15Mbps on a 20MHz LTE cell. Is this normal?",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "contains_spectral efficiency": false,
+        "contains_PRB": false,
+        "contains_SINR": false
+      },
+      "elapsed": 0.9750649929046631
+    },
+    {
+      "id": "KPI-05",
+      "category": "kpi",
+      "question": "Handover success rate between two 5G cells is only 88%. How should I analyze this?",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "contains_too-late": false,
+        "contains_too-early": false,
+        "contains_A3": false,
+        "contains_TTT": false
+      },
+      "elapsed": 0.5079550743103027
+    },
+    {
+      "id": "KPI-06",
+      "category": "kpi",
+      "question": "Inter-RAT handover from 5G to 4G has 15% failure rate. What's likely causing this?",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "contains_measurement": false,
+        "contains_B1": false,
+        "contains_coverage": false
+      },
+      "elapsed": 0.9168961048126221
+    },
+    {
+      "id": "KPI-07",
+      "category": "kpi",
+      "question": "Cell CELL-900 shows 95% PRB utilization but only 100 connected users. Is this normal?",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "contains_PRB": false,
+        "contains_throughput": false,
+        "contains_heavy users": false
+      },
+      "elapsed": 0.847365140914917
+    },
+    {
+      "id": "KPI-08",
+      "category": "kpi",
+      "question": "Uplink interference level (IoT) increased by 5dB across a cluster of 10 cells. What could cause this?",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "contains_interference": false,
+        "contains_external": false,
+        "contains_PIM": false
+      },
+      "elapsed": 0.5087368488311768
+    },
+    {
+      "id": "KPI-09",
+      "category": "kpi",
+      "question": "Our network's energy consumption per GB of data is 30% higher than industry average. How to optimize?",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "contains_energy": false,
+        "contains_carrier shutdown": false,
+        "contains_MIMO": false,
+        "contains_sleep": false
+      },
+      "elapsed": 0.8818809986114502
+    },
+    {
+      "id": "KPI-10",
+      "category": "kpi",
+      "question": "Attach success rate on MME-01 dropped from 99.5% to 97%. What KPIs should I correlate?",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "contains_attach": false,
+        "contains_authentication": false,
+        "contains_HSS": false
+      },
+      "elapsed": 0.9190199375152588
+    },
+    {
+      "id": "KPI-11",
+      "category": "kpi",
+      "question": "VoLTE call drop rate is 2% but only in the North region. Other regions are at 0.3%. Why?",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "contains_region": false,
+        "contains_handover": false,
+        "contains_coverage": false
+      },
+      "elapsed": 0.9589481353759766
+    },
+    {
+      "id": "KPI-12",
+      "category": "kpi",
+      "question": "Paging success rate dropped to 85% on MME-02. What does this indicate?",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "contains_paging": false,
+        "contains_TAU": false,
+        "contains_tracking area": false
+      },
+      "elapsed": 0.8932750225067139
+    },
+    {
+      "id": "KPI-13",
+      "category": "kpi",
+      "question": "Bearer modification success rate is 90%. What could be causing the 10% failures?",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "contains_bearer": false,
+        "contains_QoS": false,
+        "contains_resource": false
+      },
+      "elapsed": 0.9485788345336914
+    },
+    {
+      "id": "KPI-14",
+      "category": "kpi",
+      "question": "X2 handover success rate is 99% but S1 handover is only 92%. What does this tell you?",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "contains_X2": false,
+        "contains_S1": false,
+        "contains_inter-eNB": false,
+        "contains_MME": false
+      },
+      "elapsed": 0.9270420074462891
+    },
+    {
+      "id": "KPI-15",
+      "category": "kpi",
+      "question": "Our 5G SA network shows 5% registration rejection rate. Most rejections are cause code #5. What does this mean?",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "contains_registration": false,
+        "contains_reject": false,
+        "contains_PLMN": false
+      },
+      "elapsed": 0.9124069213867188
+    },
+    {
+      "id": "PROTO-01",
+      "category": "knowledge",
+      "question": "What is 5QI and what are the standard 5QI values for voice, video, and best effort?",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "contains_5QI": false,
+        "contains_QoS": false,
+        "contains_voice": false,
+        "contains_GBR": false
+      },
+      "elapsed": 0.5586202144622803
+    },
+    {
+      "id": "PROTO-02",
+      "category": "knowledge",
+      "question": "Explain the N4 interface between SMF and UPF. What protocol does it use?",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "contains_PFCP": false,
+        "contains_SMF": false,
+        "contains_UPF": false,
+        "contains_forwarding": false
+      },
+      "elapsed": 0.9441590309143066
+    },
+    {
+      "id": "PROTO-03",
+      "category": "knowledge",
+      "question": "What is the difference between NSA Option 3x and SA Option 2 in 5G deployment?",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "contains_EPC": false,
+        "contains_5GC": false,
+        "contains_control plane": false,
+        "contains_master": false
+      },
+      "elapsed": 0.8811569213867188
+    },
+    {
+      "id": "PROTO-04",
+      "category": "knowledge",
+      "question": "How does the 5G NR random access procedure (RACH) work? Describe the 4 steps.",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "contains_preamble": false,
+        "contains_RAR": false,
+        "contains_Msg3": false,
+        "contains_contention": false
+      },
+      "elapsed": 0.4256892204284668
+    },
+    {
+      "id": "PROTO-05",
+      "category": "knowledge",
+      "question": "What is network slicing? How is S-NSSAI structured?",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "contains_SST": false,
+        "contains_SD": false,
+        "contains_slice": false
+      },
+      "elapsed": 0.8329207897186279
+    },
+    {
+      "id": "PROTO-06",
+      "category": "knowledge",
+      "question": "Explain the role of AMF, SMF, and UPF in 5G core network.",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "contains_AMF": false,
+        "contains_mobility": false,
+        "contains_SMF": false,
+        "contains_session": false,
+        "contains_UPF": false,
+        "contains_user plane": false
+      },
+      "elapsed": 0.8425207138061523
+    },
+    {
+      "id": "PROTO-07",
+      "category": "knowledge",
+      "question": "What is CUPS and why is it important in 5G architecture?",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "contains_control": false,
+        "contains_user plane": false,
+        "contains_separation": false
+      },
+      "elapsed": 0.5966739654541016
+    },
+    {
+      "id": "PROTO-08",
+      "category": "knowledge",
+      "question": "How does HARQ work in LTE/5G NR? What is the difference between synchronous and asynchronous HARQ?",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "contains_HARQ": false,
+        "contains_retransmission": false,
+        "contains_ACK": false,
+        "contains_NACK": false
+      },
+      "elapsed": 0.7397429943084717
+    },
+    {
+      "id": "PROTO-09",
+      "category": "knowledge",
+      "question": "What is the CU-DU split in 5G RAN? Which protocol layers go where?",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "contains_CU": false,
+        "contains_DU": false,
+        "contains_RRC": false,
+        "contains_PDCP": false,
+        "contains_RLC": false,
+        "contains_MAC": false
+      },
+      "elapsed": 1.223863124847412
+    },
+    {
+      "id": "PROTO-10",
+      "category": "knowledge",
+      "question": "Explain the Tracking Area Update (TAU) procedure in LTE.",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "contains_TAU": false,
+        "contains_tracking area": false,
+        "contains_MME": false,
+        "contains_idle": false
+      },
+      "elapsed": 0.6497187614440918
+    },
+    {
+      "id": "PROTO-11",
+      "category": "knowledge",
+      "question": "What is SSB in 5G NR and what does it contain?",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "contains_PSS": false,
+        "contains_SSS": false,
+        "contains_PBCH": false,
+        "contains_synchronization": false
+      },
+      "elapsed": 0.761699914932251
+    },
+    {
+      "id": "PROTO-12",
+      "category": "knowledge",
+      "question": "How does carrier aggregation work in LTE/NR? What is the difference between inter-band and intra-band CA?",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "contains_component carrier": false,
+        "contains_PCell": false,
+        "contains_SCell": false
+      },
+      "elapsed": 0.8033339977264404
+    },
+    {
+      "id": "PROTO-13",
+      "category": "knowledge",
+      "question": "What is MIMO and how does massive MIMO differ from regular MIMO?",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "contains_antenna": false,
+        "contains_beamforming": false,
+        "contains_spatial": false
+      },
+      "elapsed": 0.8209078311920166
+    },
+    {
+      "id": "PROTO-14",
+      "category": "knowledge",
+      "question": "Explain the IMS architecture for VoLTE. What are P-CSCF, I-CSCF, and S-CSCF?",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "contains_P-CSCF": false,
+        "contains_I-CSCF": false,
+        "contains_S-CSCF": false,
+        "contains_SIP": false
+      },
+      "elapsed": 0.8598620891571045
+    },
+    {
+      "id": "PROTO-15",
+      "category": "knowledge",
+      "question": "What is the difference between GBR and Non-GBR bearers in LTE?",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "contains_GBR": false,
+        "contains_guaranteed": false,
+        "contains_bit rate": false
+      },
+      "elapsed": 0.8076968193054199
+    },
+    {
+      "id": "PROTO-16",
+      "category": "knowledge",
+      "question": "How does NRF work in 5G SBA? What is NF discovery?",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "contains_NRF": false,
+        "contains_service": false,
+        "contains_registration": false,
+        "contains_discovery": false
+      },
+      "elapsed": 0.5698328018188477
+    },
+    {
+      "id": "PROTO-17",
+      "category": "knowledge",
+      "question": "What subcarrier spacings are supported in 5G NR and when is each used?",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "contains_15": false,
+        "contains_30": false,
+        "contains_60": false,
+        "contains_120": false,
+        "contains_kHz": false
+      },
+      "elapsed": 0.8576817512512207
+    },
+    {
+      "id": "PROTO-18",
+      "category": "knowledge",
+      "question": "Explain the difference between FDD and TDD. Why is TDD preferred for 5G NR in FR1?",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "contains_FDD": false,
+        "contains_TDD": false,
+        "contains_uplink": false,
+        "contains_downlink": false,
+        "contains_spectrum": false
+      },
+      "elapsed": 0.8428149223327637
+    },
+    {
+      "id": "PROTO-19",
+      "category": "knowledge",
+      "question": "What is O-RAN and how does it differ from traditional RAN?",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "contains_open": false,
+        "contains_interface": false,
+        "contains_vendor": false,
+        "contains_RIC": false
+      },
+      "elapsed": 0.9130561351776123
+    },
+    {
+      "id": "PROTO-20",
+      "category": "knowledge",
+      "question": "Explain MEC (Multi-access Edge Computing) and its role in 5G.",
+      "answer": "ERROR: [X509: NO_CERTIFICATE_OR_CRL_FOUND] no certificate or crl found (_ssl.c:4411)",
+      "score": 0.0,
+      "details": {
+        "contains_edge": false,
+        "contains_latency": false,
+        "contains_local": false
+      },
+      "elapsed": 0.8455221652984619
+    }
+  ]
+}

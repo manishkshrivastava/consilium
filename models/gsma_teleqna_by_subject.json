@@ -1,0 +1,117 @@
+{
+  "benchmark": "GSMA TeleQnA \u2014 Per Subject",
+  "per_subject_sample": 200,
+  "seed": 42,
+  "models": [
+    "llama-base",
+    "llama-v41",
+    "claude-sonnet"
+  ],
+  "results": {
+    "llama-base": {
+      "label": "Llama 3.1 8B base",
+      "by_subject": {
+        "Lexicon": {
+          "accuracy": 0.805,
+          "correct": 161,
+          "total": 200
+        },
+        "Research overview": {
+          "accuracy": 0.675,
+          "correct": 135,
+          "total": 200
+        },
+        "Research publications": {
+          "accuracy": 0.75,
+          "correct": 150,
+          "total": 200
+        },
+        "Standards overview": {
+          "accuracy": 0.62,
+          "correct": 124,
+          "total": 200
+        },
+        "Standards specifications": {
+          "accuracy": 0.56,
+          "correct": 112,
+          "total": 200
+        }
+      },
+      "overall": {
+        "accuracy": 0.682,
+        "correct": 682,
+        "total": 1000
+      }
+    },
+    "llama-v41": {
+      "label": "Consilium v4.1",
+      "by_subject": {
+        "Lexicon": {
+          "accuracy": 0.8,
+          "correct": 160,
+          "total": 200
+        },
+        "Research overview": {
+          "accuracy": 0.715,
+          "correct": 143,
+          "total": 200
+        },
+        "Research publications": {
+          "accuracy": 0.725,
+          "correct": 145,
+          "total": 200
+        },
+        "Standards overview": {
+          "accuracy": 0.69,
+          "correct": 138,
+          "total": 200
+        },
+        "Standards specifications": {
+          "accuracy": 0.6,
+          "correct": 120,
+          "total": 200
+        }
+      },
+      "overall": {
+        "accuracy": 0.706,
+        "correct": 706,
+        "total": 1000
+      }
+    },
+    "claude-sonnet": {
+      "label": "Claude Sonnet 4.6",
+      "by_subject": {
+        "Lexicon": {
+          "accuracy": 0.925,
+          "correct": 185,
+          "total": 200
+        },
+        "Research overview": {
+          "accuracy": 0.815,
+          "correct": 163,
+          "total": 200
+        },
+        "Research publications": {
+          "accuracy": 0.83,
+          "correct": 166,
+          "total": 200
+        },
+        "Standards overview": {
+          "accuracy": 0.805,
+          "correct": 161,
+          "total": 200
+        },
+        "Standards specifications": {
+          "accuracy": 0.705,
+          "correct": 141,
+          "total": 200
+        }
+      },
+      "overall": {
+        "accuracy": 0.816,
+        "correct": 816,
+        "total": 1000
+      }
+    }
+  }
+}

@@ -1,0 +1,1299 @@
+{
+  "model": "Llama 3.1 8B (fine-tuned v1, 2137 steps, v1 data)",
+  "overall_score": 0.7811365758424582,
+  "by_category": {
+    "incident": 0.8095959595959596,
+    "config": 0.9175000000000001,
+    "kpi": 0.6105820105820106,
+    "knowledge": 0.73
+  },
+  "results": [
+    {
+      "id": "INC-RAN-01",
+      "category": "incident",
+      "question": "eNodeB ENB-3456 CPU utilization at 97%. Connected UEs: 450. What is the likely cause and resolution?",
+      "answer": "**Analyze:**\nCPU utilization on eNodeB ENB-3456 has reached 97% with 450 connected UEs.\nThis indicates CPU bottleneck, potentially from:\n1) Excessive handover processing due to high UE mobility\n2) Complex interference scenarios requiring extensive calculations\n3) Software overhead from excessive logging or management operations\n4) Hardware limit of CPU cores (likely 4-8 cores on this eNodeB)\n5) Firmware version causing inefficient code paths\n\n**Resolution:**\n1. **Check handover statistics**: If ",
+      "score": 0.6363636363636364,
+      "details": {
+        "domain": "wrong (expected RAN)",
+        "contains_CPU": true,
+        "contains_handover": true,
+        "contains_connected UE": true,
+        "contains_load balancing": false,
+        "has_resolution": true
+      },
+      "elapsed": 113.3545196056366
+    },
+    {
+      "id": "INC-RAN-02",
+      "category": "incident",
+      "question": "RACH failure rate jumped from 2% to 18% on cell CELL-78901 in the last hour. No recent config changes.",
+      "answer": "**Diagnosis:**\nRandom Access Channel (RACH) failure rate increased by 16% on cell CELL-78901 in the past hour, exceeding the 5% threshold for RACH congestion. Analysis of potential causes: 1) **Increased UE density**: New buildings/developments in the cell coverage area increasing the number of UEs per square kilometer. 2) **RACH configuration**: MAC layer parameter changes (e.g., preamble format, MsgA/MagicalNumber) may reduce success rate. 3) **Timing advance issues**: Abnormal TA values from ",
+      "score": 0.6,
+      "details": {
+        "domain": "correct",
+        "contains_PRACH": false,
+        "contains_interference": false,
+        "contains_preamble": true,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 6.877507925033569
+    },
+    {
+      "id": "INC-RAN-03",
+      "category": "incident",
+      "question": "DL throughput dropped 40% on cell CELL-23456. PRB utilization is at 45%, so it's not congestion.",
+      "answer": "**Diagnosis:**\nDifferential DL throughput drop of 40% on cell CELL-23456 with PRB utilization at 45%. This suggests a backhaul bottleneck rather than radio congestion. Possible causes: 1) Backhaul link degradation (QoS issues, latency, packet loss), 2) MIMO upgrade failure or misconfiguration, 3) Hardware degradation (PA/TRX module), 4) New interference source in the area.\n\n**Analysis of PRB usage:** With PRB utilization at 45%, there's still headroom for increased traffic. This suggests that ra",
+      "score": 0.5,
+      "details": {
+        "domain": "correct",
+        "contains_SINR": false,
+        "contains_interference": true,
+        "contains_CQI": false,
+        "wrongly_contains_congestion": true,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 5.16113805770874
+    },
+    {
+      "id": "INC-RAN-04",
+      "category": "incident",
+      "question": "Handover success rate between CELL-100 and CELL-200 dropped from 98% to 82%. What should I investigate?",
+      "answer": "**Critical: Handover (HO) success rate between CELL-100 and CELL-200 dropped to 82%. Previous HO success rate was 98%.**\n\n**Investigation points:**\n1. **Timing Advance adjustments:** Is TAI (Tracking Area Identity) consistent across both cells? One-way changes in TA can cause failures\n2. **Handover type:** Check if it's intra-frequency, inter-frequency, or inter-RAT. Analysis depends on HO type\n3. **Signal strength trend:** Compare RSRP/RSRQ values for both cells in the last 24h \u2014 are there patt",
+      "score": 1.0,
+      "details": {
+        "domain": "correct",
+        "contains_handover": true,
+        "contains_A3": true,
+        "contains_neighbor": true,
+        "has_severity": true,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 6.941302061080933
+    },
+    {
+      "id": "INC-RAN-05",
+      "category": "incident",
+      "question": "VSWR alarm on sector 2 of site ENB-5678. Return loss is 8dB instead of normal 25dB.",
+      "answer": "**Fault analysis:**\nVoltage Standing Wave Ratio (VSWR) has raised an alarm on sector 2 of site ENB-5678, with return loss at 8dB, below the 25dB minimum. High VSWR causes reflected power damage to transmitter and increases interference. Causes include: misaligned antenna, water on radome, bad connector, or load mismatch from amplifier.\n\n**Resolution steps:**\n1. Check for physical damage (dents, water spots) on the antenna\n2. Verify connector status (PCB, SMA, QMA) and replace if damaged\n3. Check",
+      "score": 0.8333333333333334,
+      "details": {
+        "domain": "correct",
+        "contains_VSWR": true,
+        "contains_connector": true,
+        "contains_feeder": false,
+        "contains_antenna": true,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 4.724069118499756
+    },
+    {
+      "id": "INC-RAN-06",
+      "category": "incident",
+      "question": "PCI collision detected. Both CELL-300 and CELL-400 are using PCI 127 and they are neighbors.",
+      "answer": "**Incident Analysis:**\nBoth Cell (CELL-300) and Cell (CELL-400) have collided on Physical Channel Identifier (PCI) 127, which is causing interference between the two cells. Each cell can now detect the transmissions from both cells but cannot decode them. The impact of PCI collision depends on various factors, including:\n\n*   Type of UEs connected to each cell\n*   Data rate and payload size in transport block\n*   Cyclic Prefix (Normal or Extended)\n*   Frequency characteristics of the radio chann",
+      "score": 0.9,
+      "details": {
+        "domain": "correct",
+        "contains_PCI": true,
+        "contains_collision": true,
+        "contains_neighbor": true,
+        "wrongly_contains_transport": true,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 8.331908702850342
+    },
+    {
+      "id": "INC-RAN-07",
+      "category": "incident",
+      "question": "Cell CELL-500 is completely out of service. BBU is not responding to OAM commands.",
+      "answer": "**Diagnosis:**\nThe Base Band Unit (BBU) at cell CELL-500 has failed or shut down for unknown reasons. All handsets in this cell are now without service and cannot make calls. Common causes include hardware failure, power loss, overheating, software crash, or network overload. OAM (Operations, Administration, Maintenance) commands from the NOC (Network Operations Center) are not being recognized by the BBU.\n\n**Troubleshooting Steps:**\n1. Check BBU status via OAM link from NOC\n2. If no response, t",
+      "score": 0.8,
+      "details": {
+        "domain": "wrong (expected RAN)",
+        "contains_BBU": true,
+        "contains_power": true,
+        "contains_hardware": true,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 4.805578947067261
+    },
+    {
+      "id": "INC-RAN-08",
+      "category": "incident",
+      "question": "RRC setup success rate is only 85% on gNB GNB-100. What KPIs should I check first?",
+      "answer": "**Key Performance Indicators to focus on:**\n\n| KPI | Target Value | Comment |\n|-----|--------------|---------|\n| RRC Setup Success Rate | \u2265 95%      | Current value is at 85%, need improvement |\n| RACH Success Rate     | \u2265 90%       | May indicate issues with PDCCH or contention   |\n| BLER (Blocking Likelihood Evaluation Rate) | \u2264 3%        | If high, indicates radio congestion          |\n\n**What could be causing it:**\n\n1. **Radio Congestion:** Too many UEs on the gNB. Check active UE count vs c",
+      "score": 0.7777777777777778,
+      "details": {
+        "domain": "wrong (expected RAN)",
+        "contains_RRC": true,
+        "contains_PDCCH": true,
+        "contains_RACH": true,
+        "has_resolution": true
+      },
+      "elapsed": 4.33170485496521
+    },
+    {
+      "id": "INC-RAN-09",
+      "category": "incident",
+      "question": "DL PRB utilization is 92% on CELL-600 during busy hour. Users complain of slow data.",
+      "answer": "**Analysis:**\nDL PRB (Physical Resource Blocks) utilization at 92% during busy hour exceeds the recommended max utilization rate for good performance (around 70%). This causes congestion and slows down UL data transfers.\n\n**Common Causes:**\n1. Traffic growth exceeding cell capacity planning\n2. Abnormal traffic pattern (event, new building)\n3. Neighbor cell outage causing traffic spillover\n4. Inefficient scheduler configuration\n\n**Solutions:**\n1. **Check neighbor cells \u2014 verify no hidden node iss",
+      "score": 0.8333333333333334,
+      "details": {
+        "domain": "correct",
+        "contains_PRB": true,
+        "contains_congestion": true,
+        "contains_capacity": true,
+        "contains_load balancing": false,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 4.000282049179077
+    },
+    {
+      "id": "INC-RAN-10",
+      "category": "incident",
+      "question": "High PDCP packet loss (3.5%) detected on CELL-700. Radio conditions seem normal (SINR > 10dB).",
+      "answer": "**Diagnosis:**\nPDCP layer packet loss has been detected on CELL-700 at 3.5% rate, far exceeding the 0.1% target for a GPRS core network.\n\nThe cause is unclear - Radio Link Recovery mechanism should have retransmitted lost PDCP PDUs. Possible causes:\n1) Abnormal radio conditions (though SINR seems normal)\n2) Issue with MAC entity or RLC AM\n3) Transport mechanism problem (GTP-U tunneling in backhaul)\n\n**Resolution steps:**\n1. Verify if UL grants match DL transmissions (MAC correlation)\n2. Check RL",
+      "score": 1.0,
+      "details": {
+        "domain": "correct",
+        "contains_PDCP": true,
+        "contains_backhaul": true,
+        "contains_transport": true,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 4.569288730621338
+    },
+    {
+      "id": "INC-CORE-01",
+      "category": "incident",
+      "question": "S1 link failure between eNodeB ENB-8000 and MME MME-02. SCTP association is down.",
+      "answer": "**Diagnosis:**\nSCTP association between eNodeB ENB-8000 and MME MME-02 is down. Impact: UEs cannot perform initial attach or handover via this MME. If redundant MME exists, traffic should failover to other entry point. Root causes include: 1) SCTP port (36412) blocked by ACL/Firewall on MME side, 2) MME overload or process crash, 3) eNodeB SCTP stack issue or configuration error, 4) Network path change causing MTU issues with SCTP.\n\n**Resolution Steps:**\n1. Verify SCTP port 36412 is reachable fr",
+      "score": 0.8333333333333334,
+      "details": {
+        "domain": "wrong (expected Core)",
+        "contains_S1": true,
+        "contains_SCTP": true,
+        "contains_MME": true,
+        "contains_transport": true,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 5.672951936721802
+    },
+    {
+      "id": "INC-CORE-02",
+      "category": "incident",
+      "question": "AMF registration failure rate is 15% on AMF-03. Users can't attach to 5G network.",
+      "answer": "**Diagnosis:**\nAccess and Mobility Management Function (AMF) AMF-03 is experiencing high registration failure rate (15%). UEs are unable to complete the initial registration process and attach to the 5G network. Common causes include: 1) AUSF/UDM authentication failures (subscription data issues), 2) NRF service discovery failures, 3) AMF overload (CPU/memory), 4) N2 interface issues between gNB and AMF, 5) PLMN or TAC mismatch in configuration.\n\n**Troubleshooting steps:**\n1. Check AMF logs for ",
+      "score": 0.8333333333333334,
+      "details": {
+        "domain": "wrong (expected Core)",
+        "contains_AMF": true,
+        "contains_registration": true,
+        "contains_AUSF": true,
+        "contains_UDM": true,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 5.161329984664917
+    },
+    {
+      "id": "INC-CORE-03",
+      "category": "incident",
+      "question": "PDU session establishment failure at 20% on SMF-01. IP pool utilization is at 95%.",
+      "answer": "**Diagnosis:**\nSession Management Function (SMF) SMF-01 is experiencing high failure rate (20%) for PDU session establishment. The available IP address pool is at 95% utilization. This indicates that the SMF has exhausted available IP addresses or there's a routing issue preventing IP address allocation. Root causes: 1) IP address pool exhaustion, 2) DHCP/IPv6 RA issues from UPF, 3) Routing failure between SMF and UPF, 4) TCP connection establishment failures (RRC setup), 5) NAS signaling failur",
+      "score": 0.8333333333333334,
+      "details": {
+        "domain": "wrong (expected Core)",
+        "contains_PDU": true,
+        "contains_SMF": true,
+        "contains_IP pool": true,
+        "contains_UPF": true,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 9.269142866134644
+    },
+    {
+      "id": "INC-CORE-04",
+      "category": "incident",
+      "question": "GTP-U path failure between SGW-01 and PGW-02. Echo requests are timing out.",
+      "answer": "**Diagnosis:**\nGTP-U (GPRS Tunneling Protocol - User plane) path between Serving Gateway Switch (SGW-01) and PDN Gateway (PGW-02) is failed. GTP-U echo requests sent by SGW are not being received by PGW, causing echo timer expiry and retransmission. Impact: all user plane connections through this path are interrupted, traffic falls back to physical link recovery mechanisms (re-routing), but Echo Request/Response mechanism cannot verify path viability.\n\n**Root causes:**\n1. **Link failure between ",
+      "score": 0.8,
+      "details": {
+        "domain": "wrong (expected Core)",
+        "contains_GTP": true,
+        "contains_tunnel": true,
+        "contains_echo": true,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 8.045952081680298
+    },
+    {
+      "id": "INC-CORE-05",
+      "category": "incident",
+      "question": "NRF is not responding to NF discovery requests. Multiple NFs can't find each other.",
+      "answer": "**Diagnosis:**\nNetwork Repository Function (NRF) acts as a registry for Network Functions (NF). Other NFs discover NRF by sending DISCOVERY REQUEST messages on the Nudm_NFDiscovery service interface. If NRF is not responding, multiple issues may exist:\n1) NRF instance failure or overload\n2) Connectivity issue between requesting NF and NRF\n3) TLS/SSL certificate mismatch on NRF endpoint\n4) NRF policy configuration error (access control, API version mismatch)\n5) DNS resolution issue for NRF FQDN\n\n",
+      "score": 0.8,
+      "details": {
+        "domain": "wrong (expected Core)",
+        "contains_NRF": true,
+        "contains_discovery": true,
+        "contains_NF": true,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 5.179454803466797
+    },
+    {
+      "id": "INC-CORE-06",
+      "category": "incident",
+      "question": "HSS replication lag between primary and standby is 3 seconds and increasing.",
+      "answer": "**Diagnosis:**\nHigh Availability (HA) configuration with HSS (Home Subscriber Server) deployment as CTF (Control Tower Function). The primary and standby HSS are showing a replication lag of 3 seconds, which is within the vendor-defined specification but still considered high for production environments. This latency impacts the session convergence time in case of primary failure. Root causes: 1) High transaction rate exceeding the replication bandwidth, 2) Network latency between primary and st",
+      "score": 0.8,
+      "details": {
+        "domain": "wrong (expected Core)",
+        "contains_HSS": true,
+        "contains_replication": true,
+        "contains_failover": true,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 5.168744087219238
+    },
+    {
+      "id": "INC-CORE-07",
+      "category": "incident",
+      "question": "Diameter Gx connection lost between PCRF-01 and PGW-01. Port 3868 is unreachable.",
+      "answer": "**Diagnosis:**\nA Diameter Gx connection between PCRF policy control server PCRF-01 and PGW gateway router PGW-01 has failed. The two devices cannot establish a UDP tunnel over port 3868. Impact: PGW cannot obtain IP address or QoS policies from PCRF. New connection attempts are rejected.\n\n**Root causes:**\n1. PCRF policy control failure (e.g., database error, overload)\n2. PGW implementation error (e.g., incorrect NAS ID, shared secret)\n3. Firewalls blocking Diameter traffic on port 3868 between P",
+      "score": 0.8,
+      "details": {
+        "domain": "wrong (expected Core)",
+        "contains_Diameter": true,
+        "contains_PCRF": true,
+        "contains_Gx": true,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 5.849872827529907
+    },
+    {
+      "id": "INC-CORE-08",
+      "category": "incident",
+      "question": "NSSF is rejecting slice selection requests for SST=1 in tracking area TAC-5000.",
+      "answer": "**Diagnosis:**\nNetwork Slice Selection Function (NSSF) is rejecting all slice selection requests with Service Type Indicator (SST)=1 within Tracking Area TAC-5000. UEs are unable to register or continue service due to this rejection. Root causes: 1) S-NSSAI-to-Slice mapping error in NSSF, 2) Slice not provisioned for the requested SST, 3) TAC-to-NSSF mapping error in SMF, 4) NSSF policy rule mismatch for the requested SST, 5) NSF (Application Function) not provisioning the requested service.\n\n**",
+      "score": 0.8,
+      "details": {
+        "domain": "wrong (expected Core)",
+        "contains_NSSF": true,
+        "contains_slice": true,
+        "contains_S-NSSAI": true,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 5.758126258850098
+    },
+    {
+      "id": "INC-TRANS-01",
+      "category": "incident",
+      "question": "Packet loss of 4% detected on backhaul link to site ENB-9000. Link is microwave.",
+      "answer": "**Diagnosis:**\nMicrowave backhaul link to site ENB-9000 showing 4% packet loss. This exceeds the 1% maximum recommended for reliable transmission of IP packets. Causes: 1) Rain fade (atmospheric attenuation due to precipitation), 2) Equipment degradation (TA, TR, or ATP antenna gain loss), 3) Frequency interference from neighboring links, 4) Obstruction in the link path (new building, vehicle, etc.), 5) Aging of the modulation scheme. Impact: Packet loss directly affects user experience \u2014 increa",
+      "score": 0.8,
+      "details": {
+        "domain": "wrong (expected Transport)",
+        "contains_microwave": true,
+        "contains_RSL": true,
+        "contains_rain fade": true,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 6.4308600425720215
+    },
+    {
+      "id": "INC-TRANS-02",
+      "category": "incident",
+      "question": "BGP peer between PE-NYC-01 and PE-LAX-02 is flapping. Goes down and up every 5 minutes.",
+      "answer": "**Issue: BGP peer session between PE-NYC-01 and PE-LAX-02 is experiencing instability**\n**The session goes down and up every 5 minutes, causing traffic fluctuations**\n**Analysis of logs shows:**\n- **Session goes down due to 'Remote host requested clear' or 'BFD detected link failure'**\n- **PE-LAX-02 sends KEEPALIVE REQUEST, but PE-NYC-01 doesn't respond**\n- **PE-NYC-01 logs show 'No neighbor response to keepalive'**\n- **Traceroute confirms the physical link is up**\n\n**What are my troubleshooting",
+      "score": 0.5555555555555556,
+      "details": {
+        "domain": "wrong (expected Transport)",
+        "contains_BGP": true,
+        "contains_peer": true,
+        "contains_hold timer": false,
+        "has_resolution": true
+      },
+      "elapsed": 3.1862807273864746
+    },
+    {
+      "id": "INC-TRANS-03",
+      "category": "incident",
+      "question": "MPLS LSP for VPN-ENTERPRISE-500 is down. LDP session between PE-01 and PE-02 is lost.",
+      "answer": "**Diagnosis:**\nLDP session failure between PE routers PE-01 and PE-02 has caused the MPLS Label Switched Path (LSP) for VPN-ENTERPRISE-500 to fail. Impact: L3VPN connectivity lost for all sites in this VPN connected via these PEs. Causes: 1) LDP session failure (keepalive timeout or notification), 2) IGP (OSPF/IS-IS) failure affecting route computation, 3) Resource exhaustion (memory/session limit), 4) Transport connection failure (TCP port 646).\n\n**Troubleshooting steps:**\n1. Check LDP session ",
+      "score": 1.0,
+      "details": {
+        "domain": "correct",
+        "contains_MPLS": true,
+        "contains_LDP": true,
+        "contains_LSP": true,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 5.13985800743103
+    },
+    {
+      "id": "INC-TRANS-04",
+      "category": "incident",
+      "question": "PTP synchronization lost at site ENB-1100. GNSS antenna shows no satellite lock.",
+      "answer": "**Diagnosis:**\nPrecision Time Protocol (PTP/IEEE 1588v2) synchronization lost at site ENB-1100. The GNSS (Global Navigation Satellite System) antenna is not locking onto any satellites. Impact: without accurate timing, TDD frame alignment fails, causing inter-cell interference and potential cell outage. Root causes: 1) GNSS antenna damage or misalignment, 2) Antenna on wrong side of the building, 3) Signal blockage by new building feature, 4) PTPd (PTP server) failure, 5) TCP/IP issue between EN",
+      "score": 0.8,
+      "details": {
+        "domain": "wrong (expected Transport)",
+        "contains_PTP": true,
+        "contains_synchronization": true,
+        "contains_GNSS": true,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 5.549697160720825
+    },
+    {
+      "id": "INC-TRANS-05",
+      "category": "incident",
+      "question": "DWDM optical power on lambda 3 dropped by 6dB. OSNR is degrading.",
+      "answer": "**Incident Report: DWDM Lambda 3 Optical Power Loss -- OSNR Degradation**\n\n**Key Findings:**\n- DWDM lambda 3 total optical power (Pw) has dropped to -15.8 dBm\n- Received signal power (Prb) on the receiver is now at -68.5 dBm\n- OSNR has decreased to 11.6 dB\n- Compliance with the original RoF budget: No\n\n**Root Causes:**\n1) **Fiber attenuation -- loss in new span or splice issue**\n2) **Transmitter (TX) power reduction** due to aging or modulation driver\n3) **Gain flatness degradation on optical am",
+      "score": 0.8,
+      "details": {
+        "domain": "wrong (expected Transport)",
+        "contains_optical": true,
+        "contains_OSNR": true,
+        "contains_amplifier": true,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 7.607918739318848
+    },
+    {
+      "id": "INC-TRANS-06",
+      "category": "incident",
+      "question": "QoS policy on the S1 interface is dropping high-priority voice packets. DSCP marking seems wrong.",
+      "answer": "**Problem Summary:**\nS1 interface QoS policy is causing high-priority (voice) packets to be dropped. Inspection shows incorrect DSCP marking, which is leading to misclassification and drop. Impact: voice quality degradation or total loss of voice connectivity on the affected S1 link.\n\n**Root Causes:**\n1. **Incorrect DSCP marking**: GTP-encapsulated PDU headers have incorrect DSCP values (e.g., 000111 = AF31 instead of 101110 = EF for voice). Packets are being misclassified.\n2. **TOS/DSCP mismatc",
+      "score": 0.8,
+      "details": {
+        "domain": "wrong (expected Transport)",
+        "contains_QoS": true,
+        "contains_DSCP": true,
+        "contains_priority": true,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 7.669854164123535
+    },
+    {
+      "id": "INC-IMS-01",
+      "category": "incident",
+      "question": "VoLTE call setup failure rate is 12% in the South region. Most failures are SIP 503 from S-CSCF.",
+      "answer": "**Analysis:**\nVoLTE call setup success rate has dropped to 88% in the South, with 503 (service not available) responses from S-CSCF being the primary cause. Root causes: 1) S-CSCF overload or process crash, 2) HSS database failure (subscriber profile missing), 3) Certificate expiry on S-CSCF \u2014 TLS handshake failing, 4) SIP routing error in S-CSCF re-routing rules, 5) CDR (Charging Data Record) failure \u2014 CDF (Charging Data Function) unreachable.\n\n**Troubleshooting steps:**\n1. Check S-CSCF process",
+      "score": 0.6666666666666666,
+      "details": {
+        "domain": "wrong (expected IMS)",
+        "contains_IMS": false,
+        "contains_S-CSCF": true,
+        "contains_SIP": true,
+        "contains_503": true,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 5.848007917404175
+    },
+    {
+      "id": "INC-IMS-02",
+      "category": "incident",
+      "question": "One-way audio reported on VoLTE calls. Caller can hear callee but callee hears nothing.",
+      "answer": "**Symptoms:** One-way audio (one direction only) on VoLTE voice calls. Caller can usually hear the callee, but not vice versa.\n\n**Causes:**\n1. **Audio codec mismatch**: Different codecs used in uplink and downlink media streams\n2. **SDP negotiation failure**: Session Description Protocol (SDP) offers from both ends don't match\n3. **Jitter causes packet loss**: Excessive jitter causing RTP packets to be dropped by the receiver\n4. **Volume control issues**:\n5. **Handset or headset problem**\n6. **E",
+      "score": 0.6666666666666666,
+      "details": {
+        "domain": "wrong (expected IMS)",
+        "contains_RTP": true,
+        "contains_SDP": true,
+        "contains_NAT": false,
+        "contains_media": true,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 5.237043142318726
+    },
+    {
+      "id": "INC-IMS-03",
+      "category": "incident",
+      "question": "SRVCC handover from VoLTE to 3G is failing. Sv interface between MME and MSC is showing errors.",
+      "answer": "**Diagnosis:**\nSingle Radio Voice Call Continuity (SRVCC) handover from VoLTE (4G) to circuit-switched voice (3G/2G) is failing. The Session Transfer (Sv interface) between the MME (Mobilie Management Entity, 4G core) and MSC (Mobile Switching Center, 3G/2G core) is showing errors. When a VoLTE call needs to be continued on 3G/2G due to poor 4G coverage, the MME is unable to transfer the call to MSC via Sv interface. Impact: ongoing VoLTE calls are dropped when 4G -> 3G/2G handover occurs. Root ",
+      "score": 1.0,
+      "details": {
+        "domain": "correct",
+        "contains_SRVCC": true,
+        "contains_Sv": true,
+        "contains_MSC": true,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 7.774429082870483
+    },
+    {
+      "id": "INC-IMS-04",
+      "category": "incident",
+      "question": "Emergency calls (911) over VoLTE are failing. Normal VoLTE calls work fine.",
+      "answer": "**Diagnosis:**\nEmergency calls using the 'Emergency' button on UEs or dialing 911 directly is critical voice communication that must function in all situations. Currently, these calls are not working when made from your network. Regular VoLTE calls (P2P voice over LTE) work fine but emergency calls are failing for some reason. This affects public safety and requires immediate attention. Root causes include: 1) Emergency call routing failure through E-CSCF or Emergency SCUR, 2) Location informati",
+      "score": 0.8181818181818182,
+      "details": {
+        "domain": "wrong (expected IMS)",
+        "contains_emergency": true,
+        "contains_E-CSCF": true,
+        "contains_PSAP": true,
+        "has_severity": true,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 7.374141216278076
+    },
+    {
+      "id": "INC-IMS-05",
+      "category": "incident",
+      "question": "IMS registration success rate dropped to 92%. P-CSCF is returning 403 Forbidden.",
+      "answer": "**Diagnosis:**\nIMS (IP Multimedia Subsystem) registration success rate has dropped to 8% from what was previously a stable 99.5%. The P-CSCF (Serving CSCF) is responding with 403 Forbidden error codes. This typically indicates that the P-CSCF is rejecting SIP REGISTER requests. Root causes: 1) AAA (Authentication, Authorization, Accounting) backend failure or misconfiguration, 2) Certificate expiry on SBC or P-CSCF \u2014 TLS handshake failure, 3) Overloading of P-CSCF due to high registration rate, ",
+      "score": 1.0,
+      "details": {
+        "domain": "correct",
+        "contains_IMS": true,
+        "contains_registration": true,
+        "contains_P-CSCF": true,
+        "contains_403": true,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 7.079053163528442
+    },
+    {
+      "id": "INC-IMS-06",
+      "category": "incident",
+      "question": "SBC is overwhelmed after a network recovery. 50,000 simultaneous IMS re-registrations hitting it.",
+      "answer": "**Diagnosis:**\nIMS (IP Multimedia Subsystem) Session Border Controller (SBC) is experiencing high load after a network recovery event. 50,000 simultaneous IMS registration requests are being processed by the SBC, exceeding its capacity. Impact: new session attempts are being rejected with 503 Service Unavailable responses, existing sessions may experience jitter or drop. Root causes: 1) Recovery of dependent systems (MRF, HSS, AS) causing IMS re-registration storm, 2) SBC hardware/CPU/memory ove",
+      "score": 1.0,
+      "details": {
+        "domain": "correct",
+        "contains_SBC": true,
+        "contains_registration": true,
+        "contains_rate limiting": true,
+        "has_severity": true,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 8.565253019332886
+    },
+    {
+      "id": "CFG-01",
+      "category": "config",
+      "question": "Create a network slice for URLLC autonomous vehicles with 10ms latency budget",
+      "answer": "network_slice:\n  name: urllc-av\n  sst: 2  # URLLC\n  sd: \"0x000001\"\n  qos_profile:\n    5qi: 1\n    gbr_dl: 50Mbps\n    gbr_ul: 50Mbps\n    mbr_dl: 100Mbps\n    mbr_ul: 100Mbps\n    packet_delay_budget_ms: 10\n    packet_error_rate: 0.000001\n  resource_allocation:\n    guaranteed_bitrate_dl: 20Mbps\n    guaranteed_bitrate_ul: 20Mbps\n    max_bitrate_dl: 50Mbps\n    max_bitrate_ul: 50Mbps\n    latency_optimization: true\n  isolation: hard",
+      "score": 1.0,
+      "details": {
+        "is_yaml_like": true,
+        "contains_sst": true,
+        "contains_URLLC": true,
+        "contains_latency": true,
+        "contains_packet_delay": true
+      },
+      "elapsed": 3.7157280445098877
+    },
+    {
+      "id": "CFG-02",
+      "category": "config",
+      "question": "Configure QoS policy for VoNR with guaranteed 128kbps voice bearer",
+      "answer": "qos_policy:\n  name: vonr-voice\n  qos_flows:\n    - qfi: 1\n      5qi: 1\n      gbr_dl: 128\n      gbr_ul: 128\n      mbr_dl: 256\n      mbr_ul: 256\n      packet_delay_budget_ms: 100\n      packet_error_rate: 0.001",
+      "score": 1.0,
+      "details": {
+        "is_yaml_like": true,
+        "contains_5qi": true,
+        "contains_gbr": true,
+        "contains_128": true
+      },
+      "elapsed": 2.0536880493164062
+    },
+    {
+      "id": "CFG-03",
+      "category": "config",
+      "question": "Set up carrier aggregation with n78 as primary cell and n1 as secondary",
+      "answer": "**Carrier Aggregation Configuration:**\n\n+-----------------+---------+-----------------+-----------------+\n| Field           | Primary | Secondary      |                 |\n+=================+=========+=================+=================+\n| PCell          | Cell 1  |                 |                 |\n+-----------------+---------+-----------------+-----------------+\n| NR Band        | n78     |                 |                 |\n+-----------------+---------+-----------------+-----------------+\n|",
+      "score": 1.0,
+      "details": {
+        "is_yaml_like": true,
+        "contains_n78": true,
+        "contains_n1": true,
+        "contains_pcell": true,
+        "contains_scell": true
+      },
+      "elapsed": 9.345809936523438
+    },
+    {
+      "id": "CFG-04",
+      "category": "config",
+      "question": "Configure a 5G NR cell on n78 band with 100MHz bandwidth and 4x4 MIMO",
+      "answer": "cell_config:\n  cell_id: 1\n  nr_band: n78\n  duplex_mode: TDD\n  channel_bandwidth_mhz: 100\n  subcarrier_spacing_khz: 30\n  carrier_bandwidth_prbs: 266\n  mimo:\n    antenna_ports: 4\n    layers_dl: 4\n    layers_ul: 2\n    transmission_scheme: codebook\n  tdd_pattern:\n    dl_slots: 7\n    ul_slots: 2\n    flexible_slots: 1\n    period_ms: 5\n  power:\n    max_transmit_power_dbm: 49",
+      "score": 1.0,
+      "details": {
+        "is_yaml_like": true,
+        "contains_n78": true,
+        "contains_100": true,
+        "contains_mimo": true,
+        "contains_4": true
+      },
+      "elapsed": 3.1407079696655273
+    },
+    {
+      "id": "CFG-05",
+      "category": "config",
+      "question": "Set up SON with automatic neighbor relations, mobility load balancing, and MRO",
+      "answer": "**Config:**\n```yml\nson_config:\n  anr:\n    enabled: true\n    max_neighbors_per_cell: 32\n    measurement_report_trigger: event_A3\n    report_interval_ms: 1000\n  mobility_load_balancing:\n    enabled: true\n    load_threshold_percent: 70\n    target_load_percent: 50\n    evaluation_window_sec: 30\n  mro:\n    enabled: true\n    max_mimo_layers: 4\n    scheduled_mimo_bundling: true\n    bundle_size_dl: 2\n    bundle_size_ul: 1\n```\n\n**Commentary:**\nThis SON (Self-Organizing Network) configuration enables Autom",
+      "score": 0.75,
+      "details": {
+        "is_yaml_like": true,
+        "contains_anr": true,
+        "contains_mlb": false,
+        "contains_mro": true
+      },
+      "elapsed": 6.525741815567017
+    },
+    {
+      "id": "CFG-06",
+      "category": "config",
+      "question": "Configure RAN energy saving with carrier shutdown when PRB utilization below 10%",
+      "answer": "**RAN Energy Saving Configuration:**\n\n**Feature:** Carrier Shutdown with PRB Utilization Threshold\n**Description:** When PRB utilization on a cell drops below the configured threshold, the system shuts down the serving carrier and reduces energy consumption.\n\n**Configuration:**\n\n*   **PRB Utilization Threshold:** 10% (Cell-specific)\n*   **Carrier Shutdown Delay:** 30s (Time to verify utilization meets threshold)\n*   **Re-activation Delay:** 60s (Time for RRC reconfiguration after threshold resto",
+      "score": 1.0,
+      "details": {
+        "is_yaml_like": true,
+        "contains_energy": true,
+        "contains_carrier": true,
+        "contains_shutdown": true,
+        "contains_prb": true
+      },
+      "elapsed": 6.581065893173218
+    },
+    {
+      "id": "CFG-07",
+      "category": "config",
+      "question": "Create IoT mMTC network slice with power saving mode and eDRX",
+      "answer": "**Network Slice Configuration:**\n\n  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------- ----------------- -----------\n  **Field**                                                                                                                                           ",
+      "score": 0.8,
+      "details": {
+        "is_yaml_like": true,
+        "contains_sst": false,
+        "contains_mMTC": true,
+        "contains_power_saving": true,
+        "contains_edrx": true
+      },
+      "elapsed": 3.382230758666992
+    },
+    {
+      "id": "CFG-08",
+      "category": "config",
+      "question": "Configure IPsec tunnel between eNodeB and security gateway using IKEv2 with AES-256",
+      "answer": "**Network Configuration:**\nSet up an IPsec tunnel between a 5G eNodeB (cell site) and a central Security Gateway. The purpose is to encrypt backhaul traffic from the eNodeB to the core network. This ensures confidentiality, integrity, and authenticity of all user data.\n\n**Technical Details:**\n\n*   **IKEv2 SA:** Negotiated between eNodeB and Security Gateway.\n    *   Encryption algorithm: AES-256-GCM\n    *   Integrity algorithm: SHA-384 or SHA-512\n    *   PFS (ECDH) with 24-bit group, 256-bit pri",
+      "score": 1.0,
+      "details": {
+        "is_yaml_like": true,
+        "contains_ipsec": true,
+        "contains_ike": true,
+        "contains_aes": true,
+        "contains_256": true
+      },
+      "elapsed": 9.352972030639648
+    },
+    {
+      "id": "CFG-09",
+      "category": "config",
+      "question": "Set up inter-frequency handover from n78 to n1 with A2 and A5 events",
+      "answer": "**Handover Configuration:**\n---------------------------\n\n*Source Cell:*\n  *NR Cell ID: 1*\n  *Frequency: n78*\n  *Bandwidth: 100 MHz*\n\n*Target Cell:*\n  *NR Cell ID: 2*\n  *Frequency: n1*\n  *Bandwidth: 20 MHz*\n\n*Handover Type:*\n  *Inter-frequency*\n\n*Events:*\n  *A2 (Absolute Threshold) and A5 (Time-based)*\n\n**Configuration Explanation:**\n-----------------------------",
+      "score": 1.0,
+      "details": {
+        "is_yaml_like": true,
+        "contains_handover": true,
+        "contains_A2": true,
+        "contains_A5": true,
+        "contains_n78": true,
+        "contains_n1": true
+      },
+      "elapsed": 2.575115919113159
+    },
+    {
+      "id": "CFG-10",
+      "category": "config",
+      "question": "Configure UPF for edge computing with ULCL traffic steering to local data network",
+      "answer": "upf_config:\n  name: upf-edge-01\n  description: \"UPF at Edge Site A for edge application delivery\"\n  n3_api_endpoint: \"https://n3-api.edge.com\"\n  ulcl_info:\n    source_subnets: [10.100.0.0/16, 10.200.0.0/16]\n    local_data_network: 192.168.0.0/24\n    traffic_steering_rules:\n      - match:\n          destination: 192.168.1.0/24\n        action: forward_to_local_data_network\n      - match:\n          dnn: \"edge-app-ai\"\n        action: forward_to_local_data_network\n  n4_connections:\n    - n4_name: loca",
+      "score": 1.0,
+      "details": {
+        "is_yaml_like": true,
+        "contains_upf": true,
+        "contains_ulcl": true,
+        "contains_local": true
+      },
+      "elapsed": 9.372360944747925
+    },
+    {
+      "id": "CFG-11",
+      "category": "config",
+      "question": "Set up MOCN RAN sharing between two operators on n78 band with 60/40 resource split",
+      "answer": "**MOCN Sharing Agreement:**\n\n*   Operator A: Primary PCell, exclusive use of E-UTRA RF resources\n*   Operator B: Secondary PSCell, shared access to E-UTRA RF resources (n78 band)\n*   Resource Split: 60% dedicated to Operator A, 40% shared between operators\n*   Scheduling Priority: Operator A has absolute priority on dedicated resources\n*   QoS Guarantee: Both operators agree to meet service SLAs on their allocated resources\n\n**RAN Configuration:**\n\n1.  **Cell Reconfiguration:**\n    *   Cell ID a",
+      "score": 0.8,
+      "details": {
+        "is_yaml_like": true,
+        "contains_mocn": true,
+        "contains_plmn": false,
+        "contains_60": true,
+        "contains_40": true
+      },
+      "elapsed": 9.705349206924438
+    },
+    {
+      "id": "CFG-12",
+      "category": "config",
+      "question": "Configure DRX for low latency with 40ms long DRX cycle and 10ms short DRX",
+      "answer": "drx_config:\n  long_drx:\n    cycle_ms: 40\n    on_duration_timer: 4\n    inactivity_timer: 20\n    koffset: 16\n  short_drx:\n    enabled: true\n    cycle_ms: 10\n    timer_val: 0\n    hysteresis_timer: 1\n  drx_slot_offset: 3\n  mptc:\n    enabled: true\n    period_ms: 160\n    max_hops: 2",
+      "score": 1.0,
+      "details": {
+        "is_yaml_like": true,
+        "contains_drx": true,
+        "contains_40": true,
+        "contains_10": true
+      },
+      "elapsed": 2.5823237895965576
+    },
+    {
+      "id": "CFG-13",
+      "category": "config",
+      "question": "Set up alarm correlation rules to identify site power failure from multiple alarms",
+      "answer": "**Alarm Correlation Rule: Power Failure Detection**\n\n**Description:** Identify site-wide power failures by correlating multiple alarms originating from different systems with high temporal proximity.\n\n**Rules:**\n\n  **Correlation Type**   **Multiple Alarms**\n  ----------------------- ---------------------\n  **Origin System**       Any\n  **Alarm Category**      Site/Network, Power\n  **Time Window (s)**     30\n\n**Rule Logic:**\n\n1. When multiple alarms from different systems occur within the Time Wi",
+      "score": 1.0,
+      "details": {
+        "is_yaml_like": true,
+        "contains_alarm": true,
+        "contains_correlation": true,
+        "contains_power": true
+      },
+      "elapsed": 4.572267055511475
+    },
+    {
+      "id": "CFG-14",
+      "category": "config",
+      "question": "Configure PM counters for a RAN KPI dashboard with throughput, RRC success, and ERAB drop rate",
+      "answer": "**PM Configuration:**\n\n1. **Counters to track:**\n   - RRC setup success rate\n   - RRC drop rate\n   - ERAB (E-RAB) setup success rate\n   - ERAB drop rate\n   - DL throughput per cell\n   - UL throughput per cell\n2. **Timeframe:** Track by hour, 24-hour aggregate\n3. **Reporting threshold:** Alert if any counter exceeds 5%\n4. **Calculation:** % Success = (Successful events / Total attempts) * 100\n\n**RAN KPI Dashboard:**\n\n1. **Top N analysis:** Show top 10 cells by RRC setup success rate drop\n2. **Tre",
+      "score": 1.0,
+      "details": {
+        "is_yaml_like": true,
+        "contains_throughput": true,
+        "contains_rrc": true,
+        "contains_erab": true
+      },
+      "elapsed": 4.570865154266357
+    },
+    {
+      "id": "CFG-15",
+      "category": "config",
+      "question": "Configure NWDAF for network anomaly detection with real-time data collection",
+      "answer": "**NWDAF Configuration:**\n\n**Network Anomaly Detection Framework (NWDAF)**\n\n**Data Collection:**\n- **Reporting Entities:** NSSF, NRF, NEF, UPF\n- **Report Types:** UE registration/exit events, service request failures, QoS issues, SBA failures\n- **Event Volume Threshold:** 10000 events/sec for alerting\n- **Event Retention:** Store raw events for post-analysis if needed\n\n**Real-time Analysis:**\n- **Anomaly Detection Algorithm:** ML-based (clustering, regression) for pattern discovery\n- **Model Trai",
+      "score": 1.0,
+      "details": {
+        "is_yaml_like": true,
+        "contains_nwdaf": true,
+        "contains_anomaly": true
+      },
+      "elapsed": 4.90302586555481
+    },
+    {
+      "id": "CFG-16",
+      "category": "config",
+      "question": "Set up O-RAN near-RT RIC xApp for intelligent load balancing across cells",
+      "answer": "**Network Configuration:**\n-------------------------\n\n**O-RAN Architecture:**\n 1. **gNB (gNodeB):** Core 5G-LTE network access node\n 2. **NEF (NSSF Network Exposure Function):** Exposes capabilities of gNB to xApps\n 3. **SMF (Session Management Function):** Manages sessions across the network\n 4. **UPF (User Plane Function):** Handles user traffic routing and processing\n\n**xApp for Intelligent Load Balancing:**\n 1. **Name:** eLB-xApp (enhanced Load balancing xApp)\n 2. **Description:** Distribute",
+      "score": 0.5,
+      "details": {
+        "is_yaml_like": true,
+        "contains_ric": false,
+        "contains_xapp": true,
+        "contains_load_balancing": false
+      },
+      "elapsed": 9.29727292060852
+    },
+    {
+      "id": "CFG-17",
+      "category": "config",
+      "question": "Configure CSFB from LTE to 3G for voice calls with redirection to UARFCN 10713",
+      "answer": "**Network Configuration:**\n-------------------------\n\n### VoLTE PDU Session Handling\n\n*   Create a VoLTE PDU Session for voice call\n*   Request NAS Transport (EPS bearer combination) for speech\n*   Set handover priority to Medium (2)\n\n### CSFB Configuration\n\n*   Destination RAT: UTRAN, Cell ID 00101, UARFCN 10713\n*   Redirect Indication IE set to \\\"Redirected from LTE\\\"\n*   Include Access Type IE: GERAN/UTRAN\n*   Include EPS Optimized Cell List IE with the target UTRA cell\n\n### Handover Conditio",
+      "score": 1.0,
+      "details": {
+        "is_yaml_like": true,
+        "contains_csfb": true,
+        "contains_redirect": true,
+        "contains_10713": true
+      },
+      "elapsed": 9.305027961730957
+    },
+    {
+      "id": "CFG-18",
+      "category": "config",
+      "question": "Set up MEC application deployment rules for low-latency video streaming at edge site",
+      "answer": "MEC Application Deployment Rules:\n\n  --------------------------------------------------------------------------------------------------------------------------------\n  **Application**                          **Service Name**   **Endpoint Group**   **NF Instance ID**   **Deployment Policy**\n  --------------------------------------------------------------------------------------- ------------------- -------------------- ---------------------- -------------------------\n  Low-Latency Video Analytic",
+      "score": 0.75,
+      "details": {
+        "is_yaml_like": true,
+        "contains_mec": true,
+        "contains_edge": false,
+        "contains_video": true
+      },
+      "elapsed": 3.226022958755493
+    },
+    {
+      "id": "CFG-19",
+      "category": "config",
+      "question": "Configure inter-PLMN 5G roaming with SEPP on N32 interface using TLS",
+      "answer": "**System Elements:**\\\nSEPP (Service Exposure Functionality) in HPLMN (Home PLMN), VSM (Visa Switch Module) in VPLMN (Visited PLMN)\n\n**N32 Interface:** Exposed via IPsec tunnel from HPLMN SEPP to VPLMN VSM\nover M10 reference point, carrying Charging Data Requests\n\n**TLS Configuration:**\n\n1. **TLS Version**: 1.3 (transport-level only)\n2. **Cipher Suites**:\n   - ECDHE-ECDSA with AES-GCM-256 and P-521\n   - ECDHE-RSA with AES-GCM-256 and P-256\n3. **Certificate:**\n   - HPLMN SEPP: valid leaf certifica",
+      "score": 1.0,
+      "details": {
+        "is_yaml_like": true,
+        "contains_sepp": true,
+        "contains_n32": true,
+        "contains_roaming": true,
+        "contains_tls": true
+      },
+      "elapsed": 9.155003786087036
+    },
+    {
+      "id": "CFG-20",
+      "category": "config",
+      "question": "Set up NF registration in NRF for a new SMF instance with its service profile",
+      "answer": "nrf_register_nssf() -- register NF instance (SMF) at NRF\n==========================================================\n\n### Step 1: Prepare NSSF Service Profile template\n\nCreate an XML document describing the desired service profile, e.g.:\n```xml\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<nssf-provisioning-session xmlns:ns=\"http://www.5gc-nrf.org/nss-provisioning\"\n                           xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n                           xsi:schemaLocation=\"http://www.",
+      "score": 0.75,
+      "details": {
+        "is_yaml_like": true,
+        "contains_nrf": true,
+        "contains_smf": true,
+        "contains_registration": false
+      },
+      "elapsed": 9.28594183921814
+    },
+    {
+      "id": "KPI-01",
+      "category": "kpi",
+      "question": "ERAB drop rate increased from 0.5% to 2.8% over the past week. How should I investigate?",
+      "answer": "**Analysis:**\nThe ERAB (E-RAB) drop rate has increased significantly from 0.5% to 2.8% over the past week.\n\nERAB drops occur when an E-RAB (QoS flow) is released by the network earlier than expected, causing service interruption.\n\n**Causes:**\n1. **Radio Link Failure**: RLF causes ERAB drop in the active BWP\n2. **Handover Failures**: HO failures result in ERAB drop on the target PCell or PSCell\n3. **Backhaul Congestion**: Backhaul link failure or congestion causing ERAB drop\n4. **Core Network Iss",
+      "score": 0.6,
+      "details": {
+        "contains_radio": true,
+        "contains_mobility": false,
+        "contains_transport": false,
+        "contains_congestion": true,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 9.397278070449829
+    },
+    {
+      "id": "KPI-02",
+      "category": "kpi",
+      "question": "RRC setup success rate is 87% on cell CELL-800. Target is 95%. What's wrong?",
+      "answer": "RRC setup failure causes: 1) Insufficient UL resources (buffer overflow), 2) ML estimation failure or PRACH misdetected as preamble, 3) UE power mismatch (UL interference from neighbors), 4) Timing advance issues in large cells, 5) PDCCH congestion causing RACH spillage.\n\n**Analysis of CELL-800:**\n- Uplink resources per cell have decreased by 20% due to added MIMO layers on eNodeB\n- Increased interference from neighbor cells on UL (Category 1 UEs)\n- PRACH misdetected as preamble rate has increas",
+      "score": 0.75,
+      "details": {
+        "contains_PDCCH": true,
+        "contains_RACH": true,
+        "contains_coverage": false,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 5.064050197601318
+    },
+    {
+      "id": "KPI-03",
+      "category": "kpi",
+      "question": "VoLTE MOS score dropped from 3.8 to 3.1. What should I check?",
+      "answer": "Voice over LTE (VoLTE) Mean Opinion Score (MOS) has dropped from 3.8 to 3.1 on multiple cell sites.\n\n**Diagnosis:**\n1. **QoS settings:** Check QCI (Quality of Service) and ARP (Application Priority) configurations. Ensure VoLTE traffic is marked correctly.\n2. **RRC states:** Verify users are in RRC Connected state with dedicated bearer established.\n3. **BWP (Bandwidth Part):** Check PCell BWP configuration \u2014 ensure sufficient DL/UL resources for speech.\n4. **Voice over PS session:** Verify PDN c",
+      "score": 0.42857142857142855,
+      "details": {
+        "contains_jitter": false,
+        "contains_packet loss": false,
+        "contains_codec": true,
+        "has_resolution": true
+      },
+      "elapsed": 6.970131158828735
+    },
+    {
+      "id": "KPI-04",
+      "category": "kpi",
+      "question": "Average DL user throughput is 15Mbps on a 20MHz LTE cell. Is this normal?",
+      "answer": "**Analysis:**\nThe average user throughput of 15Mbps on a 20MHz cell is 75% utilization of the available radio capacity (20Mhz x 100Mbps). This is within a reasonable range for many deployment scenarios.\n\n**Factors to consider:**\n\n*   Device capabilities: UEs have varying capabilities (Category M, NB1, NB2, Cat-1, etc.) that impact max throughput\n*   PRB utilization: Average PRBs used per UE should be below 12-15 for efficient scheduling\n*   Scheduling efficiency: Proportional Fair scheduling can",
+      "score": 0.42857142857142855,
+      "details": {
+        "contains_spectral efficiency": false,
+        "contains_PRB": true,
+        "contains_SINR": false,
+        "has_causes": true
+      },
+      "elapsed": 6.121059894561768
+    },
+    {
+      "id": "KPI-05",
+      "category": "kpi",
+      "question": "Handover success rate between two 5G cells is only 88%. How should I analyze this?",
+      "answer": "**Diagnosis:**\nThe current handover success rate from cell CELL-53719 to CELL-91326 is at 88%, short of the 99% target. This indicates that approximately 12% of all handovers are failing. Possible causes: 1) Timing advance accuracy degradation (TA > 128), 2) Cell reselection criterion mismatch, 3) Handover delay exceeds 30ms, 4) Neighbor cell list inconsistency.\n\n**Analysis framework:**\n1. Check TA values for cells involved \u2014 should be < 64 for FR1\n2. Verify handover criterion configuration (eve",
+      "score": 0.4,
+      "details": {
+        "contains_too-late": false,
+        "contains_too-early": false,
+        "contains_A3": true,
+        "contains_TTT": false,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 6.472155809402466
+    },
+    {
+      "id": "KPI-06",
+      "category": "kpi",
+      "question": "Inter-RAT handover from 5G to 4G has 15% failure rate. What's likely causing this?",
+      "answer": "**Possible causes:**\n\n1. **Insufficient PDCP context transfer**: During the handover, the PDCP context is not successfully transferred between the 5G gNB and 4G eNodeB.\n2. **Different security algorithms used by 5G gNB and 4G eNodeB**\n3. **Incompatible EPS bearer configurations** (QoS, QCI) in 4G after handover\n4. **UE capability mismatch**: 5G UE not supporting the required 4G RF parameters (bands, CA)\n5. **Handover delay exceeding UE or RRC state machine timeout**\n6. **Cell reselection failure",
+      "score": 0.14285714285714285,
+      "details": {
+        "contains_measurement": false,
+        "contains_B1": false,
+        "contains_coverage": false,
+        "has_causes": true
+      },
+      "elapsed": 3.8448638916015625
+    },
+    {
+      "id": "KPI-07",
+      "category": "kpi",
+      "question": "Cell CELL-900 shows 95% PRB utilization but only 100 connected users. Is this normal?",
+      "answer": "**Anomaly Detection:** Cell CELL-900 is operating at 95% PRB (Physical Resource Block) utilization with only 100 connected UEs, which is above the 70-80% threshold for a single cell.\n\n**Analysis:**\n1. **PRB vs UE count mismatch**: Typically, each connected UE occupies around 5-7 PRBs during DL and 5 PRBs during UL on average.\n2. **Possible causes:** - Inefficient scheduling: UEs not utilizing all allocated resources efficiently (low data rate).\n- Too few cells for the traffic load: Traffic spill",
+      "score": 0.5555555555555556,
+      "details": {
+        "contains_PRB": true,
+        "contains_throughput": false,
+        "contains_heavy users": false,
+        "has_severity": true,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 6.196796178817749
+    },
+    {
+      "id": "KPI-08",
+      "category": "kpi",
+      "question": "Uplink interference level (IoT) increased by 5dB across a cluster of 10 cells. What could cause this?",
+      "answer": "**Anomaly detected:** Uplink Interference Level on IoT channel increased by 5dB in Cluster CLUST-100, affecting 10 cells.\n\n**Analysis:**\n\n1. **Increased noise floor from external sources (e.g., new gNodeB site)**\n2. **In-band or out-of-band emissions from neighboring eNodeBs**\n3. **Antenna gain degradation (voltage loss, beam tilt change)**\n4. **RF interference from 3rd-party systems (solar panels, radars)**\n\n**Diagnosis steps:**\n\n1. Check for new gNodeB deployments in the surrounding area\n2. Ve",
+      "score": 0.7142857142857143,
+      "details": {
+        "contains_interference": true,
+        "contains_external": true,
+        "contains_PIM": false,
+        "has_resolution": true
+      },
+      "elapsed": 4.161121845245361
+    },
+    {
+      "id": "KPI-09",
+      "category": "kpi",
+      "question": "Our network's energy consumption per GB of data is 30% higher than industry average. How to optimize?",
+      "answer": "**Network Optimization Recommendation:**\n\n1. **Identify power-hungry components:** Focus on RAN (Radio Access Network) sites as they account for ~80% of cell-wide energy consumption.\n2. **Hardware upgrade options:**\n\t* 4-layer MIMO modules consume 10-15% less power per antenna than 2-layer\n\t* Large-scale antenna arrays (16+ antennas) offer 20-25% power reduction\n3. **Software optimizations:**\n\t* Enable *sleep mode* on idle PCell/PSCell to save ~30% at light load\n\t* Configure RRC states for reduc",
+      "score": 0.75,
+      "details": {
+        "contains_energy": true,
+        "contains_carrier shutdown": false,
+        "contains_MIMO": true,
+        "contains_sleep": true
+      },
+      "elapsed": 5.940781116485596
+    },
+    {
+      "id": "KPI-10",
+      "category": "kpi",
+      "question": "Attach success rate on MME-01 dropped from 99.5% to 97%. What KPIs should I correlate?",
+      "answer": "**Loss Rate Analysis:**\nPDP context loss rate rose from 0.5% to 3%. The most critical losses are for voice calls (SRVCC), followed by non-SRVCC data sessions.\n\n**Correlation Matrix:**\n| **Topic** | **Impact on Loss Rate?** |\n| ---------- | ------------------------- |\n| MME Load   | High load increases        |\n| CPU        | Processing failures cause  |\n| Memory     | Out-of-memory conditions,  |\n|            | crashes the MME          |\n| RRC State  | Incorrect state transitions |\n| Handover   ",
+      "score": 0.5555555555555556,
+      "details": {
+        "contains_attach": false,
+        "contains_authentication": false,
+        "contains_HSS": true,
+        "has_severity": true,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 6.63104510307312
+    },
+    {
+      "id": "KPI-11",
+      "category": "kpi",
+      "question": "VoLTE call drop rate is 2% but only in the North region. Other regions are at 0.3%. Why?",
+      "answer": "**Diagnosis:**\nCall drop rate on VoLTE calls is higher (2%) in the North compared to other regions (0.3%). The most common causes of VoLTE call drops include:\n1. **QoS issues**: GTP-U tunnel misconfiguration or failure, causing packet loss and retransmissions.\n2. **RACH failures**: 4G RACH access class configuration mismatch or too few RACH resources for traffic volume.\n3. **Handover failures**: Insufficient MOCN/MSCDN handover relationships between cells in the North.\n4.**Cell congestion**: Too",
+      "score": 0.75,
+      "details": {
+        "contains_region": true,
+        "contains_handover": true,
+        "contains_coverage": false,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 7.669528007507324
+    },
+    {
+      "id": "KPI-12",
+      "category": "kpi",
+      "question": "Paging success rate dropped to 85% on MME-02. What does this indicate?",
+      "answer": "**Critical: Paging Success Rate dropped from 99% to 85% on MME-02**\n\nThis indicates that the network is unable to reach a subset of UEs in the area serviced by MME-02, resulting in missed pages and potential service disruptions.\n\n**Key causes:**\n1. **Cell reselection issues:** UEs not camped on the best available cell\n2. **Paging channel problems:** Low power, CCE congestion, or CRC errors\n3. **MME overload:** Too many UE contexts for MME to handle\n4. **Core network congestion:** SGW/PGW unable ",
+      "score": 0.5555555555555556,
+      "details": {
+        "contains_paging": true,
+        "contains_TAU": false,
+        "contains_tracking area": false,
+        "has_severity": true,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 5.477111101150513
+    },
+    {
+      "id": "KPI-13",
+      "category": "kpi",
+      "question": "Bearer modification success rate is 90%. What could be causing the 10% failures?",
+      "answer": "**Analysis:**\nIn a recent internal review of bearer modifications, we're seeing a 10% failure rate. Current theories:\n- **Certificate issues:** TLS certificate expiry or CA trust chain problems\n- **NRF NRF misconfiguration:** Inconsistent subscriber profiles between AMF and NRF\n- **AMF overload:** Processing delays causing timer expiry on UE side\n- **QoS misconfiguration:** Incorrect QoS settings causing rejection by the MME/AMF\n\n**Questions to investigate:**\n1. What is the bearer modification p",
+      "score": 0.75,
+      "details": {
+        "contains_bearer": true,
+        "contains_QoS": true,
+        "contains_resource": false,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 5.992393970489502
+    },
+    {
+      "id": "KPI-14",
+      "category": "kpi",
+      "question": "X2 handover success rate is 99% but S1 handover is only 92%. What does this tell you?",
+      "answer": "An X2 handover (inter-RAT E-UTRAN to E-UTRAN) has a high success rate of 99%, within expected norms. However, the S1 handover (non-EUTRAN inter-RAT handover, e.g., from UTRAN or GERAN) is significantly lower at 92%. Possible causes: 1) S1 link failure between MME and target RAT node, 2) Target RAT node unreachable or overloaded, 3) Bearer establishment failure on the S1 interface, 4) Tracking area update rejection from HSS.",
+      "score": 0.7777777777777778,
+      "details": {
+        "contains_X2": true,
+        "contains_S1": true,
+        "contains_inter-eNB": false,
+        "contains_MME": true,
+        "has_causes": true
+      },
+      "elapsed": 2.936199903488159
+    },
+    {
+      "id": "KPI-15",
+      "category": "kpi",
+      "question": "Our 5G SA network shows 5% registration rejection rate. Most rejections are cause code #5. What does this mean?",
+      "answer": "**Diagnosis:**\nRegistration rejection with cause code #5 is typically due to \"Insufficient resources\". This means the UE (or network slice) has requested more resources than available on the network. Check Uplink and Downlink resource allocation, PDU session establishment failure counter.\n\n**Root causes:**\n1. Insufficient VPLMN S-NSSAI or TAI availability\n2. SLM (Session Limit Management) policy rejecting excess sessions\n3. UPF CPU/memory overload from high traffic concentration\n4. RAN schedulin",
+      "score": 1.0,
+      "details": {
+        "contains_registration": true,
+        "contains_reject": true,
+        "contains_PLMN": true,
+        "has_causes": true,
+        "has_resolution": true
+      },
+      "elapsed": 4.962631940841675
+    },
+    {
+      "id": "PROTO-01",
+      "category": "knowledge",
+      "question": "What is 5QI and what are the standard 5QI values for voice, video, and best effort?",
+      "answer": "**Definition:** 5QI (5-queue Index) is a field in the Type of Service or Differentiated Services code point used to identify one of six different queues for packet classification. 5QI was defined as part of Integrated Services (IntServ) but has been adopted by DiffServ and MPLS Traffic Engineering.\n\n**Standard 5QI values:**\n\n\\- Voice, G.114 1000ms (TBC) = **6**\n\n\\- Video, 200ms to 500ms = **2-4**\n\n\\- Best effort, no QoS = **0**\n\n\\- Other values are used for voice and video with different delay t",
+      "score": 0.75,
+      "details": {
+        "contains_5QI": true,
+        "contains_QoS": true,
+        "contains_voice": true,
+        "contains_GBR": false
+      },
+      "elapsed": 3.2080509662628174
+    },
+    {
+      "id": "PROTO-02",
+      "category": "knowledge",
+      "question": "Explain the N4 interface between SMF and UPF. What protocol does it use?",
+      "answer": "The N4 interface is defined to allow communication between an SMF (Session\nManagement Function) and a UPF (User Plane Function).\n\n**Protocol:** PFCP (Packet Forwarding Control Protocol)\n\n**Reference:** TS 23.502 clause 6.3.2, 5GSM architecture\n\n**Message flow:**\n\n*   Session Establishment: SMF sends PDN CONNECTIVITY REQUEST message\n    \\--\\> UPF\n*   Session Modification: SMF sends Session Update Request \\--\\>\n    UPF\n*   Session Release: SMF sends PDN DISCONNECTIVITY REQUEST message \\--\\\n    > U",
+      "score": 1.0,
+      "details": {
+        "contains_PFCP": true,
+        "contains_SMF": true,
+        "contains_UPF": true,
+        "contains_forwarding": true
+      },
+      "elapsed": 3.617051839828491
+    },
+    {
+      "id": "PROTO-03",
+      "category": "knowledge",
+      "question": "What is the difference between NSA Option 3x and SA Option 2 in 5G deployment?",
+      "answer": "NSA Option 3x and SA Option 2 are two architecture options for 5G\ndeployment. The main differences between them are:\n\n**1. Core Network Architecture:**\n   - NSA Option 3x: Uses EPC (Evolved Packet Core) as the core network.\n   - SA Option 2: Uses 5GC (5G Core) as the core network.\n\n**2. Split Mode of RAN and Core:**\n   - NSA Option 3x: RAN is split into gNodeB (gNB, eNB equivalent) and\n     AMF/PDF.\n   - SA Option 2: RAN is integrated into NG-RAN with NEF/S-NSSAI.\n\n**3. Access Technology:**\n   -",
+      "score": 0.5,
+      "details": {
+        "contains_EPC": true,
+        "contains_5GC": true,
+        "contains_control plane": false,
+        "contains_master": false
+      },
+      "elapsed": 9.370548963546753
+    },
+    {
+      "id": "PROTO-04",
+      "category": "knowledge",
+      "question": "How does the 5G NR random access procedure (RACH) work? Describe the 4 steps.",
+      "answer": "**Step 1: Preamble transmission**\nUE selects a preamble from the configured preamble pool and transmits it on the randomly selected PRB(s). The UE may perform power ramping or adjust the transmit power for each preamble transmission.\n\n**Step 2: Preamble detection and selection**\nThe gNB detects the preamble and selects the preamble as S-RNTI or uses random scheduling. If contention resolution is configured, the gNB performs a random backoff before selecting the preamble.\n\n**Step 3: Contention re",
+      "score": 0.75,
+      "details": {
+        "contains_preamble": true,
+        "contains_RAR": true,
+        "contains_Msg3": false,
+        "contains_contention": true
+      },
+      "elapsed": 4.736828327178955
+    },
+    {
+      "id": "PROTO-05",
+      "category": "knowledge",
+      "question": "What is network slicing? How is S-NSSAI structured?",
+      "answer": "Network slicing enables multiple logical networks to coexist on a shared\nphysical infrastructure. A slice can be provisioned with a set of\ncapabilities (e.g., QoS, performance) for a specific use case and group\nof users.\n\nS-NSSAI: Service Number Space And Index\n---------------------------------------\n\nAn S-NSSAI is used by the UE to identify a network slice during initial\nattach.\n\n*   S-NSSAI = \\[Service Type\\],\\[Index\\]\n\nService type can be one of:\n\n\\-   NSI (Network Slice Instance)\n\n\\-   S-NSI",
+      "score": 0.3333333333333333,
+      "details": {
+        "contains_SST": false,
+        "contains_SD": false,
+        "contains_slice": true
+      },
+      "elapsed": 3.913679838180542
+    },
+    {
+      "id": "PROTO-06",
+      "category": "knowledge",
+      "question": "Explain the role of AMF, SMF, and UPF in 5G core network.",
+      "answer": "**Access and Mobility Management Function (AMF)**\n\n-   Controls access to the 5G system based on user authentication\n    -   Manages UE registration and de-registration\n\n-   Provides access authorization for all UEs accessing the network via\n    NG-RAN\n\n-   Manages session management functions in 5G, including PDN connection\n    control and release\n\n-   Acts as an anchor point for non-3GPP accesses to the 5G system, such\n    as fixed broadband access\n\n**Session Management Function (SMF)**\n\n-   M",
+      "score": 1.0,
+      "details": {
+        "contains_AMF": true,
+        "contains_mobility": true,
+        "contains_SMF": true,
+        "contains_session": true,
+        "contains_UPF": true,
+        "contains_user plane": true
+      },
+      "elapsed": 5.92573618888855
+    },
+    {
+      "id": "PROTO-07",
+      "category": "knowledge",
+      "question": "What is CUPS and why is it important in 5G architecture?",
+      "answer": "**CUPS: Control/User Plane Separation**\n\nA core concept enabling efficient 3GPP 5G Core Network (5GC) operation.\n\n**Separates control plane from user plane for more scalable and flexible network operations**\n\n1. **Control Plane:** handles signaling, connection setup/release, policy decisions\n2. **User Plane:** carries actual data in traffic\n\nThis separation enables:\n\n- **Scalability:** Traffic growth can be handled by adding UPEs (User Plane Engines) without overloading the CUPS\n- **Flexibility:",
+      "score": 1.0,
+      "details": {
+        "contains_control": true,
+        "contains_user plane": true,
+        "contains_separation": true
+      },
+      "elapsed": 6.634850025177002
+    },
+    {
+      "id": "PROTO-08",
+      "category": "knowledge",
+      "question": "How does HARQ work in LTE/5G NR? What is the difference between synchronous and asynchronous HARQ?",
+      "answer": "**HARQ (Hybrid Automatic Repeat Request) in 3GPP LTE and 5G NR:**\n\nHARQ is a protocol mechanism for error correction in wireless communication systems. It combines FEC (Forward Error Correction) with ARQ (Automatic Repeat Request) to ensure reliable data transfer.\n\nA HARQ entity is associated with each UL (User Plane) or DL (Downlink) logical channel of a radio bearer and uses the same HARQ process as the physical layer for all MAC entities accessing this logical channel, except when the MAC ent",
+      "score": 0.75,
+      "details": {
+        "contains_HARQ": true,
+        "contains_retransmission": false,
+        "contains_ACK": true,
+        "contains_NACK": true
+      },
+      "elapsed": 9.328461170196533
+    },
+    {
+      "id": "PROTO-09",
+      "category": "knowledge",
+      "question": "What is the CU-DU split in 5G RAN? Which protocol layers go where?",
+      "answer": "**CU-DU Split Overview**\n------------------------\n\nThe Control-User Plane (CU) Split separates the control plane from the\nuser plane to provide more deployment flexibility, scalability and\nenhanced performance. The split can be either 1 stage or 2 stages.\n\n![](media/image6.png){width=\"5.555555555555556in\"\nheight=\"4.305555555555556in\"}\n\nFigure 3.1.1: CU-DU Split\n\n**CU (Control Plane)**\n----------------------\n\nThe control plane carries signaling messages between UE and the network.\nIt is logically",
+      "score": 0.3333333333333333,
+      "details": {
+        "contains_CU": true,
+        "contains_DU": true,
+        "contains_RRC": false,
+        "contains_PDCP": false,
+        "contains_RLC": false,
+        "contains_MAC": false
+      },
+      "elapsed": 9.325127124786377
+    },
+    {
+      "id": "PROTO-10",
+      "category": "knowledge",
+      "question": "Explain the Tracking Area Update (TAU) procedure in LTE.",
+      "answer": "The Tracking Area Update (TAU) procedure is used by the UE to request\nchanges to its tracking area identity or for tracking area updating.\n\nFigure 3.5.1-9: Example of a Tracking Area Update Procedure\n\nIn addition to this figure, Table\u00a03.5.1-4 shows the different states and\nevents of the example. The letters in parentheses describe the step\nnumber as indicated on Figure 3.5.1-8.\n\nTable\u00a03.5.1-4: States and events for TAU procedure\n\n+-----------------------+------------+-----------+---------------+",
+      "score": 0.25,
+      "details": {
+        "contains_TAU": true,
+        "contains_tracking area": true,
+        "contains_MME": false,
+        "contains_idle": false,
+        "table_dump": true
+      },
+      "elapsed": 9.327478885650635
+    },
+    {
+      "id": "PROTO-11",
+      "category": "knowledge",
+      "question": "What is SSB in 5G NR and what does it contain?",
+      "answer": "**SSB: Synchronization Signal Block**\n\n**Definition:** The SSB is a set of signals configured for cell identity\nand/or positioning purposes. An SSB contains one or more synchronization\nsignal blocks (SSBs) each containing the following:\n\n\\- Primary Synchronization Signal (PSS)\n\n\\- Secondary Synchronization Signal (S-S/S2S)\n\n\\- Cell Identification Index (CDI)\n\n\\- Cell Identity\n\n\\- Time Offset Indicator (TOI)\n\n\\- Cell ID with Type\n\n**Types of SSB:**\n\n\\- **Cell ID with Type:** Indicates the type of",
+      "score": 0.75,
+      "details": {
+        "contains_PSS": true,
+        "contains_SSS": true,
+        "contains_PBCH": false,
+        "contains_synchronization": true
+      },
+      "elapsed": 9.313277006149292
+    },
+    {
+      "id": "PROTO-12",
+      "category": "knowledge",
+      "question": "How does carrier aggregation work in LTE/NR? What is the difference between inter-band and intra-band CA?",
+      "answer": "Carrier Aggregation (CA) combines multiple carriers into a single cell to increase overall system capacity, support more users, or provide higher data rates for individual users.\n\n**Types of Carrier Aggregation:**\n\n1. **Inter-band CA**: Combines two or more bands from different spectrum blocks (e.g., Band 25 + Band 26). Each band has its own PCell (PCell = Primary Cell).\n2. **Intra-band CA**: Combines multiple contiguous carriers within the same spectrum block (e.g., 100MHz + 200MHz on Band 25).",
+      "score": 0.6666666666666666,
+      "details": {
+        "contains_component carrier": true,
+        "contains_PCell": true,
+        "contains_SCell": false
+      },
+      "elapsed": 9.343531131744385
+    },
+    {
+      "id": "PROTO-13",
+      "category": "knowledge",
+      "question": "What is MIMO and how does massive MIMO differ from regular MIMO?",
+      "answer": "**MIMO (Multiple-Input Multiple-Output)** technology enables the use of multiple transmitters and receivers in a system to achieve higher channel capacity on an existing frequency band.\n\n**Regular MIMO**\n\nTypically uses 2-4 antennas at both ends (UE and eNodeB)\nChannel capacity improves with more antennas, but only up to a point\nBeamforming is limited by antenna spacing\nScalability issues as antenna count increases\n\n**Massive MIMO (mMIMO)**\n\nUses 64-256+ antennas at the eNodeB end (typically on ",
+      "score": 1.0,
+      "details": {
+        "contains_antenna": true,
+        "contains_beamforming": true,
+        "contains_spatial": true
+      },
+      "elapsed": 7.118375778198242
+    },
+    {
+      "id": "PROTO-14",
+      "category": "knowledge",
+      "question": "Explain the IMS architecture for VoLTE. What are P-CSCF, I-CSCF, and S-CSCF?",
+      "answer": "**IMS (IP Multimedia Subsystem) Architecture:**\n----------------------------------------------\n\nThe IMS is an IP-based multimedia system that enables mobile phones to\naccess services such as voice over LTE (VoLTE), video conferencing,\ninstant messaging and other forms of real-time communication.\n\n![](media/image1.png){width=\"6.5in\" height=\"4.166666666666667in\"}\n\nFigure 1: IMS high-level architecture\n\n**S-CSCF (Session Control Client Function):**\n----------------------------------------------\n\nTh",
+      "score": 1.0,
+      "details": {
+        "contains_P-CSCF": true,
+        "contains_I-CSCF": true,
+        "contains_S-CSCF": true,
+        "contains_SIP": true
+      },
+      "elapsed": 8.066460847854614
+    },
+    {
+      "id": "PROTO-15",
+      "category": "knowledge",
+      "question": "What is the difference between GBR and Non-GBR bearers in LTE?",
+      "answer": "**Guaranteed Bit Rate (GBR) vs Non-GBR: Key differences**\n\n  --------------------------------------- -------------- ------------------------------------------------------------------------------------------------------------------\n  **Parameter**                           **GBR**        **Non-GBR**\n  Traffic type                             Voice         Data (e.g., HTTP, FTP, email)\n  Traffic characteristics                 Bursty         Steady\n  Service requirements                    Low lat",
+      "score": 1.0,
+      "details": {
+        "contains_GBR": true,
+        "contains_guaranteed": true,
+        "contains_bit rate": true
+      },
+      "elapsed": 5.244333744049072
+    },
+    {
+      "id": "PROTO-16",
+      "category": "knowledge",
+      "question": "How does NRF work in 5G SBA? What is NF discovery?",
+      "answer": "**Network Repository Function (NRF)**: NRF provides service discovery\nfor all services offered by each Application Service Provider.\n\n**NF Discovery**: A process for an application to discover the presence\nof a Network Functions that are required to support it. The purpose of\nNF discovery is to allow applications to dynamically select and use the\nservices provided by various network functions, such as UPF, SMF, PCF,\nUDM, NEF, AMF, etc.\n\n**NRF API**: NRF provides a service registry for all servic",
+      "score": 0.75,
+      "details": {
+        "contains_NRF": true,
+        "contains_service": true,
+        "contains_registration": false,
+        "contains_discovery": true
+      },
+      "elapsed": 3.4124608039855957
+    },
+    {
+      "id": "PROTO-17",
+      "category": "knowledge",
+      "question": "What subcarrier spacings are supported in 5G NR and when is each used?",
+      "answer": "The subcarrier spacing (SCS) is defined as the difference between\nadjacent subcarrier center frequencies on the same antenna connector.\n\nThe supported SCSs for different operating bands are listed in Table\n5.3.2-1 of TS 38.101-1\\[1\\].\n\nTable 5.3.2-1: Supported subcarrier spacings\n\n+-------------------+-------------------+-----------+---------------+\n|                     | **Supported in**   |           |               |\n|                   |                    |           |               |\n|   ",
+      "score": 0.6,
+      "details": {
+        "contains_15": true,
+        "contains_30": true,
+        "contains_60": true,
+        "contains_120": false,
+        "contains_kHz": true,
+        "table_dump": true
+      },
+      "elapsed": 9.317131042480469
+    },
+    {
+      "id": "PROTO-18",
+      "category": "knowledge",
+      "question": "Explain the difference between FDD and TDD. Why is TDD preferred for 5G NR in FR1?",
+      "answer": "**Frequency Division Duplex (FDD)**: In FDD, uplink and downlink are separated by frequency bands. Each band operates independently.\n- Pros:\n  - Simpler antenna design\n  - Better coverage per band\n  - Existing equipment can be reused\n- Cons:\n  - Uplink-downlink time alignment issues\n  - Larger spectrum usage for the same bandwidth\n\n**Time Division Duplex (TDD)**: In TDD, uplink and downlink share a common frequency. The network controls when each is active.\n- Pros:\n  - Efficient spectrum usage\n ",
+      "score": 1.0,
+      "details": {
+        "contains_FDD": true,
+        "contains_TDD": true,
+        "contains_uplink": true,
+        "contains_downlink": true,
+        "contains_spectrum": true
+      },
+      "elapsed": 8.288015127182007
+    },
+    {
+      "id": "PROTO-19",
+      "category": "knowledge",
+      "question": "What is O-RAN and how does it differ from traditional RAN?",
+      "answer": "**Open RAN (O-RAN) Architecture:**\n\n- **Decentralized architecture**: Breaks down the baseband unit into smaller, independent functions\n- **Software-defined network**: Allows for greater flexibility and programmability\n- **Multi-vendor compatibility**: Enables interoperability between different hardware and software components\n\n**Key O-RAN Concepts:**\n\n1. **RAN Operating System (ROSE)**: An open-source OS that runs on the baseband unit\n2. **O-RAN Application Server (OAS)**: Hosts AI/ML models fo",
+      "score": 0.5,
+      "details": {
+        "contains_open": true,
+        "contains_interface": false,
+        "contains_vendor": true,
+        "contains_RIC": false
+      },
+      "elapsed": 6.707069158554077
+    },
+    {
+      "id": "PROTO-20",
+      "category": "knowledge",
+      "question": "Explain MEC (Multi-access Edge Computing) and its role in 5G.",
+      "answer": "**What is MEC?**\n\nMulti-access Edge Computing (MEC) enables mobile operators to deliver cloud services with ultra-low latency from the edge of their networks, closer to users.\n\n**Key features:**\n\n1. **Low-latency**: Applications run near user devices (10ms - 50ms)\n2. **High-performance**: Dedicated processing for compute-intensive tasks\n3. **Edge-proximity**: Reduces backhaul traffic and eases service deployment\n4. **Mobility-aware**: Supports moving UE with location-dependent services\n\n**Main u",
+      "score": 0.6666666666666666,
+      "details": {
+        "contains_edge": true,
+        "contains_latency": true,
+        "contains_local": false
+      },
+      "elapsed": 9.34360384941101
+    }
+  ]
+}

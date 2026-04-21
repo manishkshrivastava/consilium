@@ -1,0 +1,21 @@
+{
+  "benchmark": "TeleQnA",
+  "n_samples": 100,
+  "base_model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "base_accuracy": 0.58,
+  "finetuned_accuracy": 0.54,
+  "base_by_subject": {
+    "Standards specifications": 0.5833333333333334,
+    "Research publications": 0.5882352941176471,
+    "Research overview": 0.5882352941176471,
+    "Lexicon": 0.9,
+    "Standards overview": 0.3333333333333333
+  },
+  "finetuned_by_subject": {
+    "Standards specifications": 0.5416666666666666,
+    "Research publications": 0.5588235294117647,
+    "Research overview": 0.47058823529411764,
+    "Lexicon": 0.8,
+    "Standards overview": 0.4
+  }
+}

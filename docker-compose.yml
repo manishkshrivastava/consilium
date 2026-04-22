@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: consilium_ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      # Persists downloaded LLM models so they aren't lost on restart
+      - ollama_models:/root/.ollama
+    restart: unless-stopped
+
+  consilium:
+    build: .
+    container_name: consilium_api
+    depends_on:
+      - ollama
+    ports:
+      - "8000:8000"
+    environment:
+      # Connects the API to the local Ollama container
+      - OLLAMA_HOST=http://ollama:11434
+    volumes:
+      # Syncs your local code changes directly into the container
+      - .:/workspace
+    restart: unless-stopped
+
+volumes:
+  ollama_models: 

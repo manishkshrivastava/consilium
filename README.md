@@ -33,7 +33,7 @@ No Consilium model was trained or optimized against GSMA TeleQnA. This is a comp
 
 ## Architecture
 
-```
+```text
 User Query
     │
     ▼
@@ -110,10 +110,10 @@ Skills chain automatically based on query type: alarm → `triage → diagnose �
 
 ## Training Pipeline
 
-```
-3GPP TSpec-LLM (15K docs)          Synthetic NOC/Config data
-        │                                    │
-        ▼                                    ▼
+```text
+3GPP TSpec-LLM (15K docs)           Synthetic NOC/Config data
+        │                                      │
+        ▼                                      ▼
    49K base training examples (v2: QLoRA, Kaggle T4)
         │
         ▼
@@ -140,20 +140,49 @@ Fine-tuning approach: iterative patching rather than full retraining. Each versi
 
 ### Prerequisites
 
-- Python 3.11+
-- [Ollama](https://ollama.ai) installed and running
+- Python 3.11+ (for manual setup)
+- [Docker](https://docs.docker.com/get-docker/) and Docker Compose (for containerized setup)
+- [Ollama](https://ollama.ai) installed and running (if running manually)
 - 8 GB+ RAM (16 GB recommended)
 
-### 1. Clone and install
+### 🐳 Option 1: Docker Setup (Recommended for API server)
+The easiest way to run the Consilium API and Ollama together without manually installing dependencies is using Docker Compose.
 
+1. Clone the repository and navigate to the project directory:
+   ```bash
+   git clone [https://github.com/manishkshrivastava/consilium.git](https://github.com/manishkshrivastava/consilium.git)
+   cd consilium
+   ```
+
+2. Build and start the containers in detached mode:
+   ```bash
+   docker-compose up --build -d
+   ```
+
+3. The FastAPI server will be available at `http://localhost:8000`.
+4. Ollama will run in the background on port `11434`.
+
+**Pulling Models:**
+If you need to pull a model into the Ollama container for the first time, run this command while the containers are running:
 ```bash
-git clone https://github.com/manishkshrivastava/consilium.git
+docker exec -it consilium_ollama ollama run llama3.1:8b-instruct-q4_K_M
+```
+
+To stop the application, run:
+```bash
+docker-compose down
+```
+
+### Option 2: Manual Setup
+
+**1. Clone and install**
+```bash
+git clone [https://github.com/manishkshrivastava/consilium.git](https://github.com/manishkshrivastava/consilium.git)
 cd consilium
 pip install -r requirements.txt
 ```
 
-### 2. Load the model into Ollama
-
+**2. Load the model into Ollama**
 ```bash
 # If you have the GGUF file:
 ollama create llama-telco-v41 -f models/Modelfile-v41
@@ -162,34 +191,28 @@ ollama create llama-telco-v41 -f models/Modelfile-v41
 ollama pull llama3.1:8b-instruct-q4_K_M
 ```
 
-### 3. Run the CLI
-
+**3. Run the CLI**
 ```bash
 python agents/run_agents.py
 ```
-
 Commands: `/agents` (list agents), `/memory` (show conversation history), `/chain` (show multi-agent plans), `/quit`
 
-### 4. Run the API server
-
+**4. Run the API server**
 ```bash
 python app/api_server.py
 ```
-
 Endpoints:
 - `POST /query` — send a query
 - `GET /health` — health check
 - `GET /memory` — conversation history
 - `GET /` — agent list and system info
 
-### 5. Run the Web UI
-
+**5. Run the Web UI**
 ```bash
 streamlit run app/streamlit_ui.py
 ```
 
-### 6. Build the RAG index (optional)
-
+**6. Build the RAG index (optional)**
 ```bash
 # Download 3GPP specs
 python scripts/data_prep/01_download_tspec.py
@@ -220,7 +243,7 @@ python scripts/evaluation/gsma_by_subject.py  # Per-subject breakdown
 
 ## Project Structure
 
-```
+```text
 consilium/
 ├── agents/                     # Multi-agent system
 │   ├── telco_agents.py         # 6 agents + orchestrator + supervisor
